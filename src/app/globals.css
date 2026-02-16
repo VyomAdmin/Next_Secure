@@ -18,11 +18,8 @@
   /* Trust blue instead of teal */
   --color-text-white: #ffffff;
 
-  --font-space-grotesk: "Space Grotesk";
-  --font-hanken-grotesk: "Hanken Grotesk";
-
-  --font-heading: "Space Grotesk", sans-serif;
-  --font-sans: "Hanken Grotesk", sans-serif;
+  --font-heading: var(--font-space-grotesk), sans-serif;
+  --font-sans: var(--font-hanken-grotesk), sans-serif;
 }
 
 * {
