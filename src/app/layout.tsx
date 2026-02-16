@@ -1,20 +1,10 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Hanken_Grotesk } from "next/font/google";
+import "@fontsource/space-grotesk/500.css";
+import "@fontsource/space-grotesk/600.css";
+import "@fontsource/space-grotesk/700.css";
+import "@fontsource/hanken-grotesk/400.css";
+import "@fontsource/hanken-grotesk/500.css";
 import "./globals.css";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  weight: ["500", "600", "700"],
-  display: "swap"
-});
-
-const hankenGrotesk = Hanken_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-hanken-grotesk",
-  weight: ["400", "500"],
-  display: "swap"
-});
 
 export const metadata: Metadata = {
   title: "ValinzTech | Intelligence-Driven Technology Governance",
@@ -36,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} ${hankenGrotesk.variable} font-sans`}>
+      <body className="font-sans">
         {children}
         <StickyMobileCTA />
       </body>
