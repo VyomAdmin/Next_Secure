@@ -56,7 +56,7 @@ export default function AboutContactPage() {
 
           <div className="relative mx-auto max-w-6xl rounded-3xl border border-white/10 bg-white/[0.03] px-8 py-20 text-center backdrop-blur-sm md:px-16">
             <h1 className="font-[var(--font-space-grotesk)] text-4xl font-semibold tracking-tight text-white md:text-6xl">
-              Intelligent Technology Governance
+              Intelligence-Driven Technology Governance
             </h1>
             <p className="mx-auto mt-8 max-w-3xl font-[var(--font-hanken-grotesk)] text-lg leading-relaxed text-slate-300 md:text-xl">
               ValinzTech helps organizations build trust in the digital age through systematic governance frameworks and expert guidance.
