@@ -55,7 +55,6 @@ export default function AboutContactPage() {
           <div className="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-blue-300/30 to-transparent animate-pulse" />
 
           <div className="relative mx-auto max-w-6xl rounded-3xl border border-white/10 bg-white/[0.03] px-8 py-20 text-center backdrop-blur-sm md:px-16">
-            <p className="mb-6 text-xs uppercase tracking-[0.3em] text-slate-300">ValinzTech</p>
             <h1 className="font-[var(--font-space-grotesk)] text-4xl font-semibold tracking-tight text-white md:text-6xl">
               Intelligent Technology Governance
             </h1>
