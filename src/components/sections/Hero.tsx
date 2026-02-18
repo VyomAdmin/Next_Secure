@@ -46,8 +46,8 @@ const Hero = () => {
                     </div>
 
                     {/* ONE H1 so spacing between Technology and Governance stays "regular" */}
-                    <div className="w-full flex items-start justify-between gap-6 mb-8">
-                        <h1 className="text-left text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.0] text-white">
+                    <div className="w-full flex flex-col md:flex-row items-center md:items-start justify-center md:justify-between gap-6 mb-8">
+                        <h1 className="text-center md:text-left text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[1.0] text-white">
                             Intelligence-Driven Technology
                             <br />
                             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500">
@@ -56,7 +56,7 @@ const Hero = () => {
                         </h1>
 
                         {/* Metallic Icon Visual (right side) */}
-                        <div className="relative w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 flex-shrink-0 group mt-2">
+                        <div className="relative w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 flex-shrink-0 group md:mt-2">
                             <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-full group-hover:bg-blue-500/30 transition-all duration-500"></div>
                             <Image
                                 src="/1x/Valinz-Icon.jpeg"

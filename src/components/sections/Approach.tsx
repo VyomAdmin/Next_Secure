@@ -43,7 +43,7 @@ const Approach = () => {
 
                 <div className="max-w-4xl mx-auto relative">
                     {/* Vertical Connection Line */}
-                    <div className="absolute left-[39px] md:left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-blue-500/0 via-blue-500/20 to-blue-500/0"></div>
+                    <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-gradient-to-b from-blue-500/0 via-blue-500/20 to-blue-500/0"></div>
 
                     <div className="space-y-16 relative">
                         {phases.map((phase, index) => {
@@ -52,15 +52,15 @@ const Approach = () => {
                             return (
                                 <div
                                     key={index}
-                                    className={`relative flex flex-col md:flex-row items-start md:items-center ${isEven ? 'md:flex-row-reverse' : ''}`}
+                                    className={`relative flex flex-col md:flex-row items-center md:items-center ${isEven ? 'md:flex-row-reverse' : ''} gap-6 md:gap-0`}
                                 >
                                     {/* Number Circle */}
-                                    <div className="absolute left-0 md:left-1/2 md:-translate-x-1/2 flex items-center justify-center w-20 h-20 rounded-full bg-[#0D1426] border border-blue-500/30 z-20 shadow-2xl">
+                                    <div className="flex items-center justify-center w-20 h-20 rounded-full bg-[#0D1426] border border-blue-500/30 z-20 shadow-2xl flex-shrink-0">
                                         <span className="text-blue-400 font-bold text-lg tracking-tighter">{phase.number}</span>
                                     </div>
 
                                     {/* Content Card */}
-                                    <div className={`w-full md:w-[42%] ml-24 md:ml-0 ${isEven ? 'md:text-left' : 'md:text-right'}`}>
+                                    <div className={`w-full md:w-[42%] ${isEven ? 'md:text-left' : 'md:text-right'}`}>
                                         <div className="bg-[#0D1426]/50 border border-white/5 p-10 rounded-[2.5rem] hover:border-blue-500/20 transition-all">
                                             <div className={`flex items-center gap-4 mb-6 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
                                                 <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center">
