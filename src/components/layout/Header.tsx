@@ -2,10 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronRight, Mail, Phone, MessageCircle } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import Button from '../ui/Button';
 import Logo from '../ui/Logo';
-import Image from 'next/image';
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -23,23 +22,22 @@ const Header = () => {
     const navigation = [
         {
             name: 'Services',
-            href: '#services',
+            href: '/#services',
             dropdown: [
-                { name: 'DPDPA Compliance', href: '#dpdpa' },
-                { name: 'Core Services', href: '#services' },
-                { name: 'Technical Audits', href: '#services' }
+                { name: 'DPDPA Compliance', href: '/#dpdpa' },
+                { name: 'All Services', href: '/#services' }
             ]
         },
-        { name: 'About', href: '#about' },
+        { name: 'About & Contact', href: '/about-contact' },
         {
             name: 'Resources',
-            href: '#insights',
+            href: '/#insights',
             dropdown: [
                 { name: 'Blog', href: '#' },
-                { name: 'Case Studies', href: '#' }
+                { name: 'Case Studies', href: '#' },
+                { name: 'Downloads', href: '#' }
             ]
-        },
-        { name: 'Contact', href: '#contact' }
+        }
     ];
 
     return (
@@ -86,7 +84,7 @@ const Header = () => {
                             )}
                         </div>
                     ))}
-                    <Button variant="primary" href="#contact" className="ml-6 py-4 px-8 text-[10px] font-bold tracking-widest bg-white text-slate-900 border-none hover:bg-slate-100 rounded-full shadow-lg">
+                    <Button variant="primary" href="/about-contact#final-cta" className="ml-6 py-4 px-8 text-[10px] font-bold tracking-widest bg-white text-slate-900 border-none hover:bg-slate-100 rounded-full shadow-lg">
                         SCHEDULE CONSULTATION
                     </Button>
                 </nav>
@@ -129,7 +127,7 @@ const Header = () => {
                                 )}
                             </div>
                         ))}
-                        <Button variant="primary" href="#contact" className="mt-6 w-full justify-center py-5 bg-white text-slate-900 border-none font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Button variant="primary" href="/about-contact#final-cta" className="mt-6 w-full justify-center py-5 bg-white text-slate-900 border-none font-bold" onClick={() => setIsMobileMenuOpen(false)}>
                             SCHEDULE CONSULTATION
                         </Button>
                     </nav>

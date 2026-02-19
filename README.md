@@ -34,3 +34,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+## Deploying on Cloudflare
+
+This repo is configured for static export to improve Cloudflare compatibility:
+
+- `next.config.ts` uses `output: "export"`
+- Next Image optimization is disabled (`images.unoptimized: true`) for static hosting
+- `wrangler.toml` enables `nodejs_compat` to avoid missing built-in `node:*` module issues during worker bundling
+
+Build output is generated with:
+
+```bash
+npm run build
+```
+
+Deploy the generated `out/` directory on Cloudflare Pages static hosting.

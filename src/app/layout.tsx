@@ -6,19 +6,20 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
   weight: ["500", "600", "700"],
-  display: "swap"
+  display: "swap",
 });
 
 const hankenGrotesk = Hanken_Grotesk({
   subsets: ["latin"],
   variable: "--font-hanken-grotesk",
   weight: ["400", "500"],
-  display: "swap"
+  display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "ValinzTech | Intelligence-Driven Technology Governance",
-  description: "We help organizations build intelligent, secure, compliant, and future-ready technology systems through systematic governance frameworks.",
+  description:
+    "We help organizations build intelligent, secure, compliant, and future-ready technology systems through systematic governance frameworks.",
   icons: {
     icon: [
       { url: "/favicon.ico" },
