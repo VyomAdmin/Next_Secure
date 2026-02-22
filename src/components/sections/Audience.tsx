@@ -3,36 +3,36 @@ import React from 'react';
 const Audience = () => {
     const segments = [
         {
-            title: "Startups",
-            description: "Scale with confidence by building solid governance foundations from day one. DPDPA ready from launch."
+            title: "Growing Startups",
+            description: "Building governance foundations for investor due diligence and sustainable growth. Common needs: SOC 2, DPDPA readiness, security assessments."
         },
         {
-            title: "Scaling Enterprises",
-            description: "Manage increasing complexity through systematic framework updates and dedicated assurance models."
+            title: "Scaling Companies",
+            description: "Navigating regulatory requirements while maintaining operational agility. Common needs: ISO 27001, comprehensive privacy programs, AI governance."
         },
         {
-            title: "Established Organizations",
-            description: "Transform legacy governance into intelligent, future-ready architectures that drive competitive trust."
+            title: "Established Enterprises",
+            description: "Meeting stakeholder expectations and regulatory obligations across complex operations. Common needs: Integrated GRC, third-party risk, continuous assurance."
         }
     ];
 
     return (
-        <section className="py-24 bg-[#020617] border-t border-white/5">
+        <section className="py-24 bg-[#020617] border-y border-white/5">
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center mb-20">
-                    <h2 className="text-3xl md:text-5xl font-black text-white mb-8 tracking-tighter uppercase">
-                        Who We Serve
+                    <div className="inline-block px-4 py-1 border border-blue-500/20 rounded-full bg-blue-900/10 mb-6">
+                        <span className="text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase">Who We Serve</span>
+                    </div>
+                    <h2 className="text-3xl md:text-5xl font-black text-white mb-6 tracking-tighter">
+                        Built for Organizations Committed to Excellence
                     </h2>
-                    <p className="text-lg text-slate-400 leading-relaxed font-medium">
-                        Specialized governance intelligence for every stage of your technological evolution.
-                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
                     {segments.map((segment, index) => (
-                        <div key={index} className="bg-[#0D1426]/30 border border-white/5 p-12 rounded-[2.5rem] hover:border-blue-500/20 transition-all">
-                            <h3 className="text-xs font-black uppercase tracking-[0.4em] text-blue-400 mb-6">{segment.title}</h3>
-                            <p className="text-slate-400 font-medium leading-relaxed">
+                        <div key={index} className="bg-[#0D1426]/40 border border-white/5 p-8 md:p-10 rounded-[2rem] hover:border-blue-500/20 transition-all">
+                            <h3 className="text-xl md:text-2xl font-bold tracking-tight text-white mb-4">{segment.title}</h3>
+                            <p className="text-slate-300 font-medium leading-relaxed">
                                 {segment.description}
                             </p>
                         </div>
@@ -40,7 +40,7 @@ const Audience = () => {
                 </div>
 
                 <div className="mt-16 text-center">
-                    <p className="text-[10px] font-bold text-slate-600 uppercase tracking-[0.4em]">
+                    <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.25em]">
                         Based in Noida | Serving Delhi NCR and beyond
                     </p>
                 </div>

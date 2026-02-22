@@ -35,11 +35,11 @@ const Header = () => {
     const sectionNavigation: NavItem[] = [
         {
             name: 'Services',
-            href: pathname === '/' ? '#dpdpa' : '#about-capabilities',
+            href: pathname === '/' ? '#dpdpa' : '#about',
             dropdown: [
                 { name: 'DPDPA Compliance', href: pathname === '/' ? '#dpdpa' : '#contact' },
-                { name: 'Core Services', href: pathname === '/' ? '#dpdpa' : '#about-capabilities' },
-                { name: 'Technical Audits', href: pathname === '/' ? '#dpdpa' : '#about-capabilities' }
+                { name: 'Core Services', href: pathname === '/' ? '#dpdpa' : '#about' },
+                { name: 'Technical Audits', href: pathname === '/' ? '#dpdpa' : '#about' }
             ]
         }
     ];

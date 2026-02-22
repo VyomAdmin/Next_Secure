@@ -25,7 +25,7 @@ const Hero = () => {
                     <div className="max-w-3xl text-left">
                         <div className="mb-8 inline-block px-5 py-2 border border-white/20 rounded-full backdrop-blur-md bg-white/10">
                             <span className="text-[10px] font-bold tracking-[0.3em] text-white uppercase">
-                            Intelligence-Driven Governance
+                            Trust. Intelligence. Compliance
                         </span>
                         </div>
 
