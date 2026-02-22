@@ -2,15 +2,22 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ChevronRight, Mail, Phone, MessageCircle } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import Button from '../ui/Button';
 import Logo from '../ui/Logo';
-import Image from 'next/image';
+
+type NavItem = {
+    name: string;
+    href: string;
+    dropdown?: Array<{ name: string; href: string }>;
+};
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,23 +27,19 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navigation = [
+    const routeNavigation: NavItem[] = [
+        { name: 'Home', href: '/' },
+        { name: 'About & Contact', href: '/about-contact' },
+    ];
+
+    const sectionNavigation: NavItem[] = [
         {
             name: 'Services',
-            href: '#services',
+            href: pathname === '/' ? '#dpdpa' : '#about-capabilities',
             dropdown: [
-                { name: 'DPDPA Compliance', href: '#dpdpa' },
-                { name: 'Core Services', href: '#services' },
-                { name: 'Technical Audits', href: '#services' }
-            ]
-        },
-        { name: 'About', href: '#about' },
-        {
-            name: 'Resources',
-            href: '#insights',
-            dropdown: [
-                { name: 'Blog', href: '#' },
-                { name: 'Case Studies', href: '#' }
+                { name: 'DPDPA Compliance', href: pathname === '/' ? '#dpdpa' : '#contact' },
+                { name: 'Core Services', href: pathname === '/' ? '#dpdpa' : '#about-capabilities' },
+                { name: 'Technical Audits', href: pathname === '/' ? '#dpdpa' : '#about-capabilities' }
             ]
         },
         { name: 'Contact', href: '#contact' }
@@ -54,7 +57,18 @@ const Header = () => {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex items-center gap-10">
-                    {navigation.map((item) => (
+                    {routeNavigation.map((item) => (
+                        <Link
+                            key={item.name}
+                            href={item.href}
+                            className={`text-[10px] font-black tracking-[0.2em] uppercase transition-colors ${pathname === item.href ? 'text-white' : 'text-slate-400 hover:text-white'
+                                }`}
+                        >
+                            {item.name}
+                        </Link>
+                    ))}
+
+                    {sectionNavigation.map((item) => (
                         <div
                             key={item.name}
                             className="relative group"
@@ -86,7 +100,7 @@ const Header = () => {
                             )}
                         </div>
                     ))}
-                    <Button variant="primary" href="#contact" className="ml-6 py-4 px-8 text-[10px] font-bold tracking-widest bg-white text-slate-900 border-none hover:bg-slate-100 rounded-full shadow-lg">
+                    <Button variant="primary" href="#contact" className="ml-2 py-4 px-8 text-[10px] font-bold tracking-widest bg-white text-slate-900 border-none hover:bg-slate-100 rounded-full shadow-lg">
                         SCHEDULE CONSULTATION
                     </Button>
                 </nav>
@@ -104,7 +118,7 @@ const Header = () => {
             {isMobileMenuOpen && (
                 <div className="lg:hidden absolute top-full left-0 w-full bg-[#020617] border-b border-white/5 py-10 shadow-2xl animate-in fade-in slide-in-from-top-4">
                     <nav className="flex flex-col px-6 gap-8">
-                        {navigation.map((item) => (
+                        {[...routeNavigation, ...sectionNavigation].map((item) => (
                             <div key={item.name} className="space-y-6">
                                 <Link
                                     href={item.href}

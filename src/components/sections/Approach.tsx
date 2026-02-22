@@ -70,7 +70,7 @@ const Approach = () => {
                                                     {phase.title}
                                                 </h3>
                                             </div>
-                                            <p className="text-slate-500 leading-relaxed font-medium">
+                                            <p className="text-base text-slate-400 leading-relaxed font-medium">
                                                 {phase.description}
                                             </p>
                                         </div>

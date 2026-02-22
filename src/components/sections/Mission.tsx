@@ -43,7 +43,7 @@ const Mission = () => {
                                 <h3 className="text-2xl font-bold text-white mb-6 tracking-tight">
                                     {item.title}
                                 </h3>
-                                <p className="text-slate-500 font-medium leading-relaxed">
+                                <p className="text-base text-slate-400 font-medium leading-relaxed">
                                     {item.description}
                                 </p>
                             </div>

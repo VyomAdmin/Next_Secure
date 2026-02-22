@@ -22,6 +22,7 @@ export default function Home() {
       <Header />
       <main className="flex-grow">
         <Hero />
+        <DPDPASpotlight />
 
         {/* Authority & Trust Building Half */}
         <div id="about">
@@ -29,7 +30,6 @@ export default function Home() {
           <Approach />
           <TeamExpertise />
           <Values />
-          <DPDPASpotlight />
         </div>
 
         <SectionDivider />

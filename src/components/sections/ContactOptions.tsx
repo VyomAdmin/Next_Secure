@@ -62,7 +62,7 @@ const ContactOptions = () => {
                                 <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
                                     {option.title}
                                 </h3>
-                                <p className="text-slate-400 text-sm font-medium leading-relaxed mb-10 flex-grow">
+                                <p className="text-slate-400 text-base font-medium leading-relaxed mb-10 flex-grow">
                                     {option.description}
                                 </p>
 

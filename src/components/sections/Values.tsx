@@ -57,7 +57,7 @@ const Values = () => {
                                     <h3 className="text-xl font-bold text-white mb-2 tracking-tight">
                                         {value.title}
                                     </h3>
-                                    <p className="text-slate-400 text-sm font-medium leading-relaxed">
+                                    <p className="text-slate-400 text-base font-medium leading-relaxed">
                                         {value.description}
                                     </p>
                                 </div>
