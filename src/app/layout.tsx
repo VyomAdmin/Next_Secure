@@ -17,8 +17,29 @@ const hankenGrotesk = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "ValinzTech | Intelligence-Driven Technology Governance",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://valinztech.com"),
+  title: {
+    default: "ValinzTech | Intelligence-Driven Technology Governance",
+    template: "%s | ValinzTech",
+  },
   description: "We help organizations build intelligent, secure, compliant, and future-ready technology systems through systematic governance frameworks.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    siteName: "ValinzTech",
+    title: "ValinzTech | Intelligence-Driven Technology Governance",
+    description:
+      "Technology governance, DPDPA readiness, privacy, compliance, and risk advisory support.",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ValinzTech | Intelligence-Driven Technology Governance",
+    description:
+      "Technology governance, DPDPA readiness, privacy, compliance, and risk advisory support.",
+  },
   icons: {
     icon: [
       { url: "/favicon.ico" },

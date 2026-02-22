@@ -1,8 +1,20 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Logo from '@/components/ui/Logo';
 import Footer from '@/components/layout/Footer';
 import { Mail, Phone, ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+
+export const metadata: Metadata = {
+    title: 'Coming Soon',
+    description: 'ValinzTech is preparing additional technology governance and compliance resources.',
+    alternates: {
+        canonical: '/coming-soon',
+    },
+    robots: {
+        index: false,
+        follow: false,
+    },
+};
 
 const ComingSoon = () => {
     return (

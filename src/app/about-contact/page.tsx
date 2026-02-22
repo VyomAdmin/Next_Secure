@@ -1,11 +1,24 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { ArrowRight, Phone, Mail, MapPin, ShieldCheck, Cpu, Workflow } from 'lucide-react';
 
-export const metadata = {
-    title: 'About & Contact | ValinzTech',
+export const metadata: Metadata = {
+    title: 'About & Contact',
     description: 'ValinzTech company capabilities, operating model, and contact information for DPDPA and technology governance consulting.',
+    alternates: {
+        canonical: '/about-contact',
+    },
+    openGraph: {
+        title: 'About & Contact | ValinzTech',
+        description: 'Company capabilities, delivery model, and direct contact information for DPDPA and technology governance consulting.',
+        url: '/about-contact',
+    },
+    twitter: {
+        title: 'About & Contact | ValinzTech',
+        description: 'Company capabilities, delivery model, and direct contact information for DPDPA and technology governance consulting.',
+    },
 };
 
 const capabilityBlocks = [

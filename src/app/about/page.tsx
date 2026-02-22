@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import AboutHero from '@/components/sections/AboutHero';
@@ -17,9 +18,21 @@ import FAQ from '@/components/sections/FAQ';
 import FinalCTA from '@/components/sections/FinalCTA';
 import StickyMobileCTA from '@/components/ui/StickyMobileCTA';
 
-export const metadata = {
-    title: 'About & Contact | ValinzTech',
-    description: 'Learn about ValinzTech methodology, team expertise, and connect with our governance experts.',
+export const metadata: Metadata = {
+    title: 'About ValinzTech',
+    description: 'Learn about ValinzTech methodology, team expertise, delivery approach, and governance consulting capabilities.',
+    alternates: {
+        canonical: '/about',
+    },
+    openGraph: {
+        title: 'About ValinzTech',
+        description: 'ValinzTech methodology, expertise, and delivery model for technology governance and compliance support.',
+        url: '/about',
+    },
+    twitter: {
+        title: 'About ValinzTech',
+        description: 'ValinzTech methodology, expertise, and delivery model for technology governance and compliance support.',
+    },
 };
 
 export default function AboutPage() {
