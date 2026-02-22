@@ -41,8 +41,7 @@ const Header = () => {
                 { name: 'Core Services', href: pathname === '/' ? '#dpdpa' : '#about-capabilities' },
                 { name: 'Technical Audits', href: pathname === '/' ? '#dpdpa' : '#about-capabilities' }
             ]
-        },
-        { name: 'Contact', href: '#contact' }
+        }
     ];
 
     return (
