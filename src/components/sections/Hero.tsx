@@ -25,8 +25,8 @@ const Hero = () => {
                     <div className="max-w-3xl text-left">
                         <div className="mb-8 inline-block px-5 py-2 border border-white/20 rounded-full backdrop-blur-md bg-white/10">
                             <span className="text-[10px] font-bold tracking-[0.3em] text-white uppercase">
-                            Trust. Intelligence. Compliance
-                        </span>
+                                Trust. Intelligence. Compliance
+                            </span>
                         </div>
 
                         <h1 className="text-left text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.97] text-white mb-8">
@@ -38,8 +38,8 @@ const Hero = () => {
                         </h1>
 
                         <p className="text-lg md:text-2xl text-indigo-100/80 mb-7 max-w-2xl leading-relaxed font-medium font-sans">
-                        ValinzTech helps organizations build trust in the digital age through
-                        systematic governance frameworks and expert guidance.
+                            ValinzTech helps organizations build trust in the digital age through
+                            systematic governance frameworks and expert guidance.
                         </p>
 
                         <p className="text-base md:text-lg font-bold tracking-wide text-white mb-10">
@@ -70,16 +70,16 @@ const Hero = () => {
                         <div className="flex flex-wrap gap-x-8 gap-y-4 text-xs md:text-sm font-bold uppercase tracking-[0.18em] text-indigo-100/70 border-t border-white/10 pt-8">
                             <span className="flex items-center gap-3">
                                 <span className="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"></span>
-                            Confident
-                        </span>
-                        <span className="flex items-center gap-3">
+                                Confident
+                            </span>
+                            <span className="flex items-center gap-3">
                                 <span className="w-1.5 h-1.5 rounded-full bg-indigo-200"></span>
-                            Structured
-                        </span>
-                        <span className="flex items-center gap-3">
+                                Structured
+                            </span>
+                            <span className="flex items-center gap-3">
                                 <span className="w-1.5 h-1.5 rounded-full bg-violet-200"></span>
-                            Enterprise-Grade
-                        </span>
+                                Enterprise-Grade
+                            </span>
                         </div>
                     </div>
 
@@ -96,7 +96,7 @@ const Hero = () => {
                                     <div className="absolute -bottom-6 -left-5 h-20 w-20 rounded-3xl bg-violet-200/15 border border-white/15 backdrop-blur-xl animate-pulse" style={{ animationDuration: '5s' }}></div>
                                     <div className="absolute inset-6 md:inset-8 flex items-center justify-center">
                                         <Image
-                                            src="/images/Valinz-Icon.jpeg"
+                                            src="/images/Valinz-Logo 1.png"
                                             alt="ValinzTech abstract logo graphic"
                                             width={220}
                                             height={220}
