@@ -96,7 +96,7 @@ const Hero = () => {
                                     <div className="absolute -bottom-6 -left-5 h-20 w-20 rounded-3xl bg-violet-200/15 border border-white/15 backdrop-blur-xl animate-pulse" style={{ animationDuration: '5s' }}></div>
                                     <div className="absolute inset-6 md:inset-8 flex items-center justify-center">
                                         <Image
-                                            src="/images/Valinz-Logo 1.png"
+                                            src="/images/Valinz-Logo.png"
                                             alt="ValinzTech abstract logo graphic"
                                             width={220}
                                             height={220}
