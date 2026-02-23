@@ -21,7 +21,7 @@ const Mission = () => {
     ];
 
     return (
-        <section id="about" className="py-24 bg-[#020617] border-t border-white/5">
+        <section id="mission" className="py-24 bg-[#020617] border-t border-white/5">
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase">

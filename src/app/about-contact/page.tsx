@@ -15,6 +15,7 @@ import Location from '@/components/sections/Location';
 import FAQ from '@/components/sections/FAQ';
 import FinalCTA from '@/components/sections/FinalCTA';
 import StickyMobileCTA from '@/components/ui/StickyMobileCTA';
+import AboutHero from '@/components/sections/AboutHero';
 
 export const metadata: Metadata = {
     title: 'About & Contact',
@@ -40,14 +41,12 @@ export default function AboutContactPage() {
             <main className="flex-grow pt-0">
                 {/* Authority & Trust Building Half */}
                 <div id="about">
+                    <AboutHero />
                     <Mission />
                     <Approach />
                     <TeamExpertise />
                     <Values />
                 </div>
-
-                <SectionDivider />
-
                 {/* Contact & Engagement Half */}
                 <div id="contact">
                     <LetsConnect />

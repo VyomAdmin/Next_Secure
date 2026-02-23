@@ -40,12 +40,12 @@ const AboutHero = () => {
                 <div className="max-w-4xl mx-auto flex flex-col items-center">
                     {/* Soft-glass framed container effect */}
                     <div className="backdrop-blur-sm bg-white/[0.02] border border-white/5 p-12 md:p-16 rounded-[40px] shadow-2xl">
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white mb-8 font-heading">
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.97] text-white mb-8">
                             Intelligent Technology <br />
                             <span className="text-blue-400">Governance</span>
                         </h1>
 
-                        <p className="text-xl md:text-2xl text-slate-400 mb-10 leading-relaxed font-sans max-w-3xl mx-auto">
+                        <p className="text-lg md:text-2xl text-indigo-100/80 mb-7 max-w-2xl leading-relaxed font-medium font-sans mx-auto">
                             ValinzTech helps organizations build trust in the digital age through
                             systematic governance frameworks and expert guidance.
                         </p>
