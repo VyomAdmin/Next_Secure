@@ -191,3 +191,8 @@ a:visited {
 .bg-hero-gradient {
   background: radial-gradient(circle at top right, #1a365d, #0a192f 80%);
 }
+
+html {
+  /* This works perfectly on mobile Chrome and Safari */
+  scroll-padding-top: 80px;
+}

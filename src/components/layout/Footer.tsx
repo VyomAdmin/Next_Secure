@@ -24,10 +24,18 @@ const Footer = () => {
                     <div>
                         <h4 className="text-xs font-black uppercase tracking-[0.3em] text-white mb-10">Services</h4>
                         <ul className="space-y-5">
-                            {['DPDPA Compliance', 'Cybersecurity Consulting', 'Privacy & Data Protection', 'AI Governance', 'Compliance & Risk Management', 'Technical Audits', 'Training & Enablement'].map((item) => (
-                                <li key={item}>
-                                    <Link href="#" className="text-sm font-medium text-slate-500 hover:text-blue-400 transition-colors">
-                                        {item}
+                            {[
+                                { name: 'DPDPA Compliance', href: '/dpdpa-compliance' },
+                                { name: 'Cybersecurity Consulting', href: '/services#cybersecurity-consulting' },
+                                { name: 'Privacy & Data Protection', href: '/services#privacy-data-protection' },
+                                { name: 'AI Governance', href: '/services#ai-governance' },
+                                { name: 'Compliance & Risk Management', href: '/services#compliance-risk-management' },
+                                { name: 'Technical Audits', href: '/services#technical-audits' },
+                                { name: 'Training & Enablement', href: '/services#training-enablement' },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="text-sm font-medium text-slate-500 hover:text-blue-400 transition-colors">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
@@ -38,10 +46,16 @@ const Footer = () => {
                     <div>
                         <h4 className="text-xs font-black uppercase tracking-[0.3em] text-white mb-10">Resources</h4>
                         <ul className="space-y-5">
-                            {['About Us', 'Our Approach', 'Blog / Insights', 'Case Studies', 'Contact'].map((item) => (
-                                <li key={item}>
-                                    <Link href="#" className="text-sm font-medium text-slate-500 hover:text-blue-400 transition-colors">
-                                        {item}
+                            {[
+                                { name: 'About Us', href: '/about-contact' },
+                                { name: 'Our Approach', href: '/#approach' },
+                                { name: 'Blog / Insights', href: '#' },
+                                { name: 'Case Studies', href: '#' },
+                                { name: 'Contact', href: '/about-contact#contact-form' },
+                            ].map((item) => (
+                                <li key={item.name}>
+                                    <Link href={item.href} className="text-sm font-medium text-slate-500 hover:text-blue-400 transition-colors">
+                                        {item.name}
                                     </Link>
                                 </li>
                             ))}
@@ -54,7 +68,7 @@ const Footer = () => {
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4 text-sm font-medium text-slate-500">
                                 <MapPin size={18} className="mt-0.5 text-blue-400/50" />
-                                <span>Noida, Delhi NCR</span>
+                                <span>Noida</span>
                             </li>
                             <li className="flex items-center gap-4 text-sm font-medium text-slate-500">
                                 <Mail size={18} className="text-blue-400/50" />

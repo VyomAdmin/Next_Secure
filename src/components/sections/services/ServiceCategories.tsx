@@ -1,11 +1,12 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, Shield, Lock, Brain, BarChart3, ClipboardCheck, GraduationCap, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 const services = [
     {
+        slug: "cybersecurity-consulting",
         icon: Shield,
         title: "Cybersecurity Consulting",
         tagline: "Identify vulnerabilities, architect security, respond with confidence",
@@ -31,6 +32,7 @@ const services = [
         cta: { label: "Explore Cybersecurity Services", href: "/about-contact#contact-form" }
     },
     {
+        slug: "privacy-data-protection",
         icon: Lock,
         title: "Privacy & Data Protection",
         tagline: "Navigate GDPR, DPDPA, and global privacy regulations",
@@ -56,6 +58,7 @@ const services = [
         cta: { label: "View DPDPA Services →", href: "/dpdpa-compliance" }
     },
     {
+        slug: "ai-governance",
         icon: Brain,
         title: "AI Governance & Ethics",
         tagline: "Responsible AI frameworks for emerging technology",
@@ -81,6 +84,7 @@ const services = [
         cta: { label: "Discuss AI Governance", href: "/about-contact#contact-form" }
     },
     {
+        slug: "compliance-risk-management",
         icon: BarChart3,
         title: "Compliance & Risk Management",
         tagline: "Achieve ISO 27001, SOC 2, and regulatory compliance",
@@ -106,6 +110,7 @@ const services = [
         cta: { label: "Compliance Consultation", href: "/about-contact#contact-form" }
     },
     {
+        slug: "technical-audits",
         icon: ClipboardCheck,
         title: "Technical Audits & Assessments",
         tagline: "Independent validation of security and compliance posture",
@@ -131,6 +136,7 @@ const services = [
         cta: { label: "Request Assessment", href: "/about-contact#contact-form" }
     },
     {
+        slug: "training-enablement",
         icon: GraduationCap,
         title: "Training & Enablement",
         tagline: "Build internal capability through education",
@@ -160,6 +166,20 @@ const services = [
 const ServiceCategories = () => {
     const [openService, setOpenService] = useState<number | null>(0);
 
+    useEffect(() => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) {
+            const idx = services.findIndex((s) => s.slug === hash);
+            if (idx !== -1) {
+                setOpenService(idx);
+                // give layout time to render then scroll
+                setTimeout(() => {
+                    document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }, 300);
+            }
+        }
+    }, []);
+
     return (
         <section id="service-categories" className="py-24 bg-[#050A18]">
             <div className="container mx-auto px-6">
@@ -170,6 +190,7 @@ const ServiceCategories = () => {
                         return (
                             <div
                                 key={index}
+                                id={service.slug}
                                 className={`rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${isOpen ? 'border-blue-500/20 bg-[#0D1426]/60' : 'border-white/5 bg-[#0D1426]/20 hover:border-white/10'}`}
                             >
                                 {/* Header */}
