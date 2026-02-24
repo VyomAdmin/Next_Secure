@@ -47,7 +47,7 @@ const Hero = () => {
                         <div className="flex flex-col sm:flex-row gap-4 mb-14 w-full sm:w-auto">
                             <Button
                                 variant="secondary"
-                                href="#about"
+                                href="/about-contact"
                                 className="min-w-[220px] justify-center text-sm py-4 px-8 uppercase tracking-widest bg-white/20 border-white/35 text-white hover:bg-white/28 rounded-2xl shadow-[0_0_0_1px_rgba(255,255,255,0.12)_inset,0_10px_30px_rgba(61,23,164,0.25)] hover:shadow-[0_0_24px_rgba(255,255,255,0.28)] backdrop-blur-md group"
                             >
                                 Explore About Us{' '}
@@ -58,7 +58,7 @@ const Hero = () => {
                             </Button>
                             <Button
                                 variant="secondary"
-                                href="#contact"
+                                href="/about-contact#contact-form"
                                 className="min-w-[220px] justify-center text-sm py-4 px-8 uppercase tracking-widest bg-white/15 border-white/30 text-white hover:bg-white/22 rounded-2xl shadow-[0_8px_24px_rgba(9,10,35,0.28)] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] backdrop-blur-md"
                             >
                                 Free Consultation
