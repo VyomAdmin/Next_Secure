@@ -100,7 +100,7 @@ const Header = () => {
                             )}
                         </div>
                     ))}
-                    <Button variant="primary" href="#contact" className="ml-2 py-4 px-8 text-[10px] font-bold tracking-widest bg-white text-slate-900 border-none hover:bg-slate-100 rounded-full shadow-lg">
+                    <Button variant="primary" href="/about-contact#contact-form" className="ml-2 py-4 px-8 text-[10px] font-bold tracking-widest bg-white text-slate-900 border-none hover:bg-slate-100 rounded-full shadow-lg">
                         SCHEDULE CONSULTATION
                     </Button>
                 </nav>

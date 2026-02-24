@@ -15,7 +15,7 @@ const FinalCTA = () => {
                     </p>
 
                     <div className="flex flex-col items-center gap-12">
-                        <Button variant="primary" href="#contact" className="py-6 px-16 text-sm font-bold bg-white text-slate-900 border-none rounded-full shadow-2xl hover:bg-slate-100 transition-all">
+                        <Button variant="primary" href="/about-contact#contact-form" className="py-6 px-16 text-sm font-bold bg-white text-slate-900 border-none rounded-full shadow-2xl hover:bg-slate-100 transition-all">
                             SCHEDULE FREE CONSULTATION
                         </Button>
 
