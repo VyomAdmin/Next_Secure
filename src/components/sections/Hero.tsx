@@ -5,19 +5,17 @@ import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-gradient-to-br from-[#22104f] via-[#1a1b64] to-[#0b1238]">
+        <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-[#050A18]">
             <div className="absolute inset-0 z-0">
                 <div
-                    className="absolute inset-0 opacity-[0.12]"
+                    className="absolute inset-0 opacity-[0.03]"
                     style={{
-                        backgroundImage:
-                            'radial-gradient(circle at 1px 1px, rgba(255,255,255,0.6) 1px, transparent 0)',
-                        backgroundSize: '28px 28px',
+                        backgroundImage: 'linear-gradient(#3b82f6 0.5px, transparent 0.5px), linear-gradient(90deg, #3b82f6 0.5px, transparent 0.5px)',
+                        backgroundSize: '40px 40px',
                     }}
                 ></div>
-                <div className="absolute -top-20 left-10 h-72 w-72 rounded-full bg-fuchsia-400/25 blur-[110px]"></div>
-                <div className="absolute top-1/3 right-12 h-80 w-80 rounded-full bg-indigo-300/20 blur-[120px]"></div>
-                <div className="absolute bottom-0 left-1/3 h-56 w-56 rounded-full bg-cyan-300/10 blur-[100px]"></div>
+                <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[70%] h-[50%] bg-blue-600/10 rounded-full blur-[140px]"></div>
+                <div className="absolute bottom-0 right-[10%] w-[40%] h-[40%] bg-blue-400/5 rounded-full blur-[100px]"></div>
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
@@ -84,28 +82,15 @@ const Hero = () => {
                     </div>
 
                     <div className="relative flex items-center justify-center lg:justify-end">
-                        <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[460px] lg:h-[460px]">
-                            <div className="absolute inset-8 rounded-[3rem] bg-white/10 border border-white/20 backdrop-blur-xl rotate-6 animate-pulse" style={{ animationDuration: '6s' }}></div>
-                            <div className="absolute inset-14 rounded-[2.5rem] bg-indigo-300/10 border border-violet-200/20 -rotate-6"></div>
-                            <div className="absolute inset-0 rounded-full bg-fuchsia-400/15 blur-3xl"></div>
-                            <div className="absolute inset-6 rounded-full bg-indigo-300/20 blur-2xl"></div>
-
-                            <div className="absolute inset-12 md:inset-16 flex items-center justify-center">
-                                <div className="relative w-full h-full rounded-[2.5rem] border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_20px_60px_rgba(12,8,40,0.45)]">
-                                    <div className="absolute -top-5 -right-4 h-16 w-16 rounded-2xl bg-white/15 border border-white/20 backdrop-blur-xl animate-bounce" style={{ animationDuration: '4s' }}></div>
-                                    <div className="absolute -bottom-6 -left-5 h-20 w-20 rounded-3xl bg-violet-200/15 border border-white/15 backdrop-blur-xl animate-pulse" style={{ animationDuration: '5s' }}></div>
-                                    <div className="absolute inset-6 md:inset-8 flex items-center justify-center">
-                                        <Image
-                                            src="/images/Valinz-Logo.png"
-                                            alt="ValinzTech abstract logo graphic"
-                                            width={220}
-                                            height={220}
-                                            priority
-                                            className="w-40 h-40 md:w-52 md:h-52 object-contain rounded-[2rem] shadow-[0_12px_32px_rgba(0,0,0,0.35)] rotate-3"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
+                        <div className="relative w-[280px] h-[280px] md:w-[380px] md:h-[380px] lg:w-[460px] lg:h-[460px] flex items-center justify-center">
+                            <Image
+                                src="/images/Valinz-Logo.png"
+                                alt="ValinzTech logo"
+                                width={400}
+                                height={400}
+                                priority
+                                className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                            />
                         </div>
                     </div>
                 </div>
