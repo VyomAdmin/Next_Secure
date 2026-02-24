@@ -81,9 +81,9 @@ const Methodology = () => {
                             >
                                 <div className="flex-shrink-0 flex flex-col items-center">
                                     <div className="w-20 h-20 rounded-2xl bg-indigo-500/10 flex items-center justify-center mb-4">
-                                        <Icon className="text-indigo-400" size={36} />
+                                        <Icon style={{ color: '#64ffda' }} size={36} />
                                     </div>
-                                    <span className="text-[10px] font-black text-indigo-400 tracking-[0.2em] mb-1">{phase.number}</span>
+                                    <span className="text-[10px] font-black tracking-[0.2em] mb-1" style={{ color: '#64ffda' }}>{phase.number}</span>
                                     <span className="text-[10px] font-bold text-slate-500 uppercase">{phase.duration}</span>
                                 </div>
 

@@ -40,7 +40,7 @@ const ServicesHero = () => {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button
                             variant="primary"
-                            href="#contact"
+                            href="/about-contact#contact-form"
                             className="min-w-[220px] justify-center bg-blue-600 hover:bg-blue-500 text-white border-none py-4 px-10 rounded-full font-bold tracking-wide group"
                         >
                             Schedule Consultation

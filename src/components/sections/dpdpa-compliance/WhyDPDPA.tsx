@@ -38,7 +38,7 @@ const WhyDPDPA = () => {
                                 className="group p-10 rounded-[3rem] bg-[#0D1426]/50 border border-white/5 hover:border-indigo-500/20 transition-all duration-500 shadow-xl"
                             >
                                 <div className="w-16 h-16 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-10 group-hover:scale-110 transition-transform duration-500">
-                                    <Icon className="text-indigo-400" size={32} />
+                                    <Icon style={{ color: '#64ffda' }} size={32} />
                                 </div>
                                 <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
                                     {item.title}

@@ -28,7 +28,7 @@ const services = [
                 items: ["Dark web monitoring", "Industry-specific threat analysis", "Vulnerability intelligence feeds", "Geopolitical risk assessment"]
             }
         ],
-        cta: { label: "Explore Cybersecurity Services", href: "#contact" }
+        cta: { label: "Explore Cybersecurity Services", href: "/about-contact#contact-form" }
     },
     {
         icon: Lock,
@@ -78,7 +78,7 @@ const services = [
                 items: ["MeitY AI guidelines preparation", "EU AI Act classification and requirements", "NIST AI Risk Management Framework", "Industry-specific AI regulations"]
             }
         ],
-        cta: { label: "Discuss AI Governance", href: "#contact" }
+        cta: { label: "Discuss AI Governance", href: "/about-contact#contact-form" }
     },
     {
         icon: BarChart3,
@@ -103,7 +103,7 @@ const services = [
                 items: ["CERT-In incident reporting", "RBI data localization", "Sector-specific requirements", "Cross-border compliance"]
             }
         ],
-        cta: { label: "Compliance Consultation", href: "#contact" }
+        cta: { label: "Compliance Consultation", href: "/about-contact#contact-form" }
     },
     {
         icon: ClipboardCheck,
@@ -128,7 +128,7 @@ const services = [
                 items: ["Vendor security posture evaluation", "SaaS application security review", "Supply chain security assessment", "Software Bill of Materials (SBOM)"]
             }
         ],
-        cta: { label: "Request Assessment", href: "#contact" }
+        cta: { label: "Request Assessment", href: "/about-contact#contact-form" }
     },
     {
         icon: GraduationCap,
@@ -153,7 +153,7 @@ const services = [
                 items: ["DPDPA implementation training", "ISO 27001 awareness", "SOC 2 trust criteria", "Industry-specific requirements"]
             }
         ],
-        cta: { label: "Explore Training Programs", href: "#contact" }
+        cta: { label: "Explore Training Programs", href: "/about-contact#contact-form" }
     }
 ];
 
@@ -178,8 +178,8 @@ const ServiceCategories = () => {
                                     className="w-full px-8 md:px-12 py-10 flex items-center justify-between text-left focus:outline-none"
                                 >
                                     <div className="flex items-center gap-6">
-                                        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-colors duration-500 ${isOpen ? 'bg-blue-500/20' : 'bg-white/5'}`}>
-                                            <Icon className={isOpen ? 'text-blue-400' : 'text-slate-500'} size={26} />
+                                        <div className={`w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 transition-colors duration-500 ${isOpen ? 'bg-blue-500/10' : 'bg-white/5'}`}>
+                                            <Icon style={isOpen ? { color: '#64ffda' } : {}} className={!isOpen ? 'text-slate-500' : ''} size={26} />
                                         </div>
                                         <div className="text-left">
                                             <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight">{service.title}</h2>

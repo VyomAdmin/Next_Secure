@@ -44,7 +44,7 @@ const Challenge = () => {
                                 className="group p-10 rounded-[2.5rem] bg-[#0D1426]/40 border border-white/5 hover:border-indigo-500/30 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(79,70,229,0.1)]"
                             >
                                 <div className="w-14 h-14 bg-indigo-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                                    <Icon className="text-indigo-400" size={28} />
+                                    <Icon style={{ color: '#64ffda' }} size={28} />
                                 </div>
                                 <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
                                     {challenge.title}

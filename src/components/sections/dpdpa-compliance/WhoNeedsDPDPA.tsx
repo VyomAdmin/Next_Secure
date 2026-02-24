@@ -4,12 +4,12 @@ import Button from '../../ui/Button';
 
 const WhoNeedsDPDPA = () => {
     const list = [
-        "Technology Companies - SaaS, fintech, e-commerce, platforms handling user data",
-        "Professional Services - Consulting, legal, accounting, healthcare managing client information",
-        "Startups Seeking Funding - Investors increasingly require DPDPA compliance evidence",
-        "Companies with International Operations - Cross-border data transfers require specific mechanisms",
-        "Regulated Industries - Banking, insurance, healthcare with existing compliance obligations",
-        "Growing Enterprises - Scaling operations trigger DPDPA obligations and stakeholder requirements"
+        { category: "TECHNOLOGY COMPANIES", detail: "SaaS, fintech, e-commerce, platforms handling user data" },
+        { category: "PROFESSIONAL SERVICES", detail: "Consulting, legal, accounting, healthcare managing client information" },
+        { category: "STARTUPS SEEKING FUNDING", detail: "Investors increasingly require DPDPA compliance evidence" },
+        { category: "COMPANIES WITH INTERNATIONAL OPERATIONS", detail: "Cross-border data transfers require specific mechanisms" },
+        { category: "REGULATED INDUSTRIES", detail: "Banking, insurance, healthcare with existing compliance obligations" },
+        { category: "GROWING ENTERPRISES", detail: "Scaling operations trigger DPDPA obligations and stakeholder requirements" }
     ];
 
     return (
@@ -31,8 +31,10 @@ const WhoNeedsDPDPA = () => {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 mb-16">
                                 {list.map((item, index) => (
                                     <div key={index} className="flex items-start gap-4">
-                                        <CheckCircle2 className="text-indigo-400 flex-shrink-0 mt-1" size={20} />
-                                        <span className="text-slate-300 font-medium leading-[1.5]">{item}</span>
+                                        <CheckCircle2 style={{ color: '#64ffda' }} className="flex-shrink-0 mt-1" size={20} />
+                                        <span className="text-slate-300 font-medium leading-[1.5]">
+                                            <span className="font-black text-white">{item.category}</span>{' — '}{item.detail}
+                                        </span>
                                     </div>
                                 ))}
                             </div>
@@ -48,7 +50,7 @@ const WhoNeedsDPDPA = () => {
                                 </div>
                                 <Button
                                     variant="secondary"
-                                    href="#contact"
+                                    href="/about-contact#contact-form"
                                     className="min-w-[200px] py-4 rounded-xl bg-white text-indigo-950 hover:bg-indigo-50 border-none font-bold"
                                 >
                                     Schedule Assessment

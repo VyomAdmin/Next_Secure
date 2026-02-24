@@ -70,7 +70,7 @@ const DPDPAFAQ = () => {
                                         {faq.question}
                                     </span>
                                     <div className={`w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 transition-transform duration-500 ${openIndex === index ? 'rotate-180 bg-indigo-500/10' : ''}`}>
-                                        <ChevronDown className={`w-5 h-5 ${openIndex === index ? 'text-indigo-400' : 'text-slate-500'}`} />
+                                        <ChevronDown className={`w-5 h-5 ${openIndex === index ? 'text-slate-300' : 'text-slate-500'}`} style={openIndex === index ? { color: '#64ffda' } : {}} />
                                     </div>
                                 </button>
                                 <div
@@ -89,7 +89,7 @@ const DPDPAFAQ = () => {
 
                     <div className="text-center">
                         <Link
-                            href="#contact"
+                            href="/about-contact#contact-form"
                             className="inline-flex items-center gap-3 text-lg font-bold text-indigo-400 hover:text-white transition-colors group"
                         >
                             Don&apos;t see your question? Schedule a consultation

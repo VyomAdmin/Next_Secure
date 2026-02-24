@@ -30,7 +30,7 @@ const DPDPAFinalCTA = () => {
                     <div className="mb-16">
                         <Button
                             variant="secondary"
-                            href="#contact"
+                            href="/about-contact#contact-form"
                             className="min-w-[300px] justify-center text-sm py-5 px-10 uppercase tracking-widest bg-white text-indigo-950 hover:bg-indigo-50 border-none rounded-2xl shadow-[0_0_60px_rgba(255,255,255,0.25)] font-black group"
                         >
                             Schedule Free DPDPA Assessment
