@@ -196,3 +196,8 @@ html {
   /* This works perfectly on mobile Chrome and Safari */
   scroll-padding-top: 80px;
 }
+
+/* Default Lucide icon color across the site */
+.lucide {
+  color: #64ffda;
+}

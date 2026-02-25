@@ -54,7 +54,7 @@ const DPDPASpotlight = () => {
                 <div className="flex flex-col items-center gap-6">
                     <Button
                         variant="secondary"
-                        href="#contact"
+                        href="/services"
                         className="text-sm py-4 px-10 bg-white/15 text-white border-white/30 rounded-2xl font-bold shadow-[0_12px_28px_rgba(0,0,0,0.25)] backdrop-blur-md hover:bg-white/22 hover:shadow-[0_0_22px_rgba(255,255,255,0.16)] whitespace-nowrap"
                     >
                         Explore Services
