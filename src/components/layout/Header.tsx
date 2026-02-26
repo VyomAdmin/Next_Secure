@@ -100,7 +100,7 @@ const Header = () => {
                             )}
                         </div>
                     ))}
-                    <Button variant="outline" href="/about-contact#contact-form" className="ml-2 py-4 px-8 text-[12px] !font-black tracking-[0.18em] bg-white !text-black border-none hover:bg-slate-100 rounded-full shadow-lg whitespace-nowrap">
+                    <Button variant="primary" href="/about-contact#contact-form" className="ml-2 py-4 px-8 text-[12px] !font-black font-bold tracking-[0.18em] bg-white !text-black border-none hover:bg-slate-100 rounded-full shadow-lg whitespace-nowrap">
                         SCHEDULE CONSULTATION
                     </Button>
                 </nav>
@@ -143,7 +143,7 @@ const Header = () => {
                                 )}
                             </div>
                         ))}
-                        <Button variant="outline" href="/about-contact#contact-form" className="mt-6 w-full justify-center py-5 bg-white text-black-900 border-none font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Button variant="primary" href="/about-contact#contact-form" className="mt-6 w-full justify-center py-5 font-bold bg-white text-black-900 border-none font-bold" onClick={() => setIsMobileMenuOpen(false)}>
                             SCHEDULE CONSULTATION
                         </Button>
                     </nav>
