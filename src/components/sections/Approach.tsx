@@ -60,7 +60,7 @@ const Approach = () => {
                                     </div>
 
                                     {/* Content Card */}
-                                    <div className={`w-full md:w-[42%] ${isEven ? 'md:text-left' : 'md:text-right'}`}>
+                                    <div className={`w-full md:w-[42%] ${isEven ? 'md:text-left md:ml-12' : 'md:text-right md:mr-12'}`}>
                                         <div className="bg-[#0D1426]/50 border border-white/5 p-10 rounded-[2.5rem] hover:border-blue-500/20 transition-all">
                                             <div className={`flex items-center gap-4 mb-6 ${isEven ? 'flex-row' : 'flex-row-reverse'}`}>
                                                 <div className="w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center">

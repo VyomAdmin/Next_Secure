@@ -16,37 +16,37 @@ const CoreServices = () => {
             title: "Privacy & Data Protection",
             description: "GDPR, DPDPA, and comprehensive privacy program implementation with systematic frameworks.",
             icon: ShieldCheck,
-            link: "/about-contact#about"
+            link: "/services"
         },
         {
             title: "Cybersecurity Consulting",
             description: "Risk Assessment , Compliance and Threat mitigation.",
             icon: Network,
-            link: "/about-contact#about"
+            link: "/services"
         },
         {
             title: "Audits & Assessments",
             description: "Independent validation of security posture, code quality, and architectural decisions.",
             icon: ScanSearch,
-            link: "/about-contact#about"
+            link: "/services"
         },
         {
             title: "Training & Enablement",
             description: "Role-based training, awareness programs, and executive education to build internal capability.",
             icon: GraduationCap,
-            link: "/about-contact#about"
+            link: "/services"
         },
         {
             title: "Compliance & Risk Management",
             description: "Governance, Risk & Compliance through structured, intelligence-driven programs.",
             icon: CheckSquare,
-            link: "/about-contact#about"
+            link: "/services"
         },
         {
             title: "AI Governance & Ethics",
             description: "Responsible AI frameworks, risk assessments, and regulatory alignment for emerging technologies.",
             icon: BrainCircuit,
-            link: "/about-contact#about"
+            link: "/services"
         }
     ];
 
@@ -89,7 +89,7 @@ const CoreServices = () => {
                 <div className="flex justify-center mt-14">
                     <Button
                         variant="secondary"
-                        href="/about-contact#about"
+                        href="/services"
                         className="text-sm py-4 px-10 bg-white/15 text-white border-white/30 rounded-2xl font-bold shadow-[0_12px_28px_rgba(0,0,0,0.25)] backdrop-blur-md hover:bg-white/22 hover:shadow-[0_0_22px_rgba(255,255,255,0.16)] whitespace-nowrap"
                     >
                         View All Services <ArrowRight size={16} className="ml-2" />

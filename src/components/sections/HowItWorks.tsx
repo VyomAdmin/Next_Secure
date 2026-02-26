@@ -1,4 +1,4 @@
-import { FileText, Calendar, Rocket, ChevronRight, ChevronLeft } from 'lucide-react';
+import { FileText, Calendar, Rocket, ChevronLeft } from 'lucide-react';
 
 const HowItWorks = () => {
     const steps = [
@@ -60,8 +60,8 @@ const HowItWorks = () => {
 
                                 {/* Connector arrow for desktop */}
                                 {index < steps.length - 1 && (
-                                    <div className="hidden lg:block absolute top-1/2 -right-4 -translate-y-1/2 opacity-20 transform scale-x-[-1]">
-                                        <ChevronLeft size={32} className="text-blue-500" />
+                                    <div className="hidden lg:block absolute top-1/2 -right-6 -translate-y-1/2 opacity-60 transform scale-x-[-1]">
+                                        <ChevronLeft size={60} className="text-blue-400" />
                                     </div>
                                 )}
                             </div>

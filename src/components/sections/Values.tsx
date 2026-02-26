@@ -42,13 +42,13 @@ const Values = () => {
                     </p>
                 </div>
 
-                <div className="max-w-4xl mx-auto space-y-4">
+                <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-4">
                     {values.map((value, index) => {
                         const Icon = value.icon;
                         return (
                             <div
                                 key={index}
-                                className="group bg-[#0D1426]/50 border border-white/5 p-6 md:p-8 rounded-2xl hover:border-blue-500/20 transition-all duration-500 flex flex-col md:flex-row items-center gap-6 md:gap-10"
+                                className="group h-full bg-[#0D1426]/50 border border-white/5 p-6 md:p-8 rounded-2xl hover:border-blue-500/20 transition-all duration-500 flex flex-col md:flex-row items-center gap-6 md:gap-10"
                             >
                                 <div className="w-12 h-12 bg-blue-500/5 rounded-xl flex items-center justify-center shrink-0 group-hover:bg-blue-500/10 transition-colors">
                                     <Icon className="w-6 h-6 text-blue-400/70" />

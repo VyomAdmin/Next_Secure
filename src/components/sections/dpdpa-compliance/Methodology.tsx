@@ -66,7 +66,7 @@ const Methodology = () => {
                     <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase font-sans">
                         Intelligence-Driven DPDPA Implementation
                     </h2>
-                    <p className="text-xl text-indigo-200/60 leading-relaxed font-bold tracking-wide uppercase">
+                    <p className="text-xl text-indigo-200/60 leading-relaxed font-bold tracking-wide font-sans">
                         We don&apos;t just help you comply, we help you understand and build systems you can sustain.
                     </p>
                 </div>
