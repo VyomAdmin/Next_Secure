@@ -204,7 +204,7 @@ const ServiceCategories = () => {
                                         </div>
                                         <div className="text-left">
                                             <h2 className="text-2xl md:text-3xl font-black text-white tracking-tight">{service.title}</h2>
-                                            <p className="text-sm text-slate-500 font-medium mt-1 italic">{service.tagline}</p>
+                                            <p className="text-sm text-slate-500 font-medium mt-[0.0625rem] italic">{service.tagline}</p>
                                         </div>
                                     </div>
                                     <div className={`w-10 h-10 rounded-xl bg-white/5 flex items-center justify-center shrink-0 ml-4 transition-transform duration-500 ${isOpen ? 'rotate-180 bg-blue-500/10' : ''}`}>

@@ -59,20 +59,20 @@ const Hero = () => {
                     </div>
 
                     {/* Quick Stats Bar */}
-                    <div className="inline-flex flex-wrap items-center justify-center gap-x-12 gap-y-6 px-10 py-6 bg-white/5 border border-white/10 rounded-[2rem] backdrop-blur-xl">
+                    <div className="relative left-1/2 -translate-x-1/2 flex w-[min(92vw,51rem)] flex-wrap items-center justify-center gap-x-28 gap-y-7 px-12 py-7 bg-white/5 border border-white/10 rounded-[2rem] backdrop-blur-xl">
                         <div className="flex flex-col items-center">
-                            <span className="text-2xl font-black text-white tracking-tighter">₹250Cr</span>
-                            <span className="text-[10px] font-bold text-indigo-200/60 uppercase tracking-widest">Maximum Penalties</span>
+                            <span className="text-[2em] font-black text-[#64ffda] tracking-tighter">₹250Cr</span>
+                            <span className="text-xs font-bold text-[#64ffda] uppercase tracking-widest">Maximum Penalties</span>
                         </div>
-                        <div className="w-[1px] h-10 bg-white/10 hidden md:block"></div>
+                        
                         <div className="flex flex-col items-center">
-                            <span className="text-2xl font-black text-white tracking-tighter">2024</span>
-                            <span className="text-[10px] font-bold text-indigo-200/60 uppercase tracking-widest">Implementation</span>
+                            <span className="text-[2rem] font-black text-[#64ffda] tracking-tighter">2024</span>
+                            <span className="text-xs font-bold text-[#64ffda] uppercase tracking-widest">Implementation</span>
                         </div>
-                        <div className="w-[1px] h-10 bg-white/10 hidden md:block"></div>
+                        
                         <div className="flex flex-col items-center">
-                            <span className="text-2xl font-black text-white tracking-tighter">GLOBAL</span>
-                            <span className="text-[10px] font-bold text-indigo-200/60 uppercase tracking-widest">Cross-border Impact</span>
+                            <span className="text-[2rem] font-black text-[#64ffda] tracking-tighter">GLOBAL</span>
+                            <span className="text-xs font-bold text-[#64ffda] uppercase tracking-widest">Cross-border Impact</span>
                         </div>
                     </div>
                 </div>

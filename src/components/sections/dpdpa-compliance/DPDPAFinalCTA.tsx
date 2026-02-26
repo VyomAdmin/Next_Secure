@@ -53,13 +53,13 @@ const DPDPAFinalCTA = () => {
                         <div className="hidden sm:block w-[1px] h-8 bg-white/10"></div>
 
                         <a
-                            href="tel:+91XXXXXXXXXX"
+                            href="tel:+919953562762"
                             className="flex items-center gap-3 text-indigo-200/70 hover:text-white transition-colors group"
                         >
                             <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                                 <Phone size={18} />
                             </div>
-                            <span className="font-medium text-sm">+91-XXX-XXX-XXXX</span>
+                            <span className="font-medium text-sm">+91-995-356-2762</span>
                         </a>
 
                         <div className="hidden sm:block w-[1px] h-8 bg-white/10"></div>
