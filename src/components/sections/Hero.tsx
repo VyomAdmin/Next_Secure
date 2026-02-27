@@ -86,8 +86,8 @@ const Hero = () => {
                             <Image
                                 src="/images/Valinz-Logo.png"
                                 alt="ValinzTech logo"
-                                width={400}
-                                height={400}
+                                width={600}
+                                height={600}
                                 priority
                                 className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
                             />

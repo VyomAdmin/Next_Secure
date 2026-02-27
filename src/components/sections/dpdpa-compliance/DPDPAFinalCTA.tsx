@@ -41,13 +41,13 @@ const DPDPAFinalCTA = () => {
                     {/* Secondary contact options */}
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-14">
                         <a
-                            href="mailto:dpdpa@valinztech.com"
+                            href="mailto:contact@valinztech.com"
                             className="flex items-center gap-3 text-indigo-200/70 hover:text-white transition-colors group"
                         >
                             <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                                 <Mail size={18} />
                             </div>
-                            <span className="font-medium text-sm">dpdpa@valinztech.com</span>
+                            <span className="font-medium text-sm">contact@valinztech.com</span>
                         </a>
 
                         <div className="hidden sm:block w-[1px] h-8 bg-white/10"></div>

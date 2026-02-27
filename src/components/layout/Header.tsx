@@ -100,9 +100,12 @@ const Header = () => {
                             )}
                         </div>
                     ))}
-                    <Button variant="primary" href="/about-contact#contact-form" className="ml-2 py-4 px-8 text-[12px] !font-black font-bold tracking-[0.18em] bg-white !text-black border-none hover:bg-slate-100 rounded-full shadow-lg whitespace-nowrap">
-                        SCHEDULE CONSULTATION
-                    </Button>
+                    <Button   variant="primary" 
+                            href="/about-contact#contact-form" 
+                            className="ml-2 py-4 px-10 text-[14px] tracking-[0.1em] bg-[#0052CC] !text-white border-none hover:bg-[#0041a3] rounded-full shadow-xl transition-all duration-200 whitespace-nowrap"
+                            >
+                                SCHEDULE CONSULTATION
+                            </Button>
                 </nav>
 
                 {/* Mobile Menu Button */}
