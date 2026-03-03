@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
 import Logo from '../ui/Logo';
 
@@ -27,22 +27,11 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const routeNavigation: NavItem[] = [
+    const navigation: NavItem[] = [
         { name: 'Home', href: '/' },
-        { name: 'About & Contact', href: '/about-contact' },
-    ];
-
-    const sectionNavigation: NavItem[] = [
-        {
-            name: 'Services',
-            href: pathname === '/' ? '#dpdpa' : '/services',
-            dropdown: [
-                { name: 'All Services', href: '/services' },
-                { name: 'DPDPA Compliance', href: '/dpdpa-compliance' },
-                { name: 'Core Services', href: pathname === '/' ? '#dpdpa' : '/services#service-categories' },
-                { name: 'Technical Audits', href: '/services#service-categories' }
-            ]
-        }
+        { name: 'Services', href: '/services' },
+        { name: 'DPDPA', href: '/dpdpa-compliance' },
+        { name: 'About Us', href: '/about-contact' },
     ];
 
     return (
@@ -57,18 +46,7 @@ const Header = () => {
 
                 {/* Desktop Navigation */}
                 <nav className="hidden lg:flex items-center gap-10">
-                    {routeNavigation.map((item) => (
-                        <Link
-                            key={item.name}
-                            href={item.href}
-                            className={`text-[10px] font-black tracking-[0.2em] uppercase transition-colors ${pathname === item.href ? 'text-white' : 'text-slate-400 hover:text-white'
-                                }`}
-                        >
-                            {item.name}
-                        </Link>
-                    ))}
-
-                    {sectionNavigation.map((item) => (
+                    {navigation.map((item) => (
                         <div
                             key={item.name}
                             className="relative group"
@@ -77,10 +55,9 @@ const Header = () => {
                         >
                             <Link
                                 href={item.href}
-                                className="text-[10px] font-black tracking-[0.2em] uppercase text-slate-400 hover:text-white transition-colors flex items-center gap-2"
+                                className={`text-[10px] font-black tracking-[0.2em] uppercase transition-colors flex items-center gap-2 ${pathname === item.href ? 'text-white' : 'text-slate-400 hover:text-white'}`}
                             >
                                 {item.name}
-                                {item.dropdown && <ChevronRight size={10} className={`chevron-transition ${activeDropdown === item.name ? 'rotate-90' : ''}`} />}
                             </Link>
 
                             {item.dropdown && activeDropdown === item.name && (
@@ -121,7 +98,7 @@ const Header = () => {
             {isMobileMenuOpen && (
                 <div className="lg:hidden absolute top-full left-0 w-full bg-[#020617] border-b border-white/5 py-10 shadow-2xl animate-in fade-in slide-in-from-top-4">
                     <nav className="flex flex-col px-6 gap-8">
-                        {[...routeNavigation, ...sectionNavigation].map((item) => (
+                        {navigation.map((item) => (
                             <div key={item.name} className="space-y-6">
                                 <Link
                                     href={item.href}

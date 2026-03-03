@@ -72,15 +72,15 @@ const AboutHero = () => {
                     <div className="mt-16 flex flex-wrap justify-center gap-x-12 gap-y-4 text-sm font-bold uppercase tracking-[0.25em] text-slate-500">
                         <span className="flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]"></span>
-                            Confident
+                            Trust
                         </span>
                         <span className="flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
-                            Modern
+                            Intelligence
                         </span>
                         <span className="flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-blue-300"></span>
-                            Intelligent
+                            Compliance
                         </span>
                     </div>
                 </div>

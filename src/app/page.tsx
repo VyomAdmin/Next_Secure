@@ -3,12 +3,11 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
-import DPDPASpotlight from '@/components/sections/DPDPASpotlight';
 import CoreServices from '@/components/sections/CoreServices';
 import Differentiation from '@/components/sections/Differentiation';
 import Audience from '@/components/sections/Audience';
-import TrustCredibility from '@/components/sections/TrustCredibility';
 import FinalCTA from '@/components/sections/FinalCTA';
+import EngagementModels from '@/components/sections/services/EngagementModels';
 
 export const metadata: Metadata = {
   title: 'DPDPA & Technology Governance Consulting',
@@ -60,11 +59,10 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
         <Hero />
-        <DPDPASpotlight />
         <CoreServices />
+        <EngagementModels />
         <Differentiation />
         <Audience />
-        <TrustCredibility />
         <FinalCTA />
       </main>
       <Footer />

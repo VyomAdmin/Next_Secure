@@ -37,24 +37,7 @@ const ServicesHero = () => {
                         Intelligence-driven consulting across cybersecurity, privacy, AI governance, and compliance—building frameworks that bring order to complexity.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button
-                            variant="primary"
-                            href="/about-contact#contact-form"
-                            className="min-w-[220px] justify-center bg-blue-600 hover:bg-blue-500 text-white border-none py-4 px-10 rounded-full font-bold tracking-wide group"
-                        >
-                            Schedule Consultation
-                            <ChevronRight size={16} className="ml-2 inline group-hover:translate-x-1 transition-transform" />
-                        </Button>
-                        <Button
-                            variant="secondary"
-                            href="/guides/services-overview"
-                            className="min-w-[220px] justify-center bg-white/5 hover:bg-white/10 text-white border-white/10 py-4 px-10 rounded-full font-bold tracking-wide"
-                        >
-                            Download Services Overview
-                        </Button>
-                    </div>
-                </div>
+                               </div>
             </div>
 
             <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050A18] to-transparent pointer-events-none"></div>

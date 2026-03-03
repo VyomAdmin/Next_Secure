@@ -1,10 +1,8 @@
-import React from 'react';
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import AboutHero from '@/components/sections/AboutHero';
 import Mission from '@/components/sections/Mission';
-import Approach from '@/components/sections/Approach';
 import TeamExpertise from '@/components/sections/TeamExpertise';
 import Values from '@/components/sections/Values';
 import Differentiation from '@/components/sections/Differentiation';
@@ -47,10 +45,6 @@ export default function AboutPage() {
 
                 <div id="mission">
                     <Mission />
-                </div>
-
-                <div id="approach">
-                    <Approach />
                 </div>
 
                 <div id="expertise">

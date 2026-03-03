@@ -53,7 +53,7 @@ const DPDPAFinalCTA = () => {
                         <div className="hidden sm:block w-[1px] h-8 bg-white/10"></div>
 
                         <a
-                            href="tel:+919953562762"
+                            href="https://wa.me/919953562762"
                             className="flex items-center gap-3 text-indigo-200/70 hover:text-white transition-colors group"
                         >
                             <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
@@ -65,7 +65,7 @@ const DPDPAFinalCTA = () => {
                         <div className="hidden sm:block w-[1px] h-8 bg-white/10"></div>
 
                         <a
-                            href="https://wa.me/91XXXXXXXXXX"
+                            href="https://wa.me/919953562762"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center gap-3 text-indigo-200/70 hover:text-white transition-colors group"

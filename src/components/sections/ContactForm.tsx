@@ -14,8 +14,19 @@ const ContactForm = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        // Form submission logic here
-        console.log('Form submitted:', formData);
+        const subject = encodeURIComponent(`Website Inquiry from ${formData.name || 'Prospect'}`);
+        const body = encodeURIComponent(
+            [
+                `Name: ${formData.name}`,
+                `Email: ${formData.email}`,
+                `Company: ${formData.company || 'N/A'}`,
+                `Phone: ${formData.phone || 'N/A'}`,
+                '',
+                'Message:',
+                formData.message,
+            ].join('\n')
+        );
+        window.location.href = `mailto:contact@valinztech.com?subject=${subject}&body=${body}`;
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Heart, Eye, Handshake, Scale, Zap } from 'lucide-react';
+import { Heart, Eye, Handshake, Zap } from 'lucide-react';
 
 const Values = () => {
     const values = [
         {
             icon: Heart,
             title: "Integrity",
-            description: "Unwavering commitment to ethical practices and transparent governance."
+            description: "Unwavering commitment to ethical practices."
         },
         {
             icon: Eye,
@@ -19,14 +19,9 @@ const Values = () => {
             description: "Collaborative approach that treats your success as our mission."
         },
         {
-            icon: Scale,
-            title: "Balance",
-            description: "Practical solutions that balance compliance rigor with business pragmatism."
-        },
-        {
             icon: Zap,
             title: "Innovation",
-            description: "Continuous improvement and adoption of best practices in governance."
+            description: "Continuous improvement and adoption of best practices."
         }
     ];
 

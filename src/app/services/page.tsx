@@ -6,7 +6,6 @@ import ServicesHero from '@/components/sections/services/ServicesHero';
 import ServiceCategories from '@/components/sections/services/ServiceCategories';
 import IntegratedGovernance from '@/components/sections/services/IntegratedGovernance';
 import EngagementModels from '@/components/sections/services/EngagementModels';
-import WhyValinzTech from '@/components/sections/services/WhyValinzTech';
 import ServicesFinalCTA from '@/components/sections/services/ServicesFinalCTA';
 
 export const metadata: Metadata = {
@@ -27,7 +26,6 @@ export default function ServicesPage() {
                 <ServiceCategories />
                 <IntegratedGovernance />
                 <EngagementModels />
-                <WhyValinzTech />
                 <ServicesFinalCTA />
             </main>
             <Footer />

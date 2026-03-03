@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Mission from '@/components/sections/Mission';
-import Approach from '@/components/sections/Approach';
 import TeamExpertise from '@/components/sections/TeamExpertise';
 import Values from '@/components/sections/Values';
 import SectionDivider from '@/components/sections/SectionDivider';
@@ -43,7 +42,6 @@ export default function AboutContactPage() {
                 <div id="about">
                     <AboutHero />
                     <Mission />
-                    <Approach />
                     <TeamExpertise />
                     <Values />
                 </div>
