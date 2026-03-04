@@ -11,22 +11,45 @@ const ContactForm = () => {
         phone: '',
         message: ''
     });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitMessage, setSubmitMessage] = useState('');
+    const [submitError, setSubmitError] = useState(false);
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        const subject = encodeURIComponent(`Website Inquiry from ${formData.name || 'Prospect'}`);
-        const body = encodeURIComponent(
-            [
-                `Name: ${formData.name}`,
-                `Email: ${formData.email}`,
-                `Company: ${formData.company || 'N/A'}`,
-                `Phone: ${formData.phone || 'N/A'}`,
-                '',
-                'Message:',
-                formData.message,
-            ].join('\n')
-        );
-        window.location.href = `mailto:contact@valinztech.com?subject=${subject}&body=${body}`;
+        setIsSubmitting(true);
+        setSubmitMessage('');
+        setSubmitError(false);
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const data = await response.json();
+            if (!response.ok) {
+                throw new Error(data?.error || 'Unable to send message right now.');
+            }
+
+            setSubmitMessage('Message sent successfully. We will get back to you shortly.');
+            setFormData({
+                name: '',
+                email: '',
+                company: '',
+                phone: '',
+                message: '',
+            });
+        } catch (error) {
+            const message = error instanceof Error ? error.message : 'Unable to send message right now.';
+            setSubmitError(true);
+            setSubmitMessage(message);
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -130,9 +153,19 @@ const ContactForm = () => {
                             />
                         </div>
 
-                        <Button type="submit" variant="primary" className="w-full text-xs py-5 uppercase tracking-[0.2em] font-bold bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 rounded-2xl transition-all duration-300">
-                            Send Secure Message
+                        <Button
+                            type="submit"
+                            variant="primary"
+                            disabled={isSubmitting}
+                            className="w-full text-xs py-5 uppercase tracking-[0.2em] font-bold bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 rounded-2xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                        >
+                            {isSubmitting ? 'Sending...' : 'Send Secure Message'}
                         </Button>
+                        {submitMessage && (
+                            <p className={`mt-4 text-sm font-medium ${submitError ? 'text-red-400' : 'text-[#64ffda]'}`}>
+                                {submitMessage}
+                            </p>
+                        )}
                     </form>
                 </div>
             </div>

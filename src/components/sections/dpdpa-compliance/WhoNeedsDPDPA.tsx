@@ -39,19 +39,19 @@ const WhoNeedsDPDPA = () => {
                                 ))}
                             </div>
 
-                            <div className="p-8 md:p-10 rounded-[2.5rem] bg-gradient-to-r from-indigo-500/20 to-violet-500/20 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div className="p-8 md:p-10 rounded-[2.5rem] bg-white/5 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
                                 <div className="text-center md:text-left">
                                     <p className="text-xl md:text-2xl font-bold text-white mb-2 leading-tight">
                                         Not sure if DPDPA applies to you?
                                     </p>
-                                    <p className="text-indigo-200/70 font-medium">
+                                    <p className="text-slate-400 font-medium">
                                         Schedule a free 30-minute consultation to assess your obligations.
                                     </p>
                                 </div>
                                 <Button
                                     variant="secondary"
                                     href="/about-contact#contact-form"
-                                    className="min-w-[200px] py-4 rounded-xl bg-white text-indigo-950 hover:bg-indigo-50 border-none font-bold"
+                                    className="min-w-[200px] py-4 rounded-xl bg-white text-slate-900 hover:bg-slate-100 border-none font-bold"
                                 >
                                     Schedule Assessment
                                 </Button>

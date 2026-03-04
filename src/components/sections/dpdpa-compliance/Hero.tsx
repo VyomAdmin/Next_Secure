@@ -37,44 +37,6 @@ const Hero = () => {
                         The Digital Personal Data Protection Act (DPDPA) 2023 establishes comprehensive obligations for organizations processing personal data of Indian citizens. We help you build compliant, sustainable governance frameworks, transforming regulatory requirements into strategic advantage.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row gap-4 mb-16 justify-center">
-                        <Button
-                            variant="secondary"
-                            href="/about-contact#contact-form"
-                            className="min-w-[240px] justify-center text-sm py-4 px-8 uppercase tracking-widest bg-white/20 border-white/35 text-white hover:bg-white/28 rounded-2xl shadow-[0_0_0_1px_rgba(255,255,255,0.12)_inset,0_10px_30px_rgba(61,23,164,0.25)] hover:shadow-[0_0_24px_rgba(255,255,255,0.28)] backdrop-blur-md group"
-                        >
-                            Schedule DPDPA Assessment{' '}
-                            <ChevronRight
-                                size={16}
-                                className="ml-2 inline group-hover:translate-x-1 transition-transform"
-                            />
-                        </Button>
-                        <Button
-                            variant="secondary"
-                            href="/guides/dpdpa-guide"
-                            className="min-w-[240px] justify-center text-sm py-4 px-8 uppercase tracking-widest bg-white/15 border-white/30 text-white hover:bg-white/22 rounded-2xl shadow-[0_8px_24px_rgba(9,10,35,0.28)] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] backdrop-blur-md"
-                        >
-                            Download DPDPA Guide
-                        </Button>
-                    </div>
-
-                    {/* Quick Stats Bar */}
-                    <div className="relative left-1/2 -translate-x-1/2 flex w-[min(92vw,51rem)] flex-wrap items-center justify-center gap-x-28 gap-y-7 px-12 py-7 bg-white/5 border border-white/10 rounded-[2rem] backdrop-blur-xl">
-                        <div className="flex flex-col items-center">
-                            <span className="text-[2em] font-black text-[#64ffda] tracking-tighter">₹250Cr</span>
-                            <span className="text-xs font-bold text-[#64ffda] uppercase tracking-widest">Maximum Penalties</span>
-                        </div>
-                        
-                        <div className="flex flex-col items-center">
-                            <span className="text-[2rem] font-black text-[#64ffda] tracking-tighter">2024</span>
-                            <span className="text-xs font-bold text-[#64ffda] uppercase tracking-widest">Implementation</span>
-                        </div>
-                        
-                        <div className="flex flex-col items-center">
-                            <span className="text-[2rem] font-black text-[#64ffda] tracking-tighter">GLOBAL</span>
-                            <span className="text-xs font-bold text-[#64ffda] uppercase tracking-widest">Cross-border Impact</span>
-                        </div>
-                    </div>
                 </div>
             </div>
 

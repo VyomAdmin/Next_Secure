@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
@@ -8,7 +7,6 @@ import Methodology from '@/components/sections/dpdpa-compliance/Methodology';
 import Coverage from '@/components/sections/dpdpa-compliance/Coverage';
 import WhyDPDPA from '@/components/sections/dpdpa-compliance/WhyDPDPA';
 import WhoNeedsDPDPA from '@/components/sections/dpdpa-compliance/WhoNeedsDPDPA';
-import Resources from '@/components/sections/dpdpa-compliance/Resources';
 import DPDPAFAQ from '@/components/sections/dpdpa-compliance/DPDPAFAQ';
 import DPDPAFinalCTA from '@/components/sections/dpdpa-compliance/DPDPAFinalCTA';
 
@@ -32,7 +30,6 @@ export default function DPDPACompliancePage() {
         <Coverage />
         <WhyDPDPA />
         <WhoNeedsDPDPA />
-        <Resources />
         <DPDPAFAQ />
         <DPDPAFinalCTA />
       </main>
