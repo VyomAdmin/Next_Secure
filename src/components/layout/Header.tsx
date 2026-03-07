@@ -41,7 +41,7 @@ const Header = () => {
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="flex items-center">
-                    <Logo className="h-8 w-auto" variant="dark" />
+                    <Logo className="h-[42.24px] w-auto" variant="dark" />
                 </Link>
 
                 {/* Desktop Navigation */}

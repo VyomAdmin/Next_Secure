@@ -43,6 +43,25 @@ Notes:
 - In production, use a verified sending domain in Resend for better deliverability.
 - Keep `reply_to` as the submitter email so you can reply directly from your inbox.
 
+## Favicon setup
+
+Favicon is already configured in `src/app/layout.tsx` via:
+
+- `/favicon.ico`
+- `/icon.svg`
+
+To use your own favicon image, replace files at:
+
+- `public/favicon.ico` (primary browser favicon, recommended 32x32 and 48x48 inside ICO)
+- `src/app/icon.svg` (optional SVG fallback for modern browsers)
+
+Recommended naming:
+
+- `favicon.ico` in `public/`
+- `icon.svg` in `src/app/`
+
+After replacing, restart `npm run dev` or hard-refresh the browser (`Ctrl+F5`) if favicon is cached.
+
 ## Cloudflare deployment
 
 When deployed on Cloudflare, add the same variables as project secrets/environment variables:
