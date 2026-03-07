@@ -41,10 +41,9 @@ export const metadata: Metadata = {
       "Technology governance, DPDPA readiness, privacy, compliance, and risk advisory support.",
   },
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
+    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
   },
 };
 
