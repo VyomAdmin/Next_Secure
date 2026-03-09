@@ -2,6 +2,9 @@
 
 import React, { useState } from 'react';
 import Button from '../ui/Button';
+import { validatePhoneNumber, validateProfessionalEmail } from '@/lib/contactValidation';
+
+type FormErrors = Partial<Record<'email' | 'phone', string>>;
 
 const ContactForm = () => {
     const [formData, setFormData] = useState({
@@ -14,12 +17,33 @@ const ContactForm = () => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
     const [submitError, setSubmitError] = useState(false);
+    const [formErrors, setFormErrors] = useState<FormErrors>({});
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+        const nextErrors: FormErrors = {};
+        const emailError = validateProfessionalEmail(formData.email);
+        const phoneError = validatePhoneNumber(formData.phone);
+
+        if (emailError) {
+            nextErrors.email = emailError;
+        }
+
+        if (phoneError) {
+            nextErrors.phone = phoneError;
+        }
+
+        if (Object.keys(nextErrors).length > 0) {
+            setFormErrors(nextErrors);
+            setSubmitError(true);
+            setSubmitMessage(emailError || phoneError || 'Please correct the highlighted fields.');
+            return;
+        }
+
         setIsSubmitting(true);
         setSubmitMessage('');
         setSubmitError(false);
+        setFormErrors({});
 
         try {
             const response = await fetch('/api/contact', {
@@ -53,10 +77,26 @@ const ContactForm = () => {
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: value
         });
+
+        if (name === 'email') {
+            setFormErrors((current) => ({
+                ...current,
+                email: value ? validateProfessionalEmail(value) || '' : '',
+            }));
+        }
+
+        if (name === 'phone') {
+            setFormErrors((current) => ({
+                ...current,
+                phone: value ? validatePhoneNumber(value) || '' : '',
+            }));
+        }
     };
 
     return (
@@ -100,9 +140,10 @@ const ContactForm = () => {
                                     required
                                     value={formData.email}
                                     onChange={handleChange}
-                                    className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-slate-600 focus:outline-none focus:border-blue-500/50 transition-all font-medium"
+                                    className={`w-full px-6 py-4 bg-white/5 border rounded-2xl text-white placeholder-slate-600 focus:outline-none transition-all font-medium ${formErrors.email ? 'border-red-400/70 focus:border-red-400' : 'border-white/10 focus:border-blue-500/50'}`}
                                     placeholder="john@company.com"
                                 />
+                                {formErrors.email && <p className="text-sm text-red-400">{formErrors.email}</p>}
                             </div>
                         </div>
 
@@ -131,9 +172,11 @@ const ContactForm = () => {
                                     name="phone"
                                     value={formData.phone}
                                     onChange={handleChange}
-                                    className="w-full px-6 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-slate-600 focus:outline-none focus:border-blue-500/50 transition-all font-medium"
+                                    className={`w-full px-6 py-4 bg-white/5 border rounded-2xl text-white placeholder-slate-600 focus:outline-none transition-all font-medium ${formErrors.phone ? 'border-red-400/70 focus:border-red-400' : 'border-white/10 focus:border-blue-500/50'}`}
                                     placeholder="+91 99535 62762"
+                                    inputMode="tel"
                                 />
+                                {formErrors.phone && <p className="text-sm text-red-400">{formErrors.phone}</p>}
                             </div>
                         </div>
 

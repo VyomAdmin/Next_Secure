@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { validatePhoneNumber, validateProfessionalEmail } from '@/lib/contactValidation';
 
 export const runtime = 'edge';
 
@@ -9,8 +10,6 @@ type ContactPayload = {
     phone?: string;
     message?: string;
 };
-
-const isValidEmail = (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 
 export async function POST(request: Request) {
     try {
@@ -28,8 +27,14 @@ export async function POST(request: Request) {
             );
         }
 
-        if (!isValidEmail(email)) {
-            return NextResponse.json({ error: 'Please provide a valid email.' }, { status: 400 });
+        const emailError = validateProfessionalEmail(email);
+        if (emailError) {
+            return NextResponse.json({ error: emailError }, { status: 400 });
+        }
+
+        const phoneError = validatePhoneNumber(phone);
+        if (phoneError) {
+            return NextResponse.json({ error: phoneError }, { status: 400 });
         }
 
         const resendApiKey = process.env.RESEND_API_KEY;
