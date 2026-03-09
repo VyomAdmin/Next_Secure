@@ -1,20 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
-
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  weight: ["500", "600", "700"],
-  display: "swap"
-});
-
-const hankenGrotesk = Hanken_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-hanken-grotesk",
-  weight: ["400", "500"],
-  display: "swap"
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://valinztech.com"),
@@ -56,7 +41,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} ${hankenGrotesk.variable} font-sans`}>
+      <body className="font-sans">
         {children}
         <StickyMobileCTA />
       </body>

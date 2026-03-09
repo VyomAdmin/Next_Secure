@@ -11,7 +11,7 @@ const FinalCTA = () => {
                         Ready to Build Governance Frameworks That Last?
                     </h2>
                     <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-16 font-medium leading-relaxed">
-                        Secure your organization's future with intelligence-driven compliance and expert technology governance.
+                        Secure your organization&apos;s future with intelligence-driven compliance and expert technology governance.
                     </p>
 
                     <div className="flex flex-col items-center gap-12">

@@ -14,7 +14,7 @@ import ContactForm from '@/components/sections/ContactForm';
 import Location from '@/components/sections/Location';
 import FAQ from '@/components/sections/FAQ';
 import FinalCTA from '@/components/sections/FinalCTA';
-import StickyMobileCTA from '@/components/ui/StickyMobileCTA';
+import { aboutFaqSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
     title: 'About ValinzTech',
@@ -38,6 +38,10 @@ export default function AboutPage() {
         <div className="flex flex-col min-h-screen bg-[#050A18]">
             <Header />
             <main className="flex-grow pt-0">
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutFaqSchema) }}
+                />
                 {/* AUTHORITY & TRUST BUILDING HALF */}
                 <div id="about-hero">
                     <AboutHero />
@@ -74,7 +78,6 @@ export default function AboutPage() {
                 </div>
             </main>
             <Footer />
-            <StickyMobileCTA />
         </div>
     );
 }

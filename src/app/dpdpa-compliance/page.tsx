@@ -9,6 +9,7 @@ import WhyDPDPA from '@/components/sections/dpdpa-compliance/WhyDPDPA';
 import WhoNeedsDPDPA from '@/components/sections/dpdpa-compliance/WhoNeedsDPDPA';
 import DPDPAFAQ from '@/components/sections/dpdpa-compliance/DPDPAFAQ';
 import DPDPAFinalCTA from '@/components/sections/dpdpa-compliance/DPDPAFinalCTA';
+import { dpdpaServiceSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
   title: 'DPDPA Compliance Services | ValinzTech',
@@ -24,6 +25,10 @@ export default function DPDPACompliancePage() {
     <div className="flex flex-col min-h-screen bg-[#050A18]">
       <Header />
       <main className="flex-grow">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(dpdpaServiceSchema) }}
+        />
         <Hero />
         <Challenge />
         <Methodology />

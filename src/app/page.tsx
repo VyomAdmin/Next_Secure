@@ -8,6 +8,7 @@ import Differentiation from '@/components/sections/Differentiation';
 import Audience from '@/components/sections/Audience';
 import FinalCTA from '@/components/sections/FinalCTA';
 import EngagementModels from '@/components/sections/services/EngagementModels';
+import { organizationSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
   title: 'DPDPA & Technology Governance Consulting',
@@ -30,26 +31,6 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "ValinzTech",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://valinztech.com",
-    email: "contact@valinztech.com",
-    telephone: "+91-9953562762",
-    areaServed: "IN",
-    description:
-      "Technology governance, DPDPA readiness, privacy governance, and compliance advisory services.",
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: "+91-9953562762",
-        contactType: "customer support",
-        availableLanguage: ["English"],
-      },
-    ],
-  };
-
   return (
     <div className="flex flex-col min-h-screen bg-[#050A18]">
       <Header />

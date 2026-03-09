@@ -89,6 +89,7 @@ const Hero = () => {
                                 width={600}
                                 height={600}
                                 priority
+                                sizes="(min-width: 1024px) 460px, (min-width: 768px) 380px, 280px"
                                 className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
                             />
                         </div>

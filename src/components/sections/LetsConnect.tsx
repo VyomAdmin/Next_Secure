@@ -14,11 +14,11 @@ const LetsConnect = () => {
                     </div>
 
                     <h2 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter">
-                        Let's Connect
+                        Let&apos;s Connect
                     </h2>
 
                     <p className="text-xl md:text-2xl text-slate-400 mb-14 max-w-2xl mx-auto leading-relaxed font-medium">
-                        Ready to build trust and compliance into your technology systems? Let's discuss how ValinzTech can help your organization.
+                        Ready to build trust and compliance into your technology systems? Let&apos;s discuss how ValinzTech can help your organization.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">

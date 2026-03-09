@@ -7,6 +7,7 @@ import ServiceCategories from '@/components/sections/services/ServiceCategories'
 import IntegratedGovernance from '@/components/sections/services/IntegratedGovernance';
 import EngagementModels from '@/components/sections/services/EngagementModels';
 import ServicesFinalCTA from '@/components/sections/services/ServicesFinalCTA';
+import { servicesSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
     title: 'Comprehensive Services | ValinzTech',
@@ -22,6 +23,10 @@ export default function ServicesPage() {
         <div className="flex flex-col min-h-screen bg-[#050A18]">
             <Header />
             <main className="flex-grow">
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+                />
                 <ServicesHero />
                 <ServiceCategories />
                 <IntegratedGovernance />
