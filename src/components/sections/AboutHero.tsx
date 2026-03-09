@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const AboutHero = () => {
     return (
@@ -34,15 +35,35 @@ const AboutHero = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10 text-center">
-                <div className="max-w-5xl mx-auto flex flex-col items-center">
-                    {/* Soft-glass framed container effect */}
-                    <div className="backdrop-blur-sm bg-white/[0.02] border border-white/5 p-12 md:p-16 rounded-[40px] shadow-2xl">
-                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.97] text-white mb-8">
-                            We&apos;re ValinzTech
-                        </h1>
+            <div className="container mx-auto px-6 relative z-10">
+                <div className="max-w-6xl mx-auto">
+                    <div className="backdrop-blur-sm bg-white/[0.02] border border-white/5 px-10 py-12 md:px-16 md:py-16 rounded-[28px] shadow-2xl">
+                        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_260px] items-center gap-10 md:gap-16">
+                            <div className="text-left">
+                                <h1 className="text-5xl md:text-7xl lg:text-[5.25rem] font-black tracking-tighter leading-[0.95] text-white max-w-[7ch]">
+                                    We&apos;re
+                                    <br />
+                                    ValinzTech
+                                </h1>
+                            </div>
 
-                        <p className="text-lg md:text-2xl text-indigo-100/80 max-w-4xl leading-relaxed font-medium font-sans mx-auto">
+                            <div className="flex justify-start md:justify-center">
+                                <div className="w-40 h-40 md:w-52 md:h-52 flex items-center justify-center overflow-visible">
+                                    <Image
+                                        src="/images/Valinz-Logo.png"
+                                        alt="ValinzTech logo"
+                                        width={440}
+                                        height={440}
+                                        priority
+                                        className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mt-12 max-w-5xl">
+                        <p className="text-lg md:text-[1.35rem] text-indigo-100/80 leading-[1.85] font-medium font-sans tracking-[0.01em] text-left">
                             We help businesses make sense of the complex world of cybersecurity, privacy, and
                             compliance without the jargon or the headaches. Think of us as your technology
                             governance partner: we bring the expertise, you keep the clarity. Whether you&apos;re
@@ -53,7 +74,7 @@ const AboutHero = () => {
                     </div>
 
                     {/* Authority Visual Tags */}
-                    <div className="mt-16 flex flex-wrap justify-center gap-x-12 gap-y-4 text-sm font-bold uppercase tracking-[0.25em] text-slate-500">
+                    <div className="mt-16 flex flex-wrap justify-start gap-x-12 gap-y-4 text-sm font-bold uppercase tracking-[0.25em] text-slate-500">
                         <span className="flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]"></span>
                             Trust
