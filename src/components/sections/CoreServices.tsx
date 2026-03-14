@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import Button from '../ui/Button';
 import {
     ArrowRight,
@@ -9,88 +11,147 @@ import {
     ScanSearch,
     ShieldCheck,
 } from 'lucide-react';
+import aiGovernanceImage from '@/components/ui/Ai Governance.png';
+import auditAssessmentImage from '@/components/ui/Audit&Assessment.png';
+import complianceRiskImage from '@/components/ui/Complaince and risk management.png';
+import cybersecurityImage from '@/components/ui/Cybersecurity.png';
+import privacyDataProtectionImage from '@/components/ui/Privacy Data Protection.png';
+import teamImage from '@/components/ui/Team Image.png';
 
 const CoreServices = () => {
     const services = [
         {
-            title: "Privacy & Data Protection",
-            description: "GDPR, DPDPA, and comprehensive privacy program implementation with systematic frameworks.",
+            title: 'Privacy & Data Protection',
+            description:
+                'GDPR, DPDPA, and comprehensive privacy program implementation with systematic frameworks.',
             icon: ShieldCheck,
-            link: "/services"
+            image: privacyDataProtectionImage,
+            link: '/services#privacy-data-protection',
         },
         {
-            title: "Cybersecurity Consulting",
-            description: "Risk Assessment , Compliance and Threat mitigation.",
+            title: 'Cybersecurity Consulting',
+            description: 'Risk assessment, compliance, and threat mitigation for modern digital operations.',
             icon: Network,
-            link: "/services"
+            image: cybersecurityImage,
+            link: '/services#cybersecurity-consulting',
         },
         {
-            title: "Audits & Assessments",
-            description: "Independent validation of security posture, code quality, and architectural decisions.",
+            title: 'Audits & Assessments',
+            description:
+                'Independent validation of security posture, code quality, and architectural decisions.',
             icon: ScanSearch,
-            link: "/services"
+            image: auditAssessmentImage,
+            link: '/services#technical-audits',
         },
         {
-            title: "Training & Enablement",
-            description: "Role-based training, awareness programs, and executive education to build internal capability.",
+            title: 'Training & Enablement',
+            description:
+                'Role-based training, awareness programs, and executive education to build internal capability.',
             icon: GraduationCap,
-            link: "/services"
+            image: teamImage,
+            link: '/services#training-enablement',
         },
         {
-            title: "Compliance & Risk Management",
-            description: "Governance, Risk & Compliance through structured, intelligence-driven programs.",
+            title: 'Compliance & Risk Management',
+            description:
+                'Governance, risk, and compliance through structured, intelligence-driven programs.',
             icon: CheckSquare,
-            link: "/services"
+            image: complianceRiskImage,
+            link: '/services#compliance-risk-management',
         },
         {
-            title: "AI Governance & Ethics",
-            description: "Responsible AI frameworks, risk assessments, and regulatory alignment for emerging technologies.",
+            title: 'AI Governance & Ethics',
+            description:
+                'Responsible AI frameworks, risk assessments, and regulatory alignment for emerging technologies.',
             icon: BrainCircuit,
-            link: "/services"
-        }
+            image: aiGovernanceImage,
+            link: '/services#ai-governance',
+        },
     ];
 
     return (
-        <section id="services" className="py-24 bg-[#020617] border-y border-white/5">
-            <div className="container mx-auto px-6">
-                <div className="max-w-4xl mx-auto text-center mb-20">
-                    <div className="inline-block px-4 py-1 border border-blue-500/20 rounded-full bg-blue-900/10 mb-6">
-                        <span className="text-[10px] font-bold tracking-[0.2em] text-blue-400 uppercase">Core Services Overview</span>
+        <section id="services" className="relative overflow-hidden bg-[#020617] py-24">
+            <div className="absolute inset-0">
+                <div
+                    className="absolute inset-0 opacity-[0.03]"
+                    style={{
+                        backgroundImage:
+                            'linear-gradient(#3b82f6 0.5px, transparent 0.5px), linear-gradient(90deg, #3b82f6 0.5px, transparent 0.5px)',
+                        backgroundSize: '40px 40px',
+                    }}
+                />
+                <div className="absolute left-1/2 top-28 h-80 w-80 -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[140px]" />
+            </div>
+
+            <div className="container relative z-10 mx-auto px-6">
+                <div className="mx-auto mb-20 max-w-4xl text-center">
+                    <div className="mb-6 inline-block rounded-full bg-blue-900/10 px-4 py-1">
+                        <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-400">
+                            Core Services Overview
+                        </span>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
+                    <h2 className="mb-8 text-4xl font-black tracking-tighter text-white md:text-6xl">
                         Comprehensive Technology Assurance
                     </h2>
-                    <p className="text-xl text-slate-300 leading-relaxed font-medium">
+                    <p className="text-xl font-medium leading-relaxed text-slate-300">
                         Beyond DPDPA, we provide intelligence-driven consulting across every
                         dimension of technology governance.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div className="mx-auto max-w-7xl space-y-12">
                     {services.map((service, index) => {
                         const Icon = service.icon;
+                        const isReversed = index % 2 === 1;
+
                         return (
-                            <div key={index} className="bg-[#0D1426]/50 border border-white/5 p-8 rounded-[2rem] hover:border-blue-500/20 transition-all group">
-                                <div className="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center mb-6">
-                                    <Icon className="text-blue-400" size={28} />
+                            <div key={service.title} className="grid items-center gap-8 lg:grid-cols-12 lg:gap-10">
+                                <div
+                                    className={`relative overflow-hidden rounded-[2.5rem] bg-[#09101f] shadow-[0_24px_80px_rgba(2,8,23,0.55)] ${
+                                        isReversed ? 'lg:order-2 lg:col-span-7' : 'lg:col-span-7'
+                                    }`}
+                                >
+                                    <div className="absolute inset-0 bg-gradient-to-tr from-[#050A18]/60 via-transparent to-cyan-300/10" />
+                                    <Image
+                                        src={service.image}
+                                        alt={service.title}
+                                        className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+                                        placeholder="blur"
+                                        sizes="(min-width: 1024px) 58vw, 100vw"
+                                    />
                                 </div>
-                                <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">{service.title}</h3>
-                                <p className="text-slate-400 text-sm font-medium leading-relaxed mb-8 min-h-[72px]">
-                                    {service.description}
-                                </p>
-                                <a href={service.link} className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-blue-400 hover:text-white transition-colors">
-                                    View Services <ArrowRight size={14} />
-                                </a>
+
+                                <div
+                                    className={`rounded-[2.25rem] bg-[#0A1020]/90 p-8 shadow-[0_20px_60px_rgba(2,8,23,0.45)] backdrop-blur-sm md:p-10 ${
+                                        isReversed ? 'lg:order-1 lg:col-span-5' : 'lg:col-span-5'
+                                    }`}
+                                >
+                                    <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
+                                        <Icon className="text-blue-400" size={28} />
+                                    </div>
+                                    <h3 className="mb-4 text-3xl font-bold tracking-tight text-white">
+                                        {service.title}
+                                    </h3>
+                                    <p className="mb-8 text-base font-medium leading-relaxed text-slate-400">
+                                        {service.description}
+                                    </p>
+                                    <Link
+                                        href={service.link}
+                                        className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-blue-400 transition-colors hover:text-white"
+                                    >
+                                        View Services <ArrowRight size={14} />
+                                    </Link>
+                                </div>
                             </div>
                         );
                     })}
                 </div>
 
-                <div className="flex justify-center mt-14">
+                <div className="mt-14 flex justify-center">
                     <Button
                         variant="secondary"
                         href="/services"
-                        className="text-sm py-4 px-10 bg-white/15 text-white border-white/30 rounded-2xl font-bold shadow-[0_12px_28px_rgba(0,0,0,0.25)] backdrop-blur-md hover:bg-white/22 hover:shadow-[0_0_22px_rgba(255,255,255,0.16)] whitespace-nowrap"
+                        className="whitespace-nowrap rounded-2xl bg-white/15 px-10 py-4 text-sm font-bold text-white shadow-[0_12px_28px_rgba(0,0,0,0.25)] backdrop-blur-md hover:bg-white/22 hover:shadow-[0_0_22px_rgba(255,255,255,0.16)]"
                     >
                         View All Services <ArrowRight size={16} className="ml-2" />
                     </Button>

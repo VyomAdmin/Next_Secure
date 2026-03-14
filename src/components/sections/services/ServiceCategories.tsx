@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ChevronDown, Shield, Lock, Brain, BarChart3, ClipboardCheck, GraduationCap, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { services } from '@/lib/siteContent';
