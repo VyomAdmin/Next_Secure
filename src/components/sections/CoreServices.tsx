@@ -105,9 +105,9 @@ const CoreServices = () => {
                         const isReversed = index % 2 === 1;
 
                         return (
-                            <div key={service.title} className="grid items-center gap-8 lg:grid-cols-12 lg:gap-10">
+                            <div key={service.title} className="grid items-stretch gap-8 lg:grid-cols-12 lg:gap-10">
                                 <div
-                                    className={`relative overflow-hidden rounded-[2.5rem] bg-[#09101f] shadow-[0_24px_80px_rgba(2,8,23,0.55)] ${
+                                    className={`relative min-h-[300px] overflow-hidden rounded-[2.5rem] bg-[#09101f] shadow-[0_24px_80px_rgba(2,8,23,0.55)] lg:min-h-[420px] ${
                                         isReversed ? 'lg:order-2 lg:col-span-7' : 'lg:col-span-7'
                                     }`}
                                 >
@@ -115,29 +115,31 @@ const CoreServices = () => {
                                     <Image
                                         src={service.image}
                                         alt={service.title}
-                                        className="h-[260px] w-full object-cover md:h-[360px] lg:h-[420px]"
+                                        className="h-full w-full object-cover"
                                         placeholder="blur"
                                         sizes="(min-width: 1024px) 58vw, 100vw"
                                     />
                                 </div>
 
                                 <div
-                                    className={`rounded-[2.25rem] bg-[#0A1020]/90 p-8 shadow-[0_20px_60px_rgba(2,8,23,0.45)] backdrop-blur-sm md:p-10 ${
+                                    className={`flex h-full min-h-[300px] flex-col justify-between rounded-[2.25rem] bg-[#0A1020]/90 p-8 shadow-[0_20px_60px_rgba(2,8,23,0.45)] backdrop-blur-sm md:p-10 lg:min-h-[420px] ${
                                         isReversed ? 'lg:order-1 lg:col-span-5' : 'lg:col-span-5'
                                     }`}
                                 >
-                                    <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
-                                        <Icon className="text-blue-400" size={28} />
+                                    <div>
+                                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
+                                            <Icon className="text-blue-400" size={28} />
+                                        </div>
+                                        <h3 className="mb-4 text-3xl font-bold tracking-tight text-white">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-base font-medium leading-relaxed text-slate-400">
+                                            {service.description}
+                                        </p>
                                     </div>
-                                    <h3 className="mb-4 text-3xl font-bold tracking-tight text-white">
-                                        {service.title}
-                                    </h3>
-                                    <p className="mb-8 text-base font-medium leading-relaxed text-slate-400">
-                                        {service.description}
-                                    </p>
                                     <Link
                                         href={service.link}
-                                        className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-blue-400 transition-colors hover:text-white"
+                                        className="mt-8 inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-blue-400 transition-colors hover:text-white"
                                     >
                                         View Services <ArrowRight size={14} />
                                     </Link>
@@ -151,7 +153,7 @@ const CoreServices = () => {
                     <Button
                         variant="secondary"
                         href="/services"
-                        className="whitespace-nowrap rounded-2xl bg-white/15 px-10 py-4 text-sm font-bold text-white shadow-[0_12px_28px_rgba(0,0,0,0.25)] backdrop-blur-md hover:bg-white/22 hover:shadow-[0_0_22px_rgba(255,255,255,0.16)]"
+                        className="whitespace-nowrap rounded-2xl bg-white/15 px-10 py-4 text-sm font-bold text-white shadow-[0_12px_28px_rgba(0,0,0,0.25)] backdrop-blur-md hover:bg-[#64ffda] hover:text-black hover:shadow-[0_0_22px_rgba(100,255,218,0.16)] transition-all duration-200 ease-in-out"
                     >
                         View All Services <ArrowRight size={16} className="ml-2" />
                     </Button>

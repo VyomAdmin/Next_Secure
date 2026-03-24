@@ -97,7 +97,7 @@ const Pricing = () => {
                             <Button
                                 variant={tier.popular ? "primary" : "secondary"}
                                 href="#contact"
-                                className={`w-full py-4 rounded-2xl text-xs uppercase tracking-[0.2em] font-black ${tier.popular ? 'bg-indigo-600 hover:bg-indigo-500 border-none text-white' : 'bg-white/5 border-white/10 hover:bg-white/10'}`}
+                                className={`w-full py-4 rounded-2xl text-xs uppercase tracking-[0.2em] font-black transition-all duration-200 ease-in-out ${tier.popular ? 'bg-indigo-600 hover:bg-[#64ffda] hover:text-black border-none text-white' : 'bg-white/5 border-white/10 hover:bg-[#64ffda] hover:text-black hover:border-[#64ffda]'}`}
                             >
                                 {tier.cta}
                             </Button>

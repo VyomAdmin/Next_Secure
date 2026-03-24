@@ -48,7 +48,7 @@ const Hero = () => {
                             <Button
                                 variant="secondary"
                                 href="/about-contact"
-                                className="min-w-[220px] justify-center text-sm py-4 px-8 uppercase tracking-widest bg-white/20 border-white/35 text-white hover:bg-white/28 rounded-2xl shadow-[0_0_0_1px_rgba(255,255,255,0.12)_inset,0_10px_30px_rgba(61,23,164,0.25)] hover:shadow-[0_0_24px_rgba(255,255,255,0.28)] backdrop-blur-md group"
+                                className="min-w-[220px] justify-center text-sm py-4 px-8 uppercase tracking-widest bg-white/20 border-white/35 text-white hover:bg-[#64ffda] hover:text-black rounded-2xl shadow-[0_0_0_1px_rgba(255,255,255,0.12)_inset,0_10px_30px_rgba(61,23,164,0.25)] hover:shadow-[0_0_24px_rgba(100,255,218,0.28)] backdrop-blur-md group transition-all duration-200 ease-in-out"
                             >
                                 Explore About Us{' '}
                                 <ChevronRight
@@ -59,7 +59,7 @@ const Hero = () => {
                             <Button
                                 variant="secondary"
                                 href="/about-contact#contact-form"
-                                className="min-w-[220px] justify-center text-sm py-4 px-8 uppercase tracking-widest bg-white/15 border-white/30 text-white hover:bg-white/22 rounded-2xl shadow-[0_8px_24px_rgba(9,10,35,0.28)] hover:shadow-[0_0_20px_rgba(255,255,255,0.2)] backdrop-blur-md"
+                                className="min-w-[220px] justify-center text-sm py-4 px-8 uppercase tracking-widest bg-white/15 border-white/30 text-white hover:bg-[#64ffda] hover:text-black rounded-2xl shadow-[0_8px_24px_rgba(9,10,35,0.28)] hover:shadow-[0_0_20px_rgba(100,255,218,0.2)] backdrop-blur-md transition-all duration-200 ease-in-out"
                             >
                                 Free Consultation
                             </Button>

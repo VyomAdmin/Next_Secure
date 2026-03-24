@@ -31,7 +31,7 @@ const DPDPAFinalCTA = () => {
                         <Button
                             variant="secondary"
                             href="/about-contact#contact-form"
-                            className="min-w-[300px] justify-center text-sm py-5 px-10 uppercase tracking-widest bg-white text-indigo-950 hover:bg-indigo-50 border-none rounded-2xl shadow-[0_0_60px_rgba(255,255,255,0.25)] font-black group"
+                            className="min-w-[300px] justify-center text-sm py-5 px-10 uppercase tracking-widest bg-white text-indigo-950 hover:bg-[#64ffda] hover:text-black border-none rounded-2xl shadow-[0_0_60px_rgba(255,255,255,0.25)] hover:shadow-[0_0_60px_rgba(100,255,218,0.25)] font-black group transition-all duration-200 ease-in-out"
                         >
                             Schedule Free DPDPA Assessment
                             <ChevronRight size={16} className="ml-2 inline group-hover:translate-x-1 transition-transform" />

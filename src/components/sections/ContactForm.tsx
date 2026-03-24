@@ -200,7 +200,7 @@ const ContactForm = () => {
                             type="submit"
                             variant="primary"
                             disabled={isSubmitting}
-                            className="w-full text-xs py-5 uppercase tracking-[0.2em] font-bold bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 rounded-2xl transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+                            className="w-full text-xs py-5 uppercase tracking-[0.2em] font-bold bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda] hover:text-black rounded-2xl transition-all duration-200 ease-in-out disabled:opacity-70 disabled:cursor-not-allowed"
                         >
                             {isSubmitting ? 'Sending...' : 'Send Secure Message'}
                         </Button>

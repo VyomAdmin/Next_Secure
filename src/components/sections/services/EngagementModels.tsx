@@ -85,7 +85,7 @@ const EngagementModels = () => {
                     <Button
                         variant="primary"
                         href="#contact"
-                        className="bg-blue-600 hover:bg-blue-500 text-white border-none py-4 px-10 rounded-full font-bold"
+                        className="bg-blue-600 hover:bg-[#64ffda] hover:text-black text-white border-none py-4 px-10 rounded-full font-bold transition-all duration-200 ease-in-out"
                     >
                         Discuss Best Fit
                     </Button>

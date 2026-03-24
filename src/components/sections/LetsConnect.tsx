@@ -22,10 +22,10 @@ const LetsConnect = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                        <Button variant="secondary" href="/about-contact#contact-form" className="w-full sm:w-auto text-sm py-4 px-12 uppercase tracking-widest bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20 rounded-full shadow-2xl shadow-[#64ffda]/10">
+                        <Button variant="secondary" href="/about-contact#contact-form" className="w-full sm:w-auto text-sm py-4 px-12 uppercase tracking-widest bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda] hover:text-black rounded-full shadow-2xl shadow-[#64ffda]/10 transition-all duration-200 ease-in-out">
                             Schedule Free Consultation
                         </Button>
-                        <Button variant="secondary" href="mailto:contact@valinztech.com" className="w-full sm:w-auto text-sm py-4 px-12 uppercase tracking-widest backdrop-blur-sm bg-white/5 border-white/10 hover:bg-white/10 rounded-full">
+                        <Button variant="secondary" href="mailto:contact@valinztech.com" className="w-full sm:w-auto text-sm py-4 px-12 uppercase tracking-widest backdrop-blur-sm bg-white/5 border-white/10 hover:bg-[#64ffda] hover:text-black rounded-full transition-all duration-200 ease-in-out">
                             Email Us
                         </Button>
                     </div>

@@ -29,7 +29,7 @@ const ServicesFinalCTA = () => {
                     <Button
                         variant="secondary"
                         href="/about-contact#contact-form"
-                        className="min-w-[280px] justify-center bg-blue-600 hover:bg-blue-500 text-white border-none py-5 px-12 rounded-full font-black tracking-wide shadow-[0_0_60px_rgba(59,130,246,0.25)] group"
+                        className="min-w-[280px] justify-center bg-blue-600 hover:bg-[#64ffda] hover:text-black text-white border-none py-5 px-12 rounded-full font-black tracking-wide shadow-[0_0_60px_rgba(59,130,246,0.25)] hover:shadow-[0_0_60px_rgba(100,255,218,0.25)] group transition-all duration-200 ease-in-out"
                     >
                         Schedule Free Consultation
                         <ChevronRight size={16} className="ml-2 inline group-hover:translate-x-1 transition-transform" />

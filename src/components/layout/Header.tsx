@@ -79,7 +79,7 @@ const Header = () => {
                     ))}
                     <Button   variant="primary" 
                             href="/about-contact#contact-form" 
-                            className="ml-2 py-4 px-10 text-[14px] tracking-[0.1em] bg-[#0052CC] !text-white border-none hover:bg-[#0041a3] rounded-full shadow-xl transition-all duration-200 whitespace-nowrap"
+                            className="ml-2 py-4 px-10 text-[14px] tracking-[0.1em] bg-[#0052CC] !text-white border-none hover:bg-[#64ffda] hover:!text-black rounded-full shadow-xl transition-all duration-200 ease-in-out whitespace-nowrap"
                             >
                                 SCHEDULE CONSULTATION
                             </Button>
@@ -123,7 +123,7 @@ const Header = () => {
                                 )}
                             </div>
                         ))}
-                        <Button variant="primary" href="/about-contact#contact-form" className="mt-6 w-full justify-center py-5 font-bold bg-white text-black-900 border-none font-bold" onClick={() => setIsMobileMenuOpen(false)}>
+                        <Button variant="primary" href="/about-contact#contact-form" className="mt-6 w-full justify-center py-5 font-bold bg-white text-black border-none" onClick={() => setIsMobileMenuOpen(false)}>
                             SCHEDULE CONSULTATION
                         </Button>
                     </nav>

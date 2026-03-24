@@ -69,7 +69,7 @@ const ContactOptions = () => {
                                 <Button
                                     variant={option.primary ? 'primary' : 'secondary'}
                                     href={option.href}
-                                    className={`w-full py-3 text-xs uppercase tracking-widest rounded-full ${option.primary ? 'bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda]/20' : 'backdrop-blur-sm bg-white/5 border-white/10 hover:bg-white/10'}`}
+                                    className={`w-full py-3 text-xs uppercase tracking-widest rounded-full transition-all duration-200 ease-in-out ${option.primary ? 'bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda] hover:text-black' : 'backdrop-blur-sm bg-white/5 border-white/10 hover:bg-[#64ffda] hover:text-black hover:border-[#64ffda]'}`}
                                 >
                                     {option.cta}
                                 </Button>

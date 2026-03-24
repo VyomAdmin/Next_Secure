@@ -14,7 +14,7 @@ const Button: React.FC<ButtonProps> = ({
     className = '',
     ...props
 }) => {
-    const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2";
+    const baseStyles = "inline-flex items-center justify-center px-6 py-3 rounded text-sm font-medium transition-all duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-offset-2";
 
     const variants = {
         primary: "bg-transparent border border-[var(--color-text-white)] text-[var(--color-text-white)] hover:bg-[rgba(230,241,255,0.1)]",
