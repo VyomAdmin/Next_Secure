@@ -41,7 +41,7 @@ const Audience = () => {
 
                 <div className="mt-16 text-center">
                     <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.25em]">
-                        Based in Noida | Serving Globally</p>
+                        Delhi, India | Serving Pan India and beyond.</p>
                 </div>
             </div>
         </section>

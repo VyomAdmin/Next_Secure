@@ -30,7 +30,7 @@ const FinalCTA = () => {
                                 <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-blue-500/10 transition-colors">
                                     <Phone size={20} className="group-hover:text-blue-400" />
                                 </div>
-                                <span className="font-bold text-sm tracking-widest uppercase">+91-9953562762</span>
+                                <span className="font-bold text-sm tracking-widest uppercase">+919953562762</span>
                             </a>
                             <a href="https://wa.me/919953562762" className="flex items-center gap-4 text-slate-400 hover:text-white transition-colors group">
                                 <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-green-500/10 transition-colors">

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { ChevronDown, Shield, Lock, Brain, BarChart3, ClipboardCheck, GraduationCap, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import { services } from '@/lib/siteContent';
@@ -26,14 +26,33 @@ const getInitialOpenService = () => {
 
 const ServiceCategories = () => {
     const [openService, setOpenService] = useState<number | null>(getInitialOpenService);
+    const serviceRefs = useRef<Array<HTMLDivElement | null>>([]);
+
+    const scrollServiceIntoView = (index: number) => {
+        const element = serviceRefs.current[index];
+        if (!element) {
+            return;
+        }
+
+        const headerOffset = 112;
+        const top = element.getBoundingClientRect().top + window.scrollY - headerOffset;
+        window.scrollTo({ top, behavior: 'smooth' });
+    };
 
     useEffect(() => {
         const hash = window.location.hash.replace('#', '');
-        if (hash) {
-            setTimeout(() => {
-                document.getElementById(hash)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }, 300);
+        if (!hash) {
+            return;
         }
+
+        const index = services.findIndex((service) => service.slug === hash);
+        if (index === -1) {
+            return;
+        }
+
+        setTimeout(() => {
+            scrollServiceIntoView(index);
+        }, 300);
     }, []);
 
     return (
@@ -48,10 +67,23 @@ const ServiceCategories = () => {
                             <div
                                 key={service.slug}
                                 id={service.slug}
+                                ref={(element) => {
+                                    serviceRefs.current[index] = element;
+                                }}
                                 className={`rounded-[2.5rem] border transition-all duration-500 overflow-hidden ${isOpen ? 'border-blue-500/20 bg-[#0D1426]/60' : 'border-white/5 bg-[#0D1426]/20 hover:border-white/10'}`}
                             >
                                 <button
-                                    onClick={() => setOpenService(isOpen ? null : index)}
+                                    onClick={() => {
+                                        if (isOpen) {
+                                            setOpenService(null);
+                                            return;
+                                        }
+
+                                        setOpenService(index);
+                                        window.requestAnimationFrame(() => {
+                                            scrollServiceIntoView(index);
+                                        });
+                                    }}
                                     className="w-full px-8 md:px-12 py-10 flex items-center justify-between text-left focus:outline-none"
                                 >
                                     <div className="flex items-center gap-6">

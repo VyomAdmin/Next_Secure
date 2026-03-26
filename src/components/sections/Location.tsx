@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Clock, Mail, Phone } from 'lucide-react';
+import { MapPin, Phone } from 'lucide-react';
 
 const Location = () => {
     return (
@@ -19,10 +19,10 @@ const Location = () => {
                             </div>
 
                             <h3 className="text-4xl font-black text-white mb-6 tracking-tighter">
-                                Delhi NCR <br /> & Beyond
+                                Delhi, India
                             </h3>
                             <p className="text-slate-400 text-lg font-medium leading-relaxed max-w-xs">
-                                Serving organizations across India and international markets with strategic technology governance.
+                                Delhi, Serving Pan India and beyond.
                             </p>
                         </div>
                     </div>
@@ -46,21 +46,8 @@ const Location = () => {
                                 <div className="space-y-1">
                                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest">Global Address</h4>
                                     <p className="text-white text-lg font-medium leading-relaxed">
-                                        Delhi NCR, India<br />
-                                        Serving clients nationwide & overseas
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex items-start gap-6 group">
-                                <div className="w-12 h-12 bg-blue-500/5 border border-white/5 rounded-2xl flex items-center justify-center shrink-0 group-hover:bg-blue-500/10 transition-colors">
-                                    <Clock className="w-6 h-6 text-blue-400/70" />
-                                </div>
-                                <div className="space-y-1">
-                                    <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest">Business Hours</h4>
-                                    <p className="text-white text-lg font-medium leading-relaxed">
-                                        Mon - Fri: 9:00 AM - 6:00 PM<br />
-                                        Sat: 10:00 AM - 2:00 PM
+                                        Delhi, India<br />
+                                        Serving Pan India and beyond.
                                     </p>
                                 </div>
                             </div>
@@ -72,7 +59,7 @@ const Location = () => {
                                 <div className="space-y-1">
                                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest">Direct Line</h4>
                                     <a href="tel:+919953562762" className="text-white text-lg font-bold hover:text-blue-400 transition-colors decoration-blue-400/30 underline underline-offset-8">
-                                        +91 99535 62762
+                                        +919953562762
                                     </a>
                                 </div>
                             </div>

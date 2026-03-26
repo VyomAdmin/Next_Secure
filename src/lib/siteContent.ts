@@ -32,7 +32,7 @@ export const generalFaqs: FAQEntry[] = [
         answer: "We combine deep technical expertise with practical business understanding. Our systematic 4-phase approach ensures sustainable compliance, not just checkbox exercises. We focus on building governance capabilities within your team, not creating dependency."
     },
     {
-        question: "Do you work with organizations outside Delhi NCR?",
+        question: "Do you work with organizations outside Delhi, India?",
         answer: "Yes, we serve clients across India and internationally. Our hybrid engagement model combines remote collaboration with strategic on-site sessions as needed."
     },
     {
@@ -183,7 +183,7 @@ export const services: ServiceEntry[] = [
     },
     {
         slug: "technical-audits",
-        title: "Technical Audits & Assessments",
+        title: "Audits & Assessments",
         tagline: "Independent validation of security and compliance posture",
         overview: "Third-party technical assessments providing objective evaluation of security controls, code quality, and architectural decisions. Build stakeholder confidence through independent validation.",
         subcategories: [

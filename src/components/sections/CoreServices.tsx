@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
 import Button from '../ui/Button';
 import {
@@ -11,12 +10,6 @@ import {
     ScanSearch,
     ShieldCheck,
 } from 'lucide-react';
-import aiGovernanceImage from '@/components/ui/Ai Governance.png';
-import auditAssessmentImage from '@/components/ui/Audit&Assessment.png';
-import complianceRiskImage from '@/components/ui/Complaince and risk management.png';
-import cybersecurityImage from '@/components/ui/Cybersecurity.png';
-import privacyDataProtectionImage from '@/components/ui/Privacy Data Protection.png';
-import teamImage from '@/components/ui/Team Image.png';
 
 const CoreServices = () => {
     const services = [
@@ -25,14 +18,12 @@ const CoreServices = () => {
             description:
                 'GDPR, DPDPA, and comprehensive privacy program implementation with systematic frameworks.',
             icon: ShieldCheck,
-            image: privacyDataProtectionImage,
             link: '/services#privacy-data-protection',
         },
         {
             title: 'Cybersecurity Consulting',
             description: 'Risk assessment, compliance, and threat mitigation for modern digital operations.',
             icon: Network,
-            image: cybersecurityImage,
             link: '/services#cybersecurity-consulting',
         },
         {
@@ -40,7 +31,6 @@ const CoreServices = () => {
             description:
                 'Independent validation of security posture, code quality, and architectural decisions.',
             icon: ScanSearch,
-            image: auditAssessmentImage,
             link: '/services#technical-audits',
         },
         {
@@ -48,7 +38,6 @@ const CoreServices = () => {
             description:
                 'Role-based training, awareness programs, and executive education to build internal capability.',
             icon: GraduationCap,
-            image: teamImage,
             link: '/services#training-enablement',
         },
         {
@@ -56,7 +45,6 @@ const CoreServices = () => {
             description:
                 'Governance, risk, and compliance through structured, intelligence-driven programs.',
             icon: CheckSquare,
-            image: complianceRiskImage,
             link: '/services#compliance-risk-management',
         },
         {
@@ -64,7 +52,6 @@ const CoreServices = () => {
             description:
                 'Responsible AI frameworks, risk assessments, and regulatory alignment for emerging technologies.',
             icon: BrainCircuit,
-            image: aiGovernanceImage,
             link: '/services#ai-governance',
         },
     ];
@@ -94,56 +81,35 @@ const CoreServices = () => {
                         Comprehensive Technology Assurance
                     </h2>
                     <p className="text-xl font-medium leading-relaxed text-slate-300">
-                        Beyond DPDPA, we provide intelligence-driven consulting across every
+                        We provide intelligence-driven consulting across every
                         dimension of technology governance.
                     </p>
                 </div>
 
-                <div className="mx-auto max-w-7xl space-y-12">
-                    {services.map((service, index) => {
+                <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
+                    {services.map((service) => {
                         const Icon = service.icon;
-                        const isReversed = index % 2 === 1;
 
                         return (
-                            <div key={service.title} className="grid items-stretch gap-8 lg:grid-cols-12 lg:gap-10">
-                                <div
-                                    className={`relative min-h-[300px] overflow-hidden rounded-[2.5rem] bg-[#09101f] shadow-[0_24px_80px_rgba(2,8,23,0.55)] lg:min-h-[420px] ${
-                                        isReversed ? 'lg:order-2 lg:col-span-7' : 'lg:col-span-7'
-                                    }`}
-                                >
-                                    <div className="absolute inset-0 bg-gradient-to-tr from-[#050A18]/60 via-transparent to-cyan-300/10" />
-                                    <Image
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="h-full w-full object-cover"
-                                        placeholder="blur"
-                                        sizes="(min-width: 1024px) 58vw, 100vw"
-                                    />
+                            <div
+                                key={service.title}
+                                className="flex min-h-[320px] flex-col rounded-[2.25rem] bg-[#0A1020]/90 p-8 shadow-[0_20px_60px_rgba(2,8,23,0.45)] backdrop-blur-sm md:p-10"
+                            >
+                                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
+                                    <Icon className="text-blue-400" size={28} />
                                 </div>
-
-                                <div
-                                    className={`flex h-full min-h-[300px] flex-col justify-between rounded-[2.25rem] bg-[#0A1020]/90 p-8 shadow-[0_20px_60px_rgba(2,8,23,0.45)] backdrop-blur-sm md:p-10 lg:min-h-[420px] ${
-                                        isReversed ? 'lg:order-1 lg:col-span-5' : 'lg:col-span-5'
-                                    }`}
+                                <h3 className="mb-4 text-3xl font-bold tracking-tight text-white">
+                                    {service.title}
+                                </h3>
+                                <p className="text-base font-medium leading-relaxed text-slate-400">
+                                    {service.description}
+                                </p>
+                                <Link
+                                    href={service.link}
+                                    className="mt-auto inline-flex items-center gap-2 pt-8 text-xs font-black uppercase tracking-widest text-blue-400 transition-colors hover:text-white"
                                 >
-                                    <div>
-                                        <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
-                                            <Icon className="text-blue-400" size={28} />
-                                        </div>
-                                        <h3 className="mb-4 text-3xl font-bold tracking-tight text-white">
-                                            {service.title}
-                                        </h3>
-                                        <p className="text-base font-medium leading-relaxed text-slate-400">
-                                            {service.description}
-                                        </p>
-                                    </div>
-                                    <Link
-                                        href={service.link}
-                                        className="mt-8 inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-blue-400 transition-colors hover:text-white"
-                                    >
-                                        View Services <ArrowRight size={14} />
-                                    </Link>
-                                </div>
+                                    View Services <ArrowRight size={14} />
+                                </Link>
                             </div>
                         );
                     })}

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import Mission from '@/components/sections/Mission';
 import TeamExpertise from '@/components/sections/TeamExpertise';
 import Values from '@/components/sections/Values';
 import LetsConnect from '@/components/sections/LetsConnect';
@@ -43,7 +42,6 @@ export default function AboutContactPage() {
                 {/* Authority & Trust Building Half */}
                 <div id="about">
                     <AboutHero />
-                    <Mission />
                     <TeamExpertise />
                     <Values />
                 </div>

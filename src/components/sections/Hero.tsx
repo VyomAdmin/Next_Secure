@@ -41,7 +41,7 @@ const Hero = () => {
                         </p>
 
                         <p className="text-base md:text-lg font-bold tracking-wide text-white mb-10">
-                            Serving Delhi NCR - DPDPA Specialists
+                            Delhi, Serving Pan India and beyond.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-14 w-full sm:w-auto">

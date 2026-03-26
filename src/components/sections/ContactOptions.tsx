@@ -8,7 +8,7 @@ const ContactOptions = () => {
             icon: Calendar,
             title: "Schedule Consultation",
             description: "Book a free 30-minute strategy session with our governance team.",
-            cta: "Book Now",
+            cta: "Schedule Consultation",
             href: "#contact-form",
             primary: true
         },
@@ -16,21 +16,21 @@ const ContactOptions = () => {
             icon: Mail,
             title: "Email Us",
             description: "Send us your specific project details or governance inquiries.",
-            cta: "Send Email",
+            cta: "Email Us",
             href: "mailto:contact@valinztech.com"
         },
         {
             icon: MessageCircle,
             title: "WhatsApp",
             description: "Quick questions? Message our experts directly.",
-            cta: "Chat Now",
+            cta: "WhatsApp Us",
             href: "https://wa.me/919953562762"
         },
         {
             icon: Phone,
             title: "Call Us",
             description: "Speak directly with our team for immediate assistance.",
-            cta: "Call Now",
+            cta: "Call Us",
             href: "tel:+919953562762"
         }
     ];

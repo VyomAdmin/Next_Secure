@@ -30,7 +30,7 @@ const Footer = () => {
                                 { name: 'Privacy & Data Protection', href: '/services#privacy-data-protection' },
                                 { name: 'AI Governance', href: '/services#ai-governance' },
                                 { name: 'Compliance & Risk Management', href: '/services#compliance-risk-management' },
-                                { name: 'Technical Audits', href: '/services#technical-audits' },
+                                { name: 'Audits', href: '/services#technical-audits' },
                                 { name: 'Training & Enablement', href: '/services#training-enablement' },
                             ].map((item) => (
                                 <li key={item.name}>
@@ -48,9 +48,6 @@ const Footer = () => {
                         <ul className="space-y-5">
                             {[
                                 { name: 'About Us', href: '/about-contact' },
-                                { name: 'Our Approach', href: '/#approach' },
-                                { name: 'Blog / Insights', href: '#' },
-                                { name: 'Case Studies', href: '#' },
                                 { name: 'Contact', href: '/about-contact#contact-form' },
                             ].map((item) => (
                                 <li key={item.name}>
@@ -68,7 +65,7 @@ const Footer = () => {
                         <ul className="space-y-6">
                             <li className="flex items-start gap-4 text-sm font-medium text-slate-500">
                                 <MapPin size={18} className="mt-0.5 text-blue-400/50" />
-                                <span>Noida</span>
+                                <span>Delhi, India</span>
                             </li>
                             <li className="flex items-center gap-4 text-sm font-medium text-slate-500">
                                 <Mail size={18} className="text-blue-400/50" />
@@ -76,7 +73,7 @@ const Footer = () => {
                             </li>
                             <li className="flex items-center gap-4 text-sm font-bold text-white">
                                 <Phone size={18} className="text-blue-400/50" />
-                                <a href="https://wa.me/919953562762" className="hover:text-blue-400">+91-9953562762</a>
+                                <a href="tel:+919953562762" className="hover:text-blue-400">+919953562762</a>
                             </li>
                             <li className="pt-6">
                                 <a href="#" className="inline-flex items-center justify-center w-12 h-12 rounded-2xl bg-white/5 border border-white/5 text-slate-400 hover:text-blue-400 hover:border-blue-400/30 transition-all">
@@ -90,7 +87,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-[10px] font-bold text-slate-600 uppercase tracking-widest">
-                        &copy; 2025 ValinzTech. All rights reserved.
+                        &copy; 2026 ValinzTech. All rights reserved.
                     </p>
                     <div className="flex gap-10">
                         <Link href="#" className="text-[10px] font-bold text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Privacy Policy</Link>

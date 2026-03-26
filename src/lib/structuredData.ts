@@ -23,13 +23,13 @@ export const organizationSchema = {
     name: 'ValinzTech',
     url: siteUrl,
     email: 'contact@valinztech.com',
-    telephone: '+91-9953562762',
+    telephone: '+919953562762',
     areaServed: 'IN',
     description: 'Technology governance, DPDPA readiness, privacy governance, and compliance advisory services.',
     contactPoint: [
         {
             '@type': 'ContactPoint',
-            telephone: '+91-9953562762',
+            telephone: '+919953562762',
             contactType: 'customer support',
             availableLanguage: ['English'],
             email: 'contact@valinztech.com'
