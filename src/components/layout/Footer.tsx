@@ -90,8 +90,8 @@ const Footer = () => {
                         &copy; 2026 ValinzTech. All rights reserved.
                     </p>
                     <div className="flex gap-10">
-                        <Link href="#" className="text-[10px] font-bold text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="text-[10px] font-bold text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Terms of Service</Link>
+                        <Link href="/privacy-policy" className="text-[10px] font-bold text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Privacy Policy</Link>
+                        <Link href="/terms-of-service" className="text-[10px] font-bold text-slate-600 hover:text-white uppercase tracking-widest transition-colors">Terms of Service</Link>
                     </div>
                 </div>
             </div>

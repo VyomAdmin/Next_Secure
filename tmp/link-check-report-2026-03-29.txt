@@ -1,0 +1,27 @@
+Link Check Report
+
+Checked against the running local site at http://localhost:3000, including internal routes, rendered anchors, and the external WhatsApp destination.
+
+Live broken / non-working links
+
+- #contact is broken on the homepage because src/components/sections/services/EngagementModels.tsx links to it, but / does not render any element with id="contact".
+- #contact is also broken on the services page from src/components/sections/services/IntegratedGovernance.tsx and src/components/sections/services/EngagementModels.tsx, because /services does not render a contact anchor.
+- Footer placeholder links are non-working right now:
+  - LinkedIn icon in src/components/layout/Footer.tsx line 79
+  - Privacy Policy in src/components/layout/Footer.tsx line 93
+  - Terms of Service in src/components/layout/Footer.tsx line 94
+
+Dormant broken links in currently unused components
+
+- /blog returns 404, but src/components/sections/dpdpa-compliance/Resources.tsx links to it.
+- /blog/dpdpa-guide returns 404, and src/components/sections/dpdpa-compliance/Resources.tsx links to it.
+- href="#" placeholders also exist in src/components/sections/dpdpa-compliance/Resources.tsx.
+- #contact in src/components/sections/dpdpa-compliance/Pricing.tsx would be broken if that section is mounted, because the current DPDPA page does not render a contact anchor.
+
+Working links verified
+
+- Internal routes /, /services, /about-contact, /dpdpa-compliance, and /coming-soon returned 200.
+- /about-contact#contact-form is valid; /about-contact renders id="contact-form".
+- Service anchor links like /services#privacy-data-protection and the other service slugs are valid on /services.
+- https://wa.me/919953562762 is live and responds with a redirect (302 Found), which is expected.
+- mailto: and tel: links are structurally fine.
