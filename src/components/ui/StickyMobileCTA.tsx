@@ -11,7 +11,7 @@ const StickyMobileCTA = () => {
                 className="flex items-center justify-center gap-3 w-full bg-[#64ffda] !text-black py-4 rounded-xl font-bold text-sm uppercase tracking-widest shadow-[0_0_30px_rgba(100,255,218,0.25)] animate-in slide-in-from-bottom-5 duration-500"
             >
                 <Calendar size={18} />
-                Schedule Free Consultation
+                SCHEDULE FREE CONSULTATION
             </a>
         </div>
     );

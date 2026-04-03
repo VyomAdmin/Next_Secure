@@ -8,7 +8,7 @@ const ContactOptions = () => {
             icon: Calendar,
             title: "Schedule Consultation",
             description: "Book a free 30-minute strategy session with our governance team.",
-            cta: "Schedule Free Consultation",
+            cta: "SCHEDULE FREE CONSULTATION",
             href: "#contact-form",
             primary: true
         },
