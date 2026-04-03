@@ -15,7 +15,7 @@ const Pricing = () => {
                 "Readiness roadmap",
                 "Executive summary"
             ],
-            cta: "Start Assessment"
+            cta: "Schedule Free Consultation"
         },
         {
             title: "FRAMEWORK IMPLEMENTATION",
@@ -30,7 +30,7 @@ const Pricing = () => {
                 "Team training (up to 20 staff)",
                 "30-day post-implementation support"
             ],
-            cta: "Schedule Consultation",
+            cta: "Schedule Free Consultation",
             popular: true
         },
         {
@@ -46,7 +46,7 @@ const Pricing = () => {
                 "Continuous framework refinement",
                 "Priority advisory access"
             ],
-            cta: "Discuss Your Needs"
+            cta: "Schedule Free Consultation"
         }
     ];
 

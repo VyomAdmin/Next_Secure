@@ -104,7 +104,7 @@ export const services: ServiceEntry[] = [
                 items: ["Dark web monitoring", "Industry-specific threat analysis", "Vulnerability intelligence feeds", "Geopolitical risk assessment"]
             }
         ],
-        cta: { label: "Explore Cybersecurity Services", href: "/about-contact#contact-form" }
+        cta: { label: "Schedule Free Consultation", href: "/about-contact#contact-form" }
     },
     {
         slug: "privacy-data-protection",
@@ -154,7 +154,7 @@ export const services: ServiceEntry[] = [
                 items: ["MeitY AI guidelines preparation", "EU AI Act classification and requirements", "NIST AI Risk Management Framework", "Industry-specific AI regulations"]
             }
         ],
-        cta: { label: "Discuss AI Governance", href: "/about-contact#contact-form" }
+        cta: { label: "Schedule Free Consultation", href: "/about-contact#contact-form" }
     },
     {
         slug: "compliance-risk-management",
@@ -179,7 +179,7 @@ export const services: ServiceEntry[] = [
                 items: ["CERT-In incident reporting", "RBI data localization", "Sector-specific requirements", "Cross-border compliance"]
             }
         ],
-        cta: { label: "Compliance Consultation", href: "/about-contact#contact-form" }
+        cta: { label: "Schedule Free Consultation", href: "/about-contact#contact-form" }
     },
     {
         slug: "technical-audits",
@@ -204,7 +204,7 @@ export const services: ServiceEntry[] = [
                 items: ["Vendor security posture evaluation", "SaaS application security review", "Supply chain security assessment", "Software Bill of Materials (SBOM)"]
             }
         ],
-        cta: { label: "Request Assessment", href: "/about-contact#contact-form" }
+        cta: { label: "Schedule Free Consultation", href: "/about-contact#contact-form" }
     },
     {
         slug: "training-enablement",
@@ -229,6 +229,6 @@ export const services: ServiceEntry[] = [
                 items: ["DPDPA implementation training", "ISO 27001 awareness", "SOC 2 trust criteria", "Industry-specific requirements"]
             }
         ],
-        cta: { label: "Explore Training Programs", href: "/about-contact#contact-form" }
+        cta: { label: "Schedule Free Consultation", href: "/about-contact#contact-form" }
     }
 ];

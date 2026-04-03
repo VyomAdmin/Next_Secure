@@ -121,7 +121,7 @@ const IntegratedGovernance = () => {
                         href="#contact"
                         className="bg-blue-600 hover:bg-[#64ffda] hover:text-black text-white border-none py-4 px-10 rounded-full font-bold transition-all duration-200 ease-in-out"
                     >
-                        Discuss Your Needs
+                        Schedule Free Consultation
                     </Button>
                 </div>
             </div>
