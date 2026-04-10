@@ -49,7 +49,7 @@ const sections = [
     {
         title: 'Contact Us',
         paragraphs: [
-            'If you have questions about this Privacy Policy or our data handling practices, you can contact ValinzTech at contact@valinztech.com or call +91 99535 62762.',
+            'If you have questions about this Privacy Policy or our data handling practices, you can contact ValinzTech at contact@valinztech.com or call +91 9953562762.',
             'We may update this Privacy Policy from time to time. Material changes will be reflected on this page together with the updated revision date.',
         ],
     },

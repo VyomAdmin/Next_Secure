@@ -59,7 +59,7 @@ const Location = () => {
                                 <div className="space-y-1">
                                     <h4 className="text-xs font-bold text-slate-500 uppercase tracking-widest">Direct Line</h4>
                                     <a href="tel:+919953562762" className="text-white text-lg font-bold hover:text-blue-400 transition-colors decoration-blue-400/30 underline underline-offset-8">
-                                        +919953562762
+                                        +91 9953562762
                                     </a>
                                 </div>
                             </div>

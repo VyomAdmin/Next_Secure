@@ -59,7 +59,7 @@ const DPDPAFinalCTA = () => {
                             <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
                                 <Phone size={18} />
                             </div>
-                            <span className="font-medium text-sm">+91-995-356-2762</span>
+                            <span className="font-medium text-sm">+91 9953562762</span>
                         </a>
 
                         <div className="hidden sm:block w-[1px] h-8 bg-white/10"></div>

@@ -173,7 +173,7 @@ const ContactForm = () => {
                                     value={formData.phone}
                                     onChange={handleChange}
                                     className={`w-full px-6 py-4 bg-white/5 border rounded-2xl text-white placeholder-slate-600 focus:outline-none transition-all font-medium ${formErrors.phone ? 'border-red-400/70 focus:border-red-400' : 'border-white/10 focus:border-blue-500/50'}`}
-                                    placeholder="+91 99535 62762"
+                                    placeholder="+91 9953562762"
                                     inputMode="tel"
                                 />
                                 {formErrors.phone && <p className="text-sm text-red-400">{formErrors.phone}</p>}
