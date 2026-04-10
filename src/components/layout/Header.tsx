@@ -55,7 +55,7 @@ const Header = () => {
                         >
                             <Link
                                 href={item.href}
-                                className={`text-[20px] font-black tracking-[0.2em] uppercase transition-colors flex items-center gap-2 ${pathname === item.href ? 'text-white' : 'text-slate-400 hover:text-white'}`}
+                                className={`text-14px] font-black tracking-[0.2em] uppercase transition-colors flex items-center gap-2 ${pathname === item.href ? 'text-white' : 'text-slate-400 hover:text-white'}`}
                             >
                                 {item.name}
                             </Link>
@@ -77,12 +77,12 @@ const Header = () => {
                             )}
                         </div>
                     ))}
-                    <Button   variant="primary" 
-                            href="/about-contact#contact-form" 
-                            className="ml-2 py-4 px-10 text-[14px] tracking-[0.1em] bg-[#0052CC] !text-white border-none hover:bg-[#64ffda] hover:!text-black rounded-full shadow-xl transition-all duration-200 ease-in-out whitespace-nowrap"
-                            >
-                                SCHEDULE CONSULTATION
-                            </Button>
+                    <Button variant="primary"
+                        href="/about-contact#contact-form"
+                        className="ml-2 py-4 px-10 text-[14px] tracking-[0.1em] bg-[#0052CC] !text-white border-none hover:bg-[#64ffda] hover:!text-black rounded-full shadow-xl transition-all duration-200 ease-in-out whitespace-nowrap"
+                    >
+                        SCHEDULE CONSULTATION
+                    </Button>
                 </nav>
 
                 {/* Mobile Menu Button */}
