@@ -34,13 +34,13 @@ const Hero = () => {
                         Security
                         <span className="text-indigo-400/50 text-2xl md:text-6xl mx-1 md:mx-5 align-middle">&bull;</span>
                         AI
-                        <span className="block text-2xl md:text-4xl lg:text-5xl mt-4 text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">
-                            Simplify Compliance 
-                            <span className="text-indigo-400/50 mx-1 md:mx-3 align-middle">&bull;</span>
-                            Protect Data 
-                            <span className="text-indigo-400/50 mx-1 md:mx-3 align-middle">&bull;</span>
-                            Build Trust
-                        </span>
+                        <div className="text-2xl md:text-4xl lg:text-5xl mt-4 flex flex-wrap justify-center items-center gap-x-2 md:gap-x-4">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">Simplify Compliance</span>
+                            <span className="text-indigo-400/50 align-middle">&bull;</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">Protect Data</span>
+                            <span className="text-indigo-400/50 align-middle">&bull;</span>
+                            <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">Build Trust</span>
+                        </div>
                     </h1>
 
                     <p className="text-base md:text-xl text-indigo-100/80 mb-7 max-w-3xl leading-relaxed font-medium font-sans mx-auto text-balance">
