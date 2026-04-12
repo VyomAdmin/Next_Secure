@@ -45,7 +45,11 @@ const Hero = () => {
                         <span className="text-indigo-400/50 text-2xl md:text-6xl mx-1 md:mx-5 align-middle">&bull;</span>
                         AI
                         <span className="block text-2xl md:text-4xl lg:text-5xl mt-4 text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">
-                            Simplify Compliance . Protect Data . Build Trust
+                            Simplify Compliance 
+                            <span className="text-indigo-400/50 mx-1 md:mx-3 align-middle">&bull;</span>
+                            Protect Data 
+                            <span className="text-indigo-400/50 mx-1 md:mx-3 align-middle">&bull;</span>
+                            Build Trust
                         </span>
                     </h1>
 
