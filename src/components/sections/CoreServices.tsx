@@ -30,7 +30,7 @@ const CoreServices = () => {
             description:
                 'Independent validation of security posture, code quality, and architectural decisions.',
             icon: ScanSearch,
-            link: '/services#technical-audits',
+            link: '/services#audits-assessments',
         },
         {
             title: 'Training & Enablement',
