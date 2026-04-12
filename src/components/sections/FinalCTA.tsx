@@ -19,6 +19,21 @@ const FinalCTA = () => {
                             SCHEDULE FREE CONSULTATION
                         </Button>
 
+                        <div className="flex flex-wrap gap-x-8 gap-y-3 justify-center text-xs font-bold uppercase tracking-[0.18em] text-indigo-100/50 mb-16">
+                            <span className="flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                                30-minute consultations
+                            </span>
+                            <span className="flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-indigo-200/40"></span>
+                                No obligation
+                            </span>
+                            <span className="flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-violet-200/40"></span>
+                                Immediate next steps
+                            </span>
+                        </div>
+
                         <div className="flex flex-wrap justify-center gap-12 pt-12 border-t border-white/5 w-full">
                             <a href="mailto:contact@valinztech.com" className="flex items-center gap-4 text-slate-400 hover:text-white transition-colors group">
                                 <div className="w-12 h-12 bg-white/5 rounded-xl flex items-center justify-center group-hover:bg-blue-500/10 transition-colors">

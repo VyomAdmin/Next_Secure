@@ -27,7 +27,7 @@ const DPDPAFinalCTA = () => {
                         Schedule a free consultation to understand your DPDPA obligations and receive a customized roadmap.
                     </p>
 
-                    <div className="mb-16">
+                    <div className="flex flex-col items-center gap-12 mb-16">
                         <Button
                             variant="secondary"
                             href="/about-contact#contact-form"
@@ -36,6 +36,22 @@ const DPDPAFinalCTA = () => {
                             SCHEDULE FREE CONSULTATION
                             <ChevronRight size={16} className="ml-2 inline group-hover:translate-x-1 transition-transform" />
                         </Button>
+
+                        {/* Supporting text */}
+                        <div className="flex flex-wrap gap-x-8 gap-y-3 justify-center text-xs font-bold uppercase tracking-[0.18em] text-indigo-100/50">
+                            <span className="flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-white/40"></span>
+                                30-minute consultations
+                            </span>
+                            <span className="flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-indigo-200/40"></span>
+                                No obligation
+                            </span>
+                            <span className="flex items-center gap-2">
+                                <span className="w-1.5 h-1.5 rounded-full bg-violet-200/40"></span>
+                                Immediate next steps
+                            </span>
+                        </div>
                     </div>
 
                     {/* Secondary contact options */}
@@ -77,21 +93,7 @@ const DPDPAFinalCTA = () => {
                         </a>
                     </div>
 
-                    {/* Supporting text */}
-                    <div className="flex flex-wrap gap-x-8 gap-y-3 justify-center text-xs font-bold uppercase tracking-[0.18em] text-indigo-100/50">
-                        <span className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-white/40"></span>
-                            30-minute consultations
-                        </span>
-                        <span className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-indigo-200/40"></span>
-                            No obligation
-                        </span>
-                        <span className="flex items-center gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-violet-200/40"></span>
-                            Immediate next steps
-                        </span>
-                    </div>
+
                 </div>
             </div>
         </section>
