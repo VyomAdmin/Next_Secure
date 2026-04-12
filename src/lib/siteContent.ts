@@ -182,7 +182,7 @@ export const services: ServiceEntry[] = [
         cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact#contact-form" }
     },
     {
-        slug: "technical-audits",
+        slug: "audits-assessments",
         title: "Audits & Assessments",
         tagline: "Independent validation of security and compliance posture",
         overview: "Third-party technical assessments providing objective evaluation of security controls, code quality, and architectural decisions. Build stakeholder confidence through independent validation.",

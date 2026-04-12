@@ -10,7 +10,7 @@ const serviceIcons = {
     'privacy-data-protection': Lock,
     'ai-governance': Brain,
     'compliance-risk-management': BarChart3,
-    'technical-audits': ClipboardCheck,
+    'audits-assessments': ClipboardCheck,
     'training-enablement': GraduationCap
 };
 
@@ -50,6 +50,7 @@ const ServiceCategories = () => {
             return;
         }
 
+        setOpenService(index);
         setTimeout(() => {
             scrollServiceIntoView(index);
         }, 300);
