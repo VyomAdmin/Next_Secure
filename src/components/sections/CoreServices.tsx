@@ -70,7 +70,7 @@ const CoreServices = () => {
             </div>
 
             <div className="container relative z-10 mx-auto px-6">
-                <div className="mx-auto mb-20 max-w-4xl text-center">
+                <div className="mx-auto mb-12 max-w-4xl text-center">
                     <div className="mb-6 inline-block rounded-full bg-blue-900/10 px-4 py-1">
                         <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-blue-400">
                             Core Services Overview
