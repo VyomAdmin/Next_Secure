@@ -47,13 +47,17 @@ const Hero = () => {
                         We help organizations make sense of Data Privacy, Cybersecurity and AI Compliance - transforming complex regulations into clear, structured steps that not just protect your business but build lasting trust.
                     </p>
 
+                    <div className="mb-8">
+                        <p className="text-sm font-bold text-white uppercase tracking-widest opacity-60">Let's discuss how we can be of help</p>
+                    </div>
+
                     <div className="flex flex-col sm:flex-row gap-4 mb-14 w-full sm:w-auto justify-center">
                         <Button
                             variant="secondary"
                             href="/about-contact#contact-form"
                             className="w-full sm:w-auto sm:min-w-[220px] justify-center text-sm py-4 px-6 sm:px-8 uppercase tracking-widest bg-white/15 border-white/30 text-white hover:bg-[#64ffda] hover:text-black rounded-2xl shadow-[0_8px_24px_rgba(9,10,35,0.28)] hover:shadow-[0_0_20px_rgba(100,255,218,0.2)] backdrop-blur-md transition-all duration-200 ease-in-out"
                         >
-                            Talk to a consultant for free
+                            Talk to our team
                         </Button>
                     </div>
 
