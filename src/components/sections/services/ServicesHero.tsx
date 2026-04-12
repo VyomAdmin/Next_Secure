@@ -29,7 +29,7 @@ const ServicesHero = () => {
                         </span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.97] text-white mb-8 uppercase">
+                    <h1 className="text-2xl md:text-4xl lg:text-5xl font-black tracking-tighter leading-[0.97] text-white mb-8 uppercase text-balance">
                         Comprehensive Technology Assurance Services
                     </h1>
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import Button from '../ui/Button';
 import {
@@ -86,14 +85,14 @@ const CoreServices = () => {
                     </p>
                 </div>
 
-                <div className="mx-auto max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
                     {services.map((service) => {
                         const Icon = service.icon;
 
                         return (
                             <div
                                 key={service.title}
-                                className="flex h-full min-h-[280px] flex-col justify-between rounded-[2.25rem] bg-[#0A1020]/90 p-8 shadow-[0_20px_60px_rgba(2,8,23,0.45)] border border-white/5 backdrop-blur-sm md:p-10 transition-transform duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_rgba(2,8,23,0.65)]"
+                                className="flex h-full min-h-[280px] flex-col justify-between rounded-[2.25rem] bg-[#0A1020]/90 p-8 shadow-[0_20px_60px_rgba(2,8,23,0.45)] border border-white/5 backdrop-blur-sm md:p-10"
                             >
                                 <div>
                                     <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-500/10">
@@ -108,9 +107,9 @@ const CoreServices = () => {
                                 </div>
                                 <Link
                                     href={service.link}
-                                    className="mt-8 inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-blue-400 transition-colors hover:text-white group"
+                                    className="mt-8 inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-blue-400 transition-colors hover:text-white"
                                 >
-                                    View Services <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
+                                    View Services <ArrowRight size={14} />
                                 </Link>
                             </div>
                         );

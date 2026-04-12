@@ -34,7 +34,7 @@ const Hero = () => {
 
                     <div className="mb-8 inline-block px-5 py-2 border border-white/20 rounded-full backdrop-blur-md bg-white/10">
                         <span className="text-[10px] font-bold tracking-[0.3em] text-white uppercase">
-                            Adding value to technology
+                            Adding value & intelligence to technology
                         </span>
                     </div>
 
@@ -44,18 +44,13 @@ const Hero = () => {
                         Security
                         <span className="text-indigo-400/50 text-4xl md:text-6xl mx-3 md:mx-5 align-middle">&bull;</span>
                         AI
-                        <br />
-                        <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">
-                            Simplified
+                        <span className="block text-2xl md:text-4xl lg:text-5xl mt-4 text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">
+                            Simplify Compliance . Protect Data . Build Trust
                         </span>
                     </h1>
 
                     <p className="text-base md:text-xl text-indigo-100/80 mb-7 max-w-3xl leading-relaxed font-medium font-sans mx-auto text-balance">
                         We help organizations make sense of Data Privacy, Cybersecurity and AI Compliance - transforming complex regulations into clear, structured steps that not just protect your business but build lasting trust.
-                    </p>
-
-                    <p className="text-base md:text-lg font-bold tracking-wide text-white mb-10">
-                        Delhi, Serving Pan India and beyond.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 mb-14 w-full sm:w-auto justify-center">

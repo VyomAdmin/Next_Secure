@@ -13,9 +13,9 @@ const Footer = () => {
                     <div className="space-y-8">
                         <Logo className="h-10 w-auto" variant="dark" />
                         <div className="space-y-4">
-                            <p className="text-sm font-bold text-white uppercase tracking-widest">Adding value to technology</p>
+                            <p className="text-sm font-bold text-white uppercase tracking-widest">Adding value & intelligence to technology</p>
                             <p className="text-sm text-slate-500 leading-relaxed font-medium">
-                                We help organisations build intelligent, secure, and compliant technology systems through systematic governance frameworks.
+                                We help organizations make sense of Data Privacy, Cybersecurity and AI Compliance - transforming complex regulations into clear, structured steps that not just protect your business but build lasting trust.
                             </p>
                         </div>
                     </div>
@@ -30,7 +30,6 @@ const Footer = () => {
                                 { name: 'Privacy & Data Protection', href: '/services#privacy-data-protection' },
                                 { name: 'AI Governance', href: '/services#ai-governance' },
                                 { name: 'Compliance & Risk Management', href: '/services#compliance-risk-management' },
-                                { name: 'Audits', href: '/services#technical-audits' },
                                 { name: 'Training & Enablement', href: '/services#training-enablement' },
                             ].map((item) => (
                                 <li key={item.name}>
