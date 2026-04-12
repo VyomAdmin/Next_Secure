@@ -57,7 +57,7 @@ const ServiceCategories = () => {
     }, []);
 
     return (
-        <section id="service-categories" className="py-24 bg-[#050A18]">
+        <section id="service-categories" className="pt-12 pb-24 bg-[#050A18]">
             <div className="container mx-auto px-6">
                 <div className="max-w-7xl mx-auto space-y-6">
                     {services.map((service, index) => {

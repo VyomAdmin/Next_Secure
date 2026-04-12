@@ -4,7 +4,7 @@ import { ChevronRight } from 'lucide-react';
 
 const ServicesHero = () => {
     return (
-        <section className="relative min-h-[80vh] flex items-center justify-center pt-32 pb-24 overflow-hidden bg-[#050A18]">
+        <section className="relative min-h-[60vh] flex items-center justify-center pt-32 pb-12 overflow-hidden bg-[#050A18]">
             <div className="absolute inset-0 z-0">
                 <div
                     className="absolute inset-0 opacity-[0.03]"
@@ -37,10 +37,8 @@ const ServicesHero = () => {
                         Intelligence-driven consulting across cybersecurity, privacy, AI governance, and compliance—building frameworks that bring order to complexity.
                     </p>
 
-                               </div>
+                </div>
             </div>
-
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050A18] to-transparent pointer-events-none"></div>
         </section>
     );
 };
