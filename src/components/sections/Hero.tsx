@@ -57,7 +57,7 @@ const Hero = () => {
                         <Button
                             variant="secondary"
                             href="/about-contact#contact-form"
-                            className="min-w-[220px] justify-center text-sm py-4 px-8 uppercase tracking-widest bg-white/15 border-white/30 text-white hover:bg-[#64ffda] hover:text-black rounded-2xl shadow-[0_8px_24px_rgba(9,10,35,0.28)] hover:shadow-[0_0_20px_rgba(100,255,218,0.2)] backdrop-blur-md transition-all duration-200 ease-in-out"
+                            className="w-full sm:w-auto sm:min-w-[220px] justify-center text-sm py-4 px-6 sm:px-8 uppercase tracking-widest bg-white/15 border-white/30 text-white hover:bg-[#64ffda] hover:text-black rounded-2xl shadow-[0_8px_24px_rgba(9,10,35,0.28)] hover:shadow-[0_0_20px_rgba(100,255,218,0.2)] backdrop-blur-md transition-all duration-200 ease-in-out"
                         >
                             Talk to a consultant for free
                         </Button>

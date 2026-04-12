@@ -51,7 +51,7 @@ const WhoNeedsDPDPA = () => {
                                 <Button
                                     variant="secondary"
                                     href="/about-contact#contact-form"
-                                    className="min-w-[200px] py-4 rounded-xl bg-white text-slate-900 hover:bg-[#64ffda] border-none font-bold transition-all duration-200 ease-in-out"
+                                    className="w-full md:w-auto min-w-[200px] py-4 rounded-xl bg-white text-slate-900 hover:bg-[#64ffda] border-none font-bold transition-all duration-200 ease-in-out"
                                 >
                                     SCHEDULE FREE CONSULTATION
                                 </Button>
