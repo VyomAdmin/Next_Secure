@@ -20,17 +20,7 @@ const Hero = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col items-center justify-center text-center max-w-5xl mx-auto">
-                    <div className="relative w-[160px] h-[160px] md:w-[220px] md:h-[220px] lg:w-[260px] lg:h-[260px] mb-8 flex items-center justify-center">
-                        <Image
-                            src="/images/Valinz-Logo.png"
-                            alt="ValinzTech logo"
-                            width={600}
-                            height={600}
-                            priority
-                            sizes="(min-width: 1024px) 260px, (min-width: 768px) 220px, 160px"
-                            className="w-full h-full object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
-                        />
-                    </div>
+
 
                     <div className="mb-8 inline-block px-5 py-2 border border-white/20 rounded-full backdrop-blur-md bg-white/10">
                         <span className="text-[10px] font-bold tracking-[0.3em] text-white uppercase">
