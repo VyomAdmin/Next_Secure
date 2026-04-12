@@ -28,6 +28,7 @@ const Footer = () => {
                                 { name: 'DPDPA Compliance', href: '/dpdpa-compliance' },
                                 { name: 'Cybersecurity Consulting', href: '/services#cybersecurity-consulting' },
                                 { name: 'Privacy & Data Protection', href: '/services#privacy-data-protection' },
+                                { name: 'Audits & Assessments', href: '/services#audits-assessments' },
                                 { name: 'AI Governance', href: '/services#ai-governance' },
                                 { name: 'Compliance & Risk Management', href: '/services#compliance-risk-management' },
                                 { name: 'Training & Enablement', href: '/services#training-enablement' },

@@ -38,11 +38,11 @@ const Hero = () => {
                         </span>
                     </div>
 
-                    <h1 className="text-center text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.97] text-white mb-8">
+                    <h1 className="text-center text-3xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.97] text-white mb-8 text-balance">
                         Privacy
-                        <span className="text-indigo-400/50 text-4xl md:text-6xl mx-3 md:mx-5 align-middle">&bull;</span>
+                        <span className="text-indigo-400/50 text-2xl md:text-6xl mx-1 md:mx-5 align-middle">&bull;</span>
                         Security
-                        <span className="text-indigo-400/50 text-4xl md:text-6xl mx-3 md:mx-5 align-middle">&bull;</span>
+                        <span className="text-indigo-400/50 text-2xl md:text-6xl mx-1 md:mx-5 align-middle">&bull;</span>
                         AI
                         <span className="block text-2xl md:text-4xl lg:text-5xl mt-4 text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">
                             Simplify Compliance . Protect Data . Build Trust
