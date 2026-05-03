@@ -56,7 +56,7 @@ const CoreServices = () => {
     ];
 
     return (
-        <section id="services" className="relative overflow-hidden bg-[#020617] py-24">
+        <section id="allservices" className="relative overflow-hidden bg-[#020617] py-24">
             <div className="absolute inset-0">
                 <div
                     className="absolute inset-0 opacity-[0.03]"

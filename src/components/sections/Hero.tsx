@@ -5,7 +5,7 @@ import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-[#050A18]">
+        <section id="home" className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-[#050A18]">
             <div className="absolute inset-0 z-0">
                 <div
                     className="absolute inset-0 opacity-[0.03]"

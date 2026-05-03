@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import Hero from '@/components/sections/Hero';
+import HeroCarousel from '@/components/sections/HeroCarousel';
 import CoreServices from '@/components/sections/CoreServices';
 import Differentiation from '@/components/sections/Differentiation';
 import Audience from '@/components/sections/Audience';
@@ -39,7 +39,7 @@ export default function Home() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
-        <Hero />
+        <HeroCarousel />
         <CoreServices />
         <EngagementModels />
         <Differentiation />

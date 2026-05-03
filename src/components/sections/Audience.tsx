@@ -17,7 +17,7 @@ const Audience = () => {
     ];
 
     return (
-        <section className="py-24 bg-[#020617] border-y border-white/5">
+        <section id="dpdpa" className="py-24 bg-[#020617] border-y border-white/5">
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto text-center mb-20">
                     <div className="inline-block px-4 py-1 border border-blue-500/20 rounded-full bg-blue-900/10 mb-6">
