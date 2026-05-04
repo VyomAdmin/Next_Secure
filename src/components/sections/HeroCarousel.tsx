@@ -77,26 +77,30 @@ const HeroCarousel = () => {
               index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
           >
-            {/* Background Image */}
-            <div className="absolute inset-0">
+            {/* Full-Screen Background Image */}
+            <div className="absolute inset-0 overflow-hidden">
               <Image
                 src={slide.image}
                 alt={slide.title}
                 fill
                 priority={index === 0}
-                className="object-cover opacity-40 transition-transform duration-[5000ms] ease-linear scale-105"
+                className="object-cover transition-transform duration-[8000ms] ease-out"
                 style={{
-                  transform: index === currentSlide ? 'scale(1.1)' : 'scale(1)',
+                  transform: index === currentSlide ? 'scale(1.4)' : 'scale(1.2)',
+                  filter: 'brightness(1.8) saturate(1.4) contrast(1.1)',
+                  opacity: 0.65,
                 }}
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-[#050A18]/60 via-[#050A18]/40 to-[#050A18]" />
+              {/* Gradient overlays for depth and readability */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#050A18] via-[#050A18]/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050A18] via-transparent to-transparent" />
             </div>
 
-            {/* Content */}
-            <div className="relative flex h-full items-center justify-center text-center">
+            {/* Content Overlay */}
+            <div className="relative h-full flex items-center">
               <div className="container mx-auto px-6">
-                <div className={`max-w-5xl mx-auto transition-all duration-700 delay-300 transform ${
-                  index === currentSlide ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+                <div className={`max-w-3xl transition-all duration-1000 delay-300 transform text-left ${
+                  index === currentSlide ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                 }`}>
                   <div className="mb-6 inline-block px-5 py-2 border border-white/20 rounded-full backdrop-blur-md bg-white/10">
                     <span className="text-[10px] md:text-xs font-bold tracking-[0.3em] text-white uppercase">
@@ -104,11 +108,11 @@ const HeroCarousel = () => {
                     </span>
                   </div>
 
-                  <h1 className="text-4xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-tight text-white mb-6 uppercase">
+                  <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter leading-tight text-white mb-6 uppercase">
                     {slide.subtitle}
                   </h1>
 
-                  <p className="text-lg md:text-2xl text-indigo-100/90 mb-10 max-w-3xl mx-auto leading-relaxed font-medium">
+                  <p className="text-lg md:text-xl text-indigo-100/90 mb-10 max-w-2xl leading-relaxed font-medium">
                     {slide.description}
                   </p>
 
