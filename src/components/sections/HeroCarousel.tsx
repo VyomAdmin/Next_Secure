@@ -77,23 +77,23 @@ const HeroCarousel = () => {
               index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
             }`}
           >
-            {/* Full-Screen Background Image - Maximized Vibrancy */}
-            <div className="absolute inset-0 overflow-hidden">
+            {/* Full-Screen Background Image - Restored Fidelity */}
+            <div className="absolute inset-0 overflow-hidden bg-[#050A18]">
               <Image
                 src={slide.image}
                 alt={slide.title}
                 fill
                 priority={index === 0}
-                className="object-cover transition-transform duration-[10000ms] ease-out"
+                className="object-cover transition-all duration-[10000ms] ease-out"
                 style={{
-                  transform: 'scale(0.75)',
-                  filter: 'brightness(2.2) saturate(1.8) contrast(1.1)',
-                  opacity: 0.9,
+                  transform: 'scale(1)',
+                  filter: 'brightness(1.1) contrast(1.15) saturate(1.05)',
+                  opacity: 1,
                 }}
               />
-              {/* Lighter, more balanced gradient overlays */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/70 via-[#050A18]/20 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#050A18]/80 via-transparent to-[#050A18]/10" />
+              {/* Ultra-subtle gradient overlays for seamless background merging */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/80 via-[#050A18]/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050A18] via-transparent to-[#050A18]/5" />
             </div>
 
             {/* Content Overlay */}
