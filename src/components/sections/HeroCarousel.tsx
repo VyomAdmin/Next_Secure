@@ -11,7 +11,7 @@ const slides = [
     title: 'Adding value & intelligence to technology',
     subtitle: 'Privacy • Security • AI',
     description: 'Simplify Compliance • Protect Data • Build Trust',
-    link: '#home',
+    link: '#allservices',
   },
   {
     id: 'allservices',
@@ -59,9 +59,13 @@ const HeroCarousel = () => {
     const targetId = href.replace('#', '');
     const elem = document.getElementById(targetId);
     if (elem) {
-      elem.scrollIntoView({
+      const headerOffset = 96;
+      const top = elem.getBoundingClientRect().top + window.scrollY - headerOffset;
+
+      window.history.pushState(null, '', href);
+      window.scrollTo({
+        top: Math.max(top, 0),
         behavior: 'smooth',
-        block: 'start',
       });
     }
   };
