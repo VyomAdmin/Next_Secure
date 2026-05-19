@@ -12,13 +12,13 @@ const AboutHero = () => {
                     fill
                     priority
                     sizes="100vw"
-                    className="object-cover"
+                    className="object-cover object-[72%_center] md:object-center"
                     style={{
                         filter: 'brightness(1.15) contrast(1.15) saturate(1.08)',
                     }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/72 via-[#050A18]/22 to-[#050A18]/10" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050A18]/88 via-transparent to-[#050A18]/15" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/86 via-[#050A18]/46 to-[#050A18]/18 md:from-[#050A18]/72 md:via-[#050A18]/22 md:to-[#050A18]/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050A18]/92 via-[#050A18]/18 to-[#050A18]/24 md:from-[#050A18]/88 md:via-transparent md:to-[#050A18]/15" />
 
                 {/* Subtle Geometric / Structured Pattern Overlay */}
                 <div
