@@ -88,7 +88,7 @@ const HeroCarousel = () => {
                 alt={slide.title}
                 fill
                 priority={index === 0}
-                className="object-cover transition-all duration-[10000ms] ease-out"
+                className="object-contain md:object-cover transition-all duration-[10000ms] ease-out"
                 style={{
                   transform: 'scale(1)',
                   filter: 'brightness(1.1) contrast(1.15) saturate(1.05)',

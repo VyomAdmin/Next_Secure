@@ -6,6 +6,20 @@ const AboutHero = () => {
         <section className="relative min-h-[80vh] flex items-center justify-center pt-32 pb-24 overflow-hidden bg-[#050A18]">
             {/* Immersive Background Effects */}
             <div className="absolute inset-0 z-0">
+                <Image
+                    src="/crousel/abou_us.jpeg"
+                    alt=""
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover"
+                    style={{
+                        filter: 'brightness(1.15) contrast(1.15) saturate(1.08)',
+                    }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/72 via-[#050A18]/22 to-[#050A18]/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050A18]/88 via-transparent to-[#050A18]/15" />
+
                 {/* Subtle Geometric / Structured Pattern Overlay */}
                 <div
                     className="absolute inset-0 opacity-[0.03]"
@@ -36,7 +50,7 @@ const AboutHero = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="max-w-6xl mx-auto">
+                <div className="max-w-3xl mr-auto">
                     <div className="backdrop-blur-sm bg-white/[0.02] border border-white/5 px-10 py-12 md:px-16 md:py-16 rounded-[28px] shadow-2xl">
                         <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_260px] items-center gap-10 md:gap-16">
                             <div className="text-left">
@@ -62,7 +76,7 @@ const AboutHero = () => {
                         </div>
                     </div>
 
-                    <div className="mt-12 max-w-5xl">
+                    <div className="mt-12 max-w-3xl">
                         <p className="text-lg md:text-[1.35rem] text-indigo-100/80 leading-[1.85] font-medium font-sans tracking-[0.01em] text-left">
                             We help businesses make sense of the complex world of cybersecurity, privacy, and
                             compliance without the jargon or the headaches. Think of us as your technology
