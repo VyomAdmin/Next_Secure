@@ -13,11 +13,11 @@ const ServicesHero = () => {
                     sizes="100vw"
                     className="object-cover object-[72%_center] md:object-center"
                     style={{
-                        filter: 'brightness(1.08) contrast(1.12) saturate(1.05)',
+                        filter: 'brightness(1.1) contrast(1.15) saturate(1.05)',
                     }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/82 via-[#050A18]/46 to-[#050A18]/18" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050A18]/90 via-[#050A18]/28 to-[#050A18]/30" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/80 via-[#050A18]/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050A18] via-transparent to-[#050A18]/5" />
                 <div
                     className="absolute inset-0 opacity-[0.03]"
                     style={{
