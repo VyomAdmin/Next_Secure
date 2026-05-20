@@ -1,11 +1,23 @@
 import React from 'react';
-import Button from '@/components/ui/Button';
-import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 const ServicesHero = () => {
     return (
         <section className="relative min-h-[60vh] flex items-center justify-center pt-32 pb-12 overflow-hidden bg-[#050A18]">
             <div className="absolute inset-0 z-0">
+                <Image
+                    src="/crousel/IMG_allservices.PNG"
+                    alt=""
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover object-[72%_center] md:object-center"
+                    style={{
+                        filter: 'brightness(1.08) contrast(1.12) saturate(1.05)',
+                    }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/82 via-[#050A18]/46 to-[#050A18]/18" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050A18]/90 via-[#050A18]/28 to-[#050A18]/30" />
                 <div
                     className="absolute inset-0 opacity-[0.03]"
                     style={{
