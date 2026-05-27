@@ -62,7 +62,7 @@ const AboutHero = () => {
 
             <div className="container relative z-10 mx-auto px-6">
                 <div className="mx-auto max-w-3xl md:mr-auto md:ml-0">
-                    <div className="rounded-3xl border border-white/5 bg-white/[0.03] px-7 py-9 shadow-2xl backdrop-blur-sm sm:px-10 sm:py-12 md:px-16 md:py-16">
+                    <div className="px-7 py-9 sm:px-10 sm:py-12 md:px-16 md:py-16">
                         <div className="grid grid-cols-1 items-center gap-7 md:grid-cols-[minmax(0,1fr)_260px] md:gap-16">
                             <div className="text-center md:text-left">
                                 <h1 className="mx-auto max-w-[8ch] text-[clamp(2.75rem,13vw,4rem)] font-black leading-[0.95] tracking-normal text-white md:mx-0 md:text-7xl md:tracking-tighter lg:text-[5.25rem]">
