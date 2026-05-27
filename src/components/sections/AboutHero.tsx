@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutHero = () => {
     return (
-        <section className="relative min-h-[80vh] flex items-center justify-center pt-32 pb-24 overflow-hidden bg-[#050A18]">
+        <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#050A18] pb-32 pt-28 md:min-h-[80vh] md:pb-24 md:pt-32">
             {/* Immersive Background Effects */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -12,7 +12,18 @@ const AboutHero = () => {
                     fill
                     priority
                     sizes="100vw"
-                    className="object-cover object-[72%_center] md:object-center"
+                    className="hidden object-cover object-center md:block"
+                    style={{
+                        filter: 'brightness(1.15) contrast(1.15) saturate(1.08)',
+                    }}
+                />
+                <Image
+                    src="/crousel/mobile_backbround.jpeg"
+                    alt=""
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover object-center md:hidden"
                     style={{
                         filter: 'brightness(1.15) contrast(1.15) saturate(1.08)',
                     }}
@@ -49,35 +60,35 @@ const AboutHero = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="max-w-3xl mr-auto">
-                    <div className="backdrop-blur-sm bg-white/[0.02] border border-white/5 px-10 py-12 md:px-16 md:py-16 rounded-[28px] shadow-2xl">
-                        <div className="grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_260px] items-center gap-10 md:gap-16">
-                            <div className="text-left">
-                                <h1 className="text-5xl md:text-7xl lg:text-[5.25rem] font-black tracking-tighter leading-[0.95] text-white max-w-[7ch]">
+            <div className="container relative z-10 mx-auto px-6">
+                <div className="mx-auto max-w-3xl md:mr-auto md:ml-0">
+                    <div className="rounded-3xl border border-white/5 bg-white/[0.03] px-7 py-9 shadow-2xl backdrop-blur-sm sm:px-10 sm:py-12 md:px-16 md:py-16">
+                        <div className="grid grid-cols-1 items-center gap-7 md:grid-cols-[minmax(0,1fr)_260px] md:gap-16">
+                            <div className="text-center md:text-left">
+                                <h1 className="mx-auto max-w-[8ch] text-[clamp(2.75rem,13vw,4rem)] font-black leading-[0.95] tracking-normal text-white md:mx-0 md:text-7xl md:tracking-tighter lg:text-[5.25rem]">
                                     We&apos;re
                                     <br />
                                     ValinzTech
                                 </h1>
                             </div>
 
-                            <div className="flex justify-start md:justify-center">
-                                <div className="w-40 h-40 md:w-52 md:h-52 flex items-center justify-center overflow-visible">
+                            <div className="flex justify-center">
+                                <div className="flex h-32 w-32 items-center justify-center overflow-visible sm:h-40 sm:w-40 md:h-52 md:w-52">
                                     <Image
                                         src="/images/Valinz-Logo.png"
                                         alt="ValinzTech logo"
                                         width={440}
                                         height={440}
                                         sizes="(min-width: 768px) 256px, 192px"
-                                        className="w-48 h-48 md:w-64 md:h-64 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)]"
+                                        className="h-40 w-40 object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.3)] sm:h-48 sm:w-48 md:h-64 md:w-64"
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="mt-12 max-w-3xl">
-                        <p className="text-lg md:text-[1.35rem] text-indigo-100/80 leading-[1.85] font-medium font-sans tracking-[0.01em] text-left">
+                    <div className="mt-9 max-w-3xl md:mt-12">
+                        <p className="text-center font-sans text-base font-medium leading-[1.75] tracking-normal text-indigo-100/80 sm:text-lg md:text-left md:text-[1.35rem] md:leading-[1.85]">
                             We help businesses make sense of the complex world of cybersecurity, privacy, and
                             compliance without the jargon or the headaches. Think of us as your technology
                             governance partner: we bring the expertise, you keep the clarity. Whether you&apos;re
@@ -88,7 +99,7 @@ const AboutHero = () => {
                     </div>
 
                     {/* Authority Visual Tags */}
-                    <div className="mt-16 flex flex-wrap justify-start gap-x-12 gap-y-4 text-sm font-bold uppercase tracking-[0.25em] text-slate-500">
+                    <div className="mt-10 hidden flex-wrap justify-center gap-x-12 gap-y-4 text-sm font-bold uppercase tracking-[0.25em] text-slate-500 sm:flex md:mt-16 md:justify-start">
                         <span className="flex items-center gap-3">
                             <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_#3b82f6]"></span>
                             Trust

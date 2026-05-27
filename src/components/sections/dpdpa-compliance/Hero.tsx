@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hero = () => {
     return (
-        <section className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden bg-[#050A18]">
+        <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#050A18] pb-32 pt-28 md:min-h-[90vh] md:pb-20 md:pt-32">
             <div className="absolute inset-0 z-0">
                 <Image
                     src="/crousel/IMG_DPDPA.PNG"
@@ -11,13 +11,24 @@ const Hero = () => {
                     fill
                     priority
                     sizes="100vw"
-                    className="object-cover object-[72%_center] md:object-center"
+                    className="hidden object-cover object-center md:block"
                     style={{
                         filter: 'brightness(1.08) contrast(1.12) saturate(1.05)',
                     }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/82 via-[#050A18]/48 to-[#050A18]/20" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050A18]/92 via-[#050A18]/32 to-[#050A18]/32" />
+                <Image
+                    src="/crousel/mobile_backbround.jpeg"
+                    alt=""
+                    fill
+                    priority
+                    sizes="100vw"
+                    className="object-cover object-center md:hidden"
+                    style={{
+                        filter: 'brightness(1.08) contrast(1.12) saturate(1.05)',
+                    }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/72 via-[#050A18]/36 to-[#050A18]/18 md:from-[#050A18]/82 md:via-[#050A18]/48 md:to-[#050A18]/20" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050A18] via-[#050A18]/30 to-[#050A18]/36 md:from-[#050A18]/92 md:via-[#050A18]/32 md:to-[#050A18]/32" />
                 <div
                     className="absolute inset-0 opacity-[0.03]"
                     style={{
@@ -25,34 +36,34 @@ const Hero = () => {
                         backgroundSize: '40px 40px',
                     }}
                 ></div>
-                <div className="absolute top-[10%] left-1/2 -translate-x-1/2 w-[70%] h-[50%] bg-blue-600/10 rounded-full blur-[140px]"></div>
-                <div className="absolute bottom-0 right-[10%] w-[40%] h-[40%] bg-blue-400/5 rounded-full blur-[100px]"></div>
+                <div className="absolute top-[10%] left-1/2 h-[50%] w-[70%] -translate-x-1/2 rounded-full bg-blue-600/10 blur-[140px]"></div>
+                <div className="absolute bottom-0 right-[10%] h-[40%] w-[40%] rounded-full bg-blue-400/5 blur-[100px]"></div>
             </div>
 
-            <div className="container mx-auto px-6 relative z-10">
-                <div className="max-w-4xl mx-auto text-center">
-                    <div className="mb-8 inline-block px-5 py-2 border border-white/20 rounded-full backdrop-blur-md bg-white/10">
-                        <span className="text-[10px] font-bold tracking-[0.3em] text-white uppercase">
-                            FEATURED SERVICE
+            <div className="container relative z-10 mx-auto px-6">
+                <div className="mx-auto max-w-4xl text-center">
+                    <div className="mb-6 inline-block max-w-full rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-md md:mb-8">
+                        <span className="block text-[9px] font-bold uppercase tracking-[0.24em] text-white md:text-[10px] md:tracking-[0.3em]">
+                            Featured Service
                         </span>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.97] text-white mb-8 uppercase">
+                    <h1 className="mx-auto mb-6 max-w-[13ch] text-[clamp(2.5rem,11vw,4rem)] font-black uppercase leading-[0.98] tracking-normal text-white md:mb-8 md:max-w-4xl md:text-7xl md:tracking-tighter lg:text-8xl">
                         DPDPA Compliance Services
                     </h1>
 
-                    <h2 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-white to-indigo-200 mb-8">
+                    <h2 className="mx-auto mb-6 max-w-[30rem] bg-gradient-to-r from-indigo-200 via-white to-indigo-200 bg-clip-text text-xl font-bold text-transparent md:mb-8 md:max-w-3xl md:text-3xl">
                         Systematic frameworks for India&apos;s data protection requirements.
                     </h2>
 
-                    <p className="text-lg md:text-xl text-indigo-100/80 mb-10 max-w-3xl mx-auto leading-relaxed font-medium font-sans">
+                    <p className="mx-auto mb-0 max-w-[34rem] font-sans text-base font-medium leading-relaxed text-indigo-100/80 sm:text-lg md:mb-10 md:max-w-3xl md:text-xl">
                         The Digital Personal Data Protection Act (DPDPA) 2023 establishes comprehensive obligations for organizations processing personal data of Indian citizens. We help you build compliant, sustainable governance frameworks, transforming regulatory requirements into strategic advantage.
                     </p>
 
                 </div>
             </div>
 
-            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#050A18] to-transparent pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 h-32 w-full bg-gradient-to-t from-[#050A18] to-transparent pointer-events-none"></div>
         </section>
     );
 };
