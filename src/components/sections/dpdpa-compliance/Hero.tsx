@@ -1,34 +1,11 @@
 import React from 'react';
-import Image from 'next/image';
 
 const Hero = () => {
     return (
         <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#050A18] pb-32 pt-28 md:min-h-[90vh] md:pb-20 md:pt-32">
-            <div className="absolute inset-0 z-0">
-                <Image
-                    src="/crousel/IMG_DPDPA.PNG"
-                    alt=""
-                    fill
-                    priority
-                    sizes="100vw"
-                    className="hidden object-cover object-center md:block"
-                    style={{
-                        filter: 'brightness(1.08) contrast(1.12) saturate(1.05)',
-                    }}
-                />
-                <Image
-                    src="/crousel/mobile_backbround.jpeg"
-                    alt=""
-                    fill
-                    priority
-                    sizes="100vw"
-                    className="object-cover object-center md:hidden"
-                    style={{
-                        filter: 'brightness(1.08) contrast(1.12) saturate(1.05)',
-                    }}
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#050A18]/72 via-[#050A18]/36 to-[#050A18]/18 md:from-[#050A18]/82 md:via-[#050A18]/48 md:to-[#050A18]/20" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050A18] via-[#050A18]/30 to-[#050A18]/36 md:from-[#050A18]/92 md:via-[#050A18]/32 md:to-[#050A18]/32" />
+            <div className="hero-image hero-image-dpdpa absolute inset-0 z-0">
+                <div className="absolute inset-0 z-[2] bg-gradient-to-r from-[#050A18]/58 via-[#050A18]/18 to-transparent md:from-[#050A18]/72 md:via-[#050A18]/18 md:to-transparent" />
+                <div className="absolute inset-0 z-[2] bg-gradient-to-t from-[#050A18]/72 via-transparent to-[#050A18]/8 md:from-[#050A18]/76 md:via-transparent md:to-transparent" />
                 <div
                     className="absolute inset-0 opacity-[0.03]"
                     style={{
@@ -48,15 +25,17 @@ const Hero = () => {
                         </span>
                     </div>
 
-                    <h1 className="mx-auto mb-6 max-w-[13ch] text-[clamp(2.5rem,11vw,4rem)] font-black uppercase leading-[0.98] tracking-normal text-white md:mb-8 md:max-w-4xl md:text-7xl md:tracking-tighter lg:text-8xl">
-                        DPDPA Compliance Services
+                    <h1 className="mx-auto mb-6 max-w-[20rem] text-3xl font-black uppercase leading-tight tracking-normal text-white sm:text-5xl md:mb-8 md:max-w-4xl md:text-6xl lg:text-6xl">
+                        <span className="block md:inline">DPDPA </span>
+                        <span className="block md:inline">Compliance </span>
+                        <span className="block md:inline">Services</span>
                     </h1>
 
-                    <h2 className="mx-auto mb-6 max-w-[30rem] bg-gradient-to-r from-indigo-200 via-white to-indigo-200 bg-clip-text text-xl font-bold text-transparent md:mb-8 md:max-w-3xl md:text-3xl">
+                    <h2 className="mx-auto mb-6 max-w-[16rem] bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-base font-bold text-transparent sm:max-w-[20rem] sm:text-lg md:mb-8 md:max-w-3xl md:text-3xl">
                         Systematic frameworks for India&apos;s data protection requirements.
                     </h2>
 
-                    <p className="mx-auto mb-0 max-w-[34rem] font-sans text-base font-medium leading-relaxed text-indigo-100/80 sm:text-lg md:mb-10 md:max-w-3xl md:text-xl">
+                    <p className="mx-auto mb-0 max-w-[16rem] font-sans text-sm font-medium leading-relaxed text-indigo-100/80 sm:max-w-[20rem] sm:text-lg md:mb-10 md:max-w-3xl md:text-xl">
                         The Digital Personal Data Protection Act (DPDPA) 2023 establishes comprehensive obligations for organizations processing personal data of Indian citizens. We help you build compliant, sustainable governance frameworks, transforming regulatory requirements into strategic advantage.
                     </p>
 

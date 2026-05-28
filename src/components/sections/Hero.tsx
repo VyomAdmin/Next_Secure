@@ -1,7 +1,5 @@
 import React from 'react';
 import Button from '../ui/Button';
-import Image from 'next/image';
-import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
     return (
@@ -34,13 +32,13 @@ const Hero = () => {
                         Security
                         <span className="text-indigo-400/50 text-2xl md:text-6xl mx-1 md:mx-5 align-middle">&bull;</span>
                         AI
-                        <div className="text-2xl md:text-4xl lg:text-5xl mt-4 flex flex-wrap justify-center items-center gap-x-2 md:gap-x-4">
+                        <span className="text-2xl md:text-4xl lg:text-5xl mt-4 flex flex-wrap justify-center items-center gap-x-2 md:gap-x-4">
                             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">Simplify Compliance</span>
                             <span className="text-indigo-400/50 align-middle">&bull;</span>
                             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">Protect Data</span>
                             <span className="text-indigo-400/50 align-middle">&bull;</span>
                             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-violet-100 to-indigo-200">Build Trust</span>
-                        </div>
+                        </span>
                     </h1>
 
                     <p className="text-base md:text-xl text-indigo-100/80 mb-7 max-w-3xl leading-relaxed font-medium font-sans mx-auto text-balance">
@@ -48,7 +46,7 @@ const Hero = () => {
                     </p>
 
                     <div className="mb-8">
-                        <p className="text-sm font-bold text-white uppercase tracking-widest opacity-60">Let's discuss how we can be of help</p>
+                        <p className="text-sm font-bold text-white uppercase tracking-widest opacity-60">Let&apos;s discuss how we can be of help</p>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 mb-14 w-full sm:w-auto justify-center">

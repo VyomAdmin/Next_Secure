@@ -55,7 +55,7 @@ const Header = () => {
                         >
                             <Link
                                 href={item.href}
-                                className={`text-14px] font-black tracking-[0.2em] uppercase transition-colors flex items-center gap-2 ${pathname === item.href ? 'text-white' : 'text-slate-400 hover:text-white'}`}
+                                className={`flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] transition-colors ${pathname === item.href ? 'text-white' : 'text-slate-400 hover:text-white'}`}
                             >
                                 {item.name}
                             </Link>

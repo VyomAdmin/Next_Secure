@@ -50,10 +50,12 @@ const ServiceCategories = () => {
             return;
         }
 
-        setOpenService(index);
-        setTimeout(() => {
+        const timeout = window.setTimeout(() => {
+            setOpenService(index);
             scrollServiceIntoView(index);
-        }, 300);
+        }, 0);
+
+        return () => window.clearTimeout(timeout);
     }, []);
 
     return (
