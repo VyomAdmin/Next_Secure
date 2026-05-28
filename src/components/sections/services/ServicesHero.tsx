@@ -21,8 +21,8 @@ const ServicesHero = () => {
                 </div>
             </div>
 
-            <div className="container relative z-10 mx-auto px-6 text-center">
-                <div className="mx-auto flex max-w-5xl flex-col items-center">
+            <div className="container relative z-10 mx-auto px-6">
+                <div className="flex max-w-5xl flex-col items-center text-center md:items-start md:text-left">
                     <div className="mb-6 inline-block max-w-full rounded-full border border-white/15 bg-white/10 px-5 py-2 backdrop-blur-md md:mb-8">
                         <span className="block text-[9px] font-bold uppercase tracking-[0.24em] text-white md:text-[10px] md:tracking-[0.3em]">
                             ValinzTech Services
@@ -36,7 +36,7 @@ const ServicesHero = () => {
                         <span className="block md:inline">Services</span>
                     </h1>
 
-                    <p className="mx-auto mb-0 max-w-[16rem] text-sm font-medium leading-relaxed text-indigo-100/80 sm:max-w-[20rem] sm:text-lg md:mb-12 md:max-w-3xl md:text-2xl">
+                    <p className="mb-0 max-w-[16rem] text-sm font-medium leading-relaxed text-indigo-100/80 sm:max-w-[20rem] sm:text-lg md:mb-12 md:max-w-3xl md:text-2xl">
                         Intelligence-driven consulting across cybersecurity, privacy, AI governance, and compliance, building frameworks that bring order to complexity.
                     </p>
 

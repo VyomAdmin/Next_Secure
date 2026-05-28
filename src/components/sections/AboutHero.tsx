@@ -40,8 +40,8 @@ const AboutHero = () => {
 
             {/* Content */}
             <div className="container relative z-10 mx-auto px-6">
-                <div className="mx-auto max-w-3xl md:mr-auto md:ml-0">
-                    <div className="px-7 py-9 sm:px-10 sm:py-12 md:px-16 md:py-16">
+                <div className="max-w-3xl">
+                    <div>
                         <div className="grid grid-cols-1 items-center gap-7 md:grid-cols-[minmax(0,1fr)_260px] md:gap-16">
                             <div className="text-center md:text-left">
                                 <h1 className="mx-auto max-w-[8ch] text-3xl font-black leading-tight tracking-normal text-white sm:text-5xl md:mx-0 md:text-6xl lg:text-6xl">
@@ -66,7 +66,7 @@ const AboutHero = () => {
                         </div>
                     </div>
 
-                    <div className="mx-auto mt-9 max-w-[16rem] sm:max-w-[20rem] md:mx-0 md:mt-12 md:max-w-3xl">
+                    <div className="mx-auto mt-9 max-w-[16rem] text-center sm:max-w-[20rem] md:mx-0 md:mt-12 md:max-w-3xl md:text-left">
                         <p className="text-center font-sans text-sm font-medium leading-[1.75] tracking-normal text-indigo-100/80 sm:text-lg md:text-left md:text-[1.35rem] md:leading-[1.85]">
                             We help businesses make sense of the complex world of cybersecurity, privacy, and
                             compliance without the jargon or the headaches. Think of us as your technology

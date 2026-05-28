@@ -18,24 +18,24 @@ const Hero = () => {
             </div>
 
             <div className="container relative z-10 mx-auto px-6">
-                <div className="mx-auto max-w-4xl text-center">
+                <div className="max-w-4xl text-center md:text-left">
                     <div className="mb-6 inline-block max-w-full rounded-full border border-white/20 bg-white/10 px-5 py-2 backdrop-blur-md md:mb-8">
                         <span className="block text-[9px] font-bold uppercase tracking-[0.24em] text-white md:text-[10px] md:tracking-[0.3em]">
                             Featured Service
                         </span>
                     </div>
 
-                    <h1 className="mx-auto mb-6 max-w-[20rem] text-3xl font-black uppercase leading-tight tracking-normal text-white sm:text-5xl md:mb-8 md:max-w-4xl md:text-6xl lg:text-6xl">
+                    <h1 className="mx-auto mb-6 max-w-[20rem] text-3xl font-black uppercase leading-tight tracking-normal text-white sm:text-5xl md:mx-0 md:mb-8 md:max-w-4xl md:text-6xl lg:text-6xl">
                         <span className="block md:inline">DPDPA </span>
                         <span className="block md:inline">Compliance </span>
                         <span className="block md:inline">Services</span>
                     </h1>
 
-                    <h2 className="mx-auto mb-6 max-w-[16rem] bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-base font-bold text-transparent sm:max-w-[20rem] sm:text-lg md:mb-8 md:max-w-3xl md:text-3xl">
+                    <h2 className="mx-auto mb-6 max-w-[16rem] bg-gradient-to-r from-blue-200 via-white to-blue-200 bg-clip-text text-base font-bold text-transparent sm:max-w-[20rem] md:mx-0 md:mb-8 md:max-w-3xl md:text-xl">
                         Systematic frameworks for India&apos;s data protection requirements.
                     </h2>
 
-                    <p className="mx-auto mb-0 max-w-[16rem] font-sans text-sm font-medium leading-relaxed text-indigo-100/80 sm:max-w-[20rem] sm:text-lg md:mb-10 md:max-w-3xl md:text-xl">
+                    <p className="mx-auto mb-0 max-w-[16rem] font-sans text-sm font-medium leading-relaxed text-indigo-100/80 sm:max-w-[20rem] sm:text-lg md:mx-0 md:mb-10 md:max-w-3xl md:text-xl">
                         The Digital Personal Data Protection Act (DPDPA) 2023 establishes comprehensive obligations for organizations processing personal data of Indian citizens. We help you build compliant, sustainable governance frameworks, transforming regulatory requirements into strategic advantage.
                     </p>
 
