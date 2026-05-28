@@ -3,7 +3,7 @@ import Button from '../ui/Button';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden bg-[#050A18]">
+        <section id="home" className="relative flex min-h-[82svh] items-center overflow-hidden bg-[#050A18] pb-16 pt-24 md:min-h-screen md:pb-20">
             <div className="absolute inset-0 z-0">
                 <div
                     className="absolute inset-0 opacity-[0.03]"

@@ -76,7 +76,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <section id="home" className="relative h-[100svh] w-full overflow-hidden bg-[#050A18] md:h-screen">
+    <section id="home" className="relative h-[88svh] w-full overflow-hidden bg-[#050A18] md:h-screen">
       <div className="relative h-full w-full">
         {slides.map((slide, index) => (
           <div
@@ -105,7 +105,7 @@ const HeroCarousel = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#050A18]/72 via-transparent to-[#050A18]/8 md:from-[#050A18]/70 md:via-transparent md:to-transparent" />
             </div>
 
-            <div className="relative flex min-h-[100svh] items-center py-32 md:h-full md:min-h-0 md:py-0">
+            <div className="relative flex min-h-[88svh] items-center py-24 md:h-full md:min-h-0 md:py-0">
               <div className="container mx-auto px-6">
                 <div className={`mx-auto max-w-3xl text-center transition-all duration-1000 delay-300 transform md:mx-0 md:text-left ${
                   index === currentSlide ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
@@ -138,7 +138,7 @@ const HeroCarousel = () => {
         ))}
       </div>
 
-      <div className="absolute bottom-28 left-1/2 z-20 flex -translate-x-1/2 items-center gap-4 md:bottom-12">
+      <div className="absolute bottom-12 left-1/2 z-20 flex -translate-x-1/2 items-center gap-4 md:bottom-12">
         {slides.map((_, index) => (
           <button
             key={index}

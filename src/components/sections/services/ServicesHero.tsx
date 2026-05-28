@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServicesHero = () => {
     return (
-        <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#050A18] pb-32 pt-28 md:min-h-[70vh] md:pb-16 md:pt-32">
+        <section className="relative flex min-h-[78svh] items-start justify-center overflow-hidden bg-[#050A18] pb-20 pt-36 md:min-h-[70vh] md:items-center md:pb-16 md:pt-32">
             <div className="hero-image hero-image-services absolute inset-0 z-0">
                 <div className="absolute inset-0 z-[2] bg-gradient-to-r from-[#050A18]/58 via-[#050A18]/18 to-transparent md:from-[#050A18]/72 md:via-[#050A18]/12 md:to-transparent" />
                 <div className="absolute inset-0 z-[2] bg-gradient-to-t from-[#050A18]/72 via-transparent to-[#050A18]/8 md:from-[#050A18]/70 md:via-transparent md:to-transparent" />
@@ -36,7 +36,7 @@ const ServicesHero = () => {
                         <span className="block md:inline">Services</span>
                     </h1>
 
-                    <p className="mb-0 max-w-[16rem] text-sm font-medium leading-relaxed text-indigo-100/80 sm:max-w-[20rem] sm:text-lg md:mb-12 md:max-w-3xl md:text-2xl">
+                    <p className="mb-0 max-w-[22rem] text-sm font-medium leading-relaxed text-indigo-100/80 sm:max-w-[32rem] sm:text-lg md:mb-12 md:max-w-3xl md:text-2xl">
                         Intelligence-driven consulting across cybersecurity, privacy, AI governance, and compliance, building frameworks that bring order to complexity.
                     </p>
 

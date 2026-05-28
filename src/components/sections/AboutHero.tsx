@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const AboutHero = () => {
     return (
-        <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-[#050A18] pb-32 pt-28 md:min-h-[80vh] md:pb-24 md:pt-32">
+        <section className="relative flex min-h-[82svh] items-center justify-center overflow-hidden bg-[#050A18] pb-20 pt-28 md:min-h-[80vh] md:pb-24 md:pt-32">
             {/* Background Image Layer */}
             <div className="hero-image hero-image-about absolute inset-0 z-0">
                 {/* Gradient Overlays */}
@@ -42,7 +42,7 @@ const AboutHero = () => {
             <div className="container relative z-10 mx-auto px-6">
                 <div className="max-w-3xl">
                     <div>
-                        <div className="grid grid-cols-1 items-center gap-7 md:grid-cols-[minmax(0,1fr)_260px] md:gap-16">
+                        <div className="grid grid-cols-1 items-center gap-7 md:grid-cols-[minmax(0,1fr)_260px] md:gap-16 lg:grid-cols-[max-content_220px] lg:justify-start lg:gap-8">
                             <div className="text-center md:text-left">
                                 <h1 className="mx-auto max-w-[8ch] text-3xl font-black leading-tight tracking-normal text-white sm:text-5xl md:mx-0 md:text-6xl lg:text-6xl">
                                     We&apos;re
@@ -51,7 +51,7 @@ const AboutHero = () => {
                                 </h1>
                             </div>
 
-                            <div className="flex justify-center">
+                            <div className="flex justify-center lg:justify-start">
                                 <div className="flex h-32 w-32 items-center justify-center overflow-visible sm:h-40 sm:w-40 md:h-52 md:w-52">
                                     <Image
                                         src="/images/Valinz-Logo.png"
@@ -66,7 +66,7 @@ const AboutHero = () => {
                         </div>
                     </div>
 
-                    <div className="mx-auto mt-9 max-w-[16rem] text-center sm:max-w-[20rem] md:mx-0 md:mt-12 md:max-w-3xl md:text-left">
+                    <div className="mx-auto mt-9 max-w-[22rem] text-center sm:max-w-[32rem] md:mx-0 md:mt-12 md:max-w-3xl md:text-left">
                         <p className="text-center font-sans text-sm font-medium leading-[1.75] tracking-normal text-indigo-100/80 sm:text-lg md:text-left md:text-[1.35rem] md:leading-[1.85]">
                             We help businesses make sense of the complex world of cybersecurity, privacy, and
                             compliance without the jargon or the headaches. Think of us as your technology
