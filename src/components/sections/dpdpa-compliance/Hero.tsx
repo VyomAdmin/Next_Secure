@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section className="relative flex min-h-[82svh] items-center overflow-hidden bg-[#050A18] pb-20 pt-28 md:min-h-[90vh] md:pb-20 md:pt-32">
+        <section className="relative flex min-h-[82svh] items-center overflow-hidden bg-[#050A18] pb-20 pt-28 md:min-h-[70vh] md:pb-16 md:pt-32">
             <div className="hero-image hero-image-dpdpa absolute inset-0 z-0">
                 <div className="absolute inset-0 z-[2] bg-gradient-to-r from-[#050A18]/58 via-[#050A18]/18 to-transparent md:from-[#050A18]/72 md:via-[#050A18]/18 md:to-transparent" />
                 <div className="absolute inset-0 z-[2] bg-gradient-to-t from-[#050A18]/72 via-transparent to-[#050A18]/8 md:from-[#050A18]/76 md:via-transparent md:to-transparent" />
