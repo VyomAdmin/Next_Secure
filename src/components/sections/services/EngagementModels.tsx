@@ -84,7 +84,7 @@ const EngagementModels = () => {
                 <div className="text-center">
                     <Button
                         variant="primary"
-                        href="#contact"
+                        href="/about-contact#contact-form"
                         className="bg-blue-600 hover:bg-[#64ffda] hover:text-black text-white border-none py-4 px-10 rounded-full font-bold transition-all duration-200 ease-in-out"
                     >
                         Discuss Best Fit
