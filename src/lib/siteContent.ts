@@ -80,6 +80,33 @@ export const dpdpaFaqs: FAQEntry[] = [
     }
 ];
 
+export const aiInfraFaqs: FAQEntry[] = [
+    {
+        question: "How do you help organizations optimize their AI infrastructure and compute costs?",
+        answer: "We analyze workload characteristics (training vs. fine-tuning vs. high-throughput inference) to architect right-sized compute environments. We leverage GPU orchestration, quantized model serving, hybrid cloud/on-prem clusters, and dynamic scaling to cut latency and cloud compute overhead by up to 40-60%."
+    },
+    {
+        question: "Can ValinzTech help us build custom RAG pipelines and fine-tuned enterprise models?",
+        answer: "Yes. We engineer end-to-end AI pipelines—including proprietary data parsing, vector database indexing, hybrid retrieval, agentic workflows, and domain-specific fine-tuning (LoRA/QLoRA). We ensure all pipelines operate within your enterprise perimeter without exposing IP or sensitive data to third-party public models."
+    },
+    {
+        question: "What regulatory frameworks does your AI Governance practice cover?",
+        answer: "Our governance frameworks align with the EU AI Act (risk tiering, documentation, transparency), India's MeitY Advisory guidelines, NIST AI Risk Management Framework (AI RMF 1.0), and ISO/IEC 42001 (Artificial Intelligence Management System). We translate legal requirements into automated engineering checks."
+    },
+    {
+        question: "How do you protect enterprise data and intellectual property in AI applications?",
+        answer: "We enforce zero-trust AI architecture: zero data retention contracts, prompt injection firewalls, PII masking/tokenization before inference, role-based access control (RBAC) over vector embeddings, and strict tenant isolation so your proprietary data never leaks into model training sets."
+    },
+    {
+        question: "What is the difference between AI safety guardrails and traditional cybersecurity?",
+        answer: "Traditional cybersecurity defends network perimeters and system access. AI guardrails operate at the semantic layer—detecting adversarial prompt injections, model jailbreaks, hallucination drift, data leakage, and toxic outputs in real time before responses reach users or downstream systems."
+    },
+    {
+        question: "How long does a typical AI Infra & Governance engagement take?",
+        answer: "An initial architecture and governance audit takes 1-2 weeks. Building and operationalizing secure AI infrastructure or tailored LLM pipelines typically spans 4-8 weeks, followed by continuous LLMOps monitoring, drift detection, and compliance auditing."
+    }
+];
+
 export const services: ServiceEntry[] = [
     {
         slug: "cybersecurity-consulting",

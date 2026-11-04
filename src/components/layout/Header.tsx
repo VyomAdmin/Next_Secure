@@ -31,6 +31,7 @@ const Header = () => {
         { name: 'Home', href: '/' },
         { name: 'Services', href: '/services' },
         { name: 'DPDPA', href: '/dpdpa-compliance' },
+        { name: 'AI Infra & Gov', href: '/ai-infra-governance' },
         { name: 'About Us', href: '/about-contact' },
     ];
 
@@ -45,7 +46,7 @@ const Header = () => {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center gap-10">
+                <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
                     {navigation.map((item) => (
                         <div
                             key={item.name}

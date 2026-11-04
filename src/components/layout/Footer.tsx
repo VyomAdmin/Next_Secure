@@ -25,6 +25,7 @@ const Footer = () => {
                         <h4 className="text-xs font-black uppercase tracking-[0.3em] text-white mb-10">Services</h4>
                         <ul className="space-y-5">
                             {[
+                                { name: 'AI Infra, Build & Governance', href: '/ai-infra-governance' },
                                 { name: 'DPDPA Compliance', href: '/dpdpa-compliance' },
                                 { name: 'Cybersecurity Consulting', href: '/services#cybersecurity-consulting' },
                                 { name: 'Privacy & Data Protection', href: '/services#privacy-data-protection' },

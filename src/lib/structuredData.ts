@@ -1,4 +1,4 @@
-import { dpdpaFaqs, generalFaqs, services } from '@/lib/siteContent';
+import { aiInfraFaqs, dpdpaFaqs, generalFaqs, services } from '@/lib/siteContent';
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://valinztech.com';
 
@@ -42,6 +42,8 @@ export const aboutFaqSchema = createFaqSchema('/about', generalFaqs);
 export const aboutContactFaqSchema = createFaqSchema('/about-contact', generalFaqs);
 
 export const dpdpaFaqSchema = createFaqSchema('/dpdpa-compliance', dpdpaFaqs);
+
+export const aiInfraFaqSchema = createFaqSchema('/ai-infra-governance', aiInfraFaqs);
 
 export const servicesSchema = {
     '@context': 'https://schema.org',
@@ -95,5 +97,27 @@ export const dpdpaServiceSchema = {
             }
         },
         dpdpaFaqSchema
+    ]
+};
+
+export const aiInfraServiceSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+        {
+            '@type': 'Service',
+            '@id': `${siteUrl}/ai-infra-governance#service`,
+            name: 'AI Infra, Build & Governance Services',
+            serviceType: 'AI Engineering and Governance Consulting',
+            description: 'Enterprise AI infrastructure sizing, high-performance model pipeline engineering, and comprehensive AI governance, security, and regulatory compliance.',
+            url: `${siteUrl}/ai-infra-governance`,
+            areaServed: {
+                '@type': 'Country',
+                name: 'India'
+            },
+            provider: {
+                '@id': `${siteUrl}/#organization`
+            }
+        },
+        aiInfraFaqSchema
     ]
 };
