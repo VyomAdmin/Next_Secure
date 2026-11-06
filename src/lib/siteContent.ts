@@ -159,29 +159,29 @@ export const services: ServiceEntry[] = [
         cta: { label: "View DPDPA Services", href: "/dpdpa-compliance" }
     },
     {
-        slug: "ai-governance",
-        title: "AI Governance & Ethics",
-        tagline: "Responsible AI frameworks for emerging technology",
-        overview: "Build trustworthy AI systems through comprehensive governance frameworks, risk assessments, and ethical guidelines. We help you adopt AI responsibly, balancing innovation with accountability.",
+        slug: "ai-infra-governance",
+        title: "AI Infra, Build & Governance",
+        tagline: "Scale sovereign compute, high-performance pipelines & institutional trust",
+        overview: "Comprehensive enterprise AI services spanning right-sized GPU cluster sizing, low-latency inference optimization, custom sovereign RAG architectures, and automated safety guardrails. We help you engineer, deploy, and govern intelligent systems aligned with the EU AI Act, MeitY guidelines, and NIST AI RMF.",
         subcategories: [
             {
-                title: "AI/ML Risk Assessment",
-                items: ["Algorithmic bias and fairness testing", "Model explainability analysis", "Privacy risk assessment (differential privacy)", "Security risk evaluation (adversarial ML)"]
+                title: "AI Infrastructure & Compute",
+                items: ["GPU / TPU cluster topology sizing", "vLLM, TensorRT-LLM & Triton serving", "Quantization (AWQ, FP8) & latency tuning", "Confidential compute & hardware enclaves"]
             },
             {
-                title: "Governance Framework Development",
-                items: ["AI governance committee establishment", "AI risk management framework", "Model lifecycle management", "AI ethics principles development"]
+                title: "Enterprise AI Build & LLMOps",
+                items: ["Production sovereign RAG pipelines", "Domain-specific fine-tuning (LoRA/QLoRA)", "Vector database architecture & search", "Automated model evaluation & CI/CD"]
             },
             {
-                title: "Responsible AI Implementation",
-                items: ["Human-in-the-loop requirements", "Model monitoring and drift detection", "Explainability dashboard development", "AI impact assessment processes"]
+                title: "Safety & Guardrails",
+                items: ["Real-time prompt injection firewalls", "PII masking & tokenization pre-inference", "Algorithmic bias & hallucination filtering", "Provenance tracking & audit logs"]
             },
             {
-                title: "Regulatory Alignment",
-                items: ["MeitY AI guidelines preparation", "EU AI Act classification and requirements", "NIST AI Risk Management Framework", "Industry-specific AI regulations"]
+                title: "Regulatory & Compliance",
+                items: ["EU AI Act risk tiering & technical dossiers", "MeitY AI Advisory compliance readiness", "NIST AI RMF 1.0 framework mapping", "ISO/IEC 42001 governance systems"]
             }
         ],
-        cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact#contact-form" }
+        cta: { label: "View AI Infra & Governance Services", href: "/ai-infra-governance" }
     },
     {
         slug: "compliance-risk-management",

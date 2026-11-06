@@ -47,11 +47,11 @@ const CoreServices = () => {
             link: '/services#compliance-risk-management',
         },
         {
-            title: 'AI Governance & Ethics',
+            title: 'AI Infra, Build & Governance',
             description:
-                'Responsible AI frameworks, risk assessments, and regulatory alignment for emerging technologies.',
+                'Sovereign AI infrastructure, high-throughput model build, and institutional governance & compliance.',
             icon: BrainCircuit,
-            link: '/services#ai-governance',
+            link: '/ai-infra-governance',
         },
     ];
 

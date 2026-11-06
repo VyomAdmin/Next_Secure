@@ -6,14 +6,14 @@ import Button from '../../ui/Button';
 const Hero = () => {
     return (
         <section className="relative flex min-h-[85svh] items-center overflow-hidden bg-[#050A18] pb-20 pt-28 md:min-h-[75vh] md:pb-20 md:pt-36">
-            {/* Dynamic Background Graphics */}
-            <div className="absolute inset-0 z-0">
-                <div className="absolute inset-0 z-[2] bg-gradient-to-r from-[#050A18]/90 via-[#050A18]/60 to-transparent md:from-[#050A18]/95 md:via-[#050A18]/70 md:to-transparent" />
-                <div className="absolute inset-0 z-[2] bg-gradient-to-t from-[#050A18] via-transparent to-[#050A18]/20" />
+            {/* Background Hero Image from Services */}
+            <div className="hero-image hero-image-services absolute inset-0 z-0">
+                <div className="absolute inset-0 z-[2] bg-gradient-to-r from-[#050A18]/85 via-[#050A18]/50 to-transparent md:from-[#050A18]/85 md:via-[#050A18]/35 md:to-transparent" />
+                <div className="absolute inset-0 z-[2] bg-gradient-to-t from-[#050A18]/80 via-transparent to-[#050A18]/20 md:from-[#050A18]/75 md:via-transparent md:to-transparent" />
                 
                 {/* Tech Grid Pattern */}
                 <div
-                    className="absolute inset-0 opacity-[0.04]"
+                    className="absolute inset-0 opacity-[0.03]"
                     style={{
                         backgroundImage: 'linear-gradient(#3b82f6 0.5px, transparent 0.5px), linear-gradient(90deg, #3b82f6 0.5px, transparent 0.5px)',
                         backgroundSize: '40px 40px',
@@ -21,9 +21,15 @@ const Hero = () => {
                 />
 
                 {/* Glowing Orbs */}
-                <div className="absolute top-[12%] left-1/2 h-[55%] w-[75%] -translate-x-1/2 rounded-full bg-blue-600/15 blur-[150px]" />
-                <div className="absolute bottom-10 right-[15%] h-[45%] w-[45%] rounded-full bg-[#64ffda]/10 blur-[130px]" />
+                <div className="absolute top-[10%] left-1/2 h-[50%] w-[70%] -translate-x-1/2 rounded-full bg-blue-600/10 blur-[140px]" />
+                <div className="absolute bottom-0 right-[10%] h-[40%] w-[40%] rounded-full bg-blue-400/5 blur-[100px]" />
                 <div className="absolute top-1/3 left-10 h-72 w-72 rounded-full bg-indigo-500/10 blur-[120px]" />
+
+                {/* Subtle animated light trails */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+                    <div className="absolute top-1/4 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-blue-500/20 to-transparent animate-pulse" style={{ animationDuration: '6s' }} />
+                    <div className="absolute top-3/4 left-0 h-[1px] w-full bg-gradient-to-r from-transparent via-blue-400/10 to-transparent animate-pulse" style={{ animationDuration: '8s', animationDelay: '1s' }} />
+                </div>
             </div>
 
             <div className="container relative z-10 mx-auto px-6">

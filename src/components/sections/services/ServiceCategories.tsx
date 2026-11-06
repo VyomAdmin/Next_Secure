@@ -8,10 +8,16 @@ import { services } from '@/lib/siteContent';
 const serviceIcons = {
     'cybersecurity-consulting': Shield,
     'privacy-data-protection': Lock,
+    'ai-infra-governance': Brain,
     'ai-governance': Brain,
     'compliance-risk-management': BarChart3,
     'audits-assessments': ClipboardCheck,
     'training-enablement': GraduationCap
+};
+
+const resolveServiceSlug = (hash: string) => {
+    if (hash === 'ai-governance') return 'ai-infra-governance';
+    return hash;
 };
 
 const getInitialOpenService = () => {
@@ -20,7 +26,8 @@ const getInitialOpenService = () => {
     }
 
     const hash = window.location.hash.replace('#', '');
-    const index = services.findIndex((service) => service.slug === hash);
+    const targetSlug = resolveServiceSlug(hash);
+    const index = services.findIndex((service) => service.slug === targetSlug);
     return index === -1 ? 0 : index;
 };
 
@@ -45,7 +52,8 @@ const ServiceCategories = () => {
             return;
         }
 
-        const index = services.findIndex((service) => service.slug === hash);
+        const targetSlug = resolveServiceSlug(hash);
+        const index = services.findIndex((service) => service.slug === targetSlug);
         if (index === -1) {
             return;
         }

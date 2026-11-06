@@ -4,6 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import ServicesHero from '@/components/sections/services/ServicesHero';
 import ServiceCategories from '@/components/sections/services/ServiceCategories';
+import CorePillars from '@/components/sections/ai-infra-governance/CorePillars';
 import IntegratedGovernance from '@/components/sections/services/IntegratedGovernance';
 import EngagementModels from '@/components/sections/services/EngagementModels';
 import ServicesFinalCTA from '@/components/sections/services/ServicesFinalCTA';
@@ -29,6 +30,7 @@ export default function ServicesPage() {
                 />
                 <ServicesHero />
                 <ServiceCategories />
+                <CorePillars />
                 <IntegratedGovernance />
                 <EngagementModels />
                 <ServicesFinalCTA />
