@@ -24,7 +24,11 @@ const Button: React.FC<ButtonProps> = ({
 
     if (href) {
         return (
-            <Link href={href} className={btnClass}>
+            <Link
+                href={href}
+                className={btnClass}
+                onClick={props.onClick as React.MouseEventHandler<HTMLAnchorElement> | undefined}
+            >
                 {children}
             </Link>
         );

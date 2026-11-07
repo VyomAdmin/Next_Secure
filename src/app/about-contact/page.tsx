@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import TeamExpertise from '@/components/sections/TeamExpertise';
@@ -11,33 +10,28 @@ import Location from '@/components/sections/Location';
 import FAQ from '@/components/sections/FAQ';
 import FinalCTA from '@/components/sections/FinalCTA';
 import AboutHero from '@/components/sections/AboutHero';
-import { aboutContactFaqSchema } from '@/lib/structuredData';
+import { aboutContactFaqSchema, contactPageSchema } from '@/lib/structuredData';
+import { pageMetadata } from '@/lib/pageMetadata';
 
-export const metadata: Metadata = {
-    title: 'About & Contact',
-    description: 'ValinzTech company capabilities, operating model, and contact information for DPDPA and technology governance consulting.',
-    alternates: {
-        canonical: '/about-contact',
-    },
-    openGraph: {
-        title: 'About & Contact | ValinzTech',
-        description: 'Company capabilities, delivery model, and direct contact information for DPDPA and technology governance consulting.',
-        url: '/about-contact',
-    },
-    twitter: {
-        title: 'About & Contact | ValinzTech',
-        description: 'Company capabilities, delivery model, and direct contact information for DPDPA and technology governance consulting.',
-    },
-};
+export const metadata = pageMetadata({
+    title: 'About and Contact',
+    description:
+        'About ValinzTech and the contact form for companies. Start an engagement, book a consultation, or request support.',
+    path: '/about-contact',
+});
 
 export default function AboutContactPage() {
     return (
         <div className="flex flex-col min-h-screen bg-[#050A18]">
             <Header />
-            <main className="flex-grow pt-0">
+            <main id="main-content" className="flex-grow pt-0">
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutContactFaqSchema) }}
+                />
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
                 />
                 {/* Authority & Trust Building Half */}
                 <div id="about">

@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { validatePhoneNumber, validateProfessionalEmail } from '@/lib/contactValidation';
+import { inquiryIntentLabel, isInquiryIntent, type InquiryIntent } from '@/lib/inquiry';
 
 export const runtime = 'edge';
 
@@ -9,7 +10,21 @@ type ContactPayload = {
     company?: string;
     phone?: string;
     message?: string;
+    intent?: string;
 };
+
+function escapeHtml(value: string): string {
+    return value
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+}
+
+function oneLine(value: string, maxLength: number): string {
+    return value.replace(/[\r\n]+/g, ' ').replace(/\s+/g, ' ').trim().slice(0, maxLength);
+}
 
 export async function POST(request: Request) {
     try {
@@ -19,10 +34,11 @@ export async function POST(request: Request) {
         const company = (body.company || '').trim();
         const phone = (body.phone || '').trim();
         const message = (body.message || '').trim();
+        const intent: InquiryIntent = isInquiryIntent(body.intent) ? body.intent : 'lead';
 
-        if (!name || !email || !message) {
+        if (!name || !email || !company || !message) {
             return NextResponse.json(
-                { error: 'Name, email, and message are required.' },
+                { error: 'Name, work email, company, and message are required.' },
                 { status: 400 }
             );
         }
@@ -47,13 +63,16 @@ export async function POST(request: Request) {
 
         const toEmail = process.env.CONTACT_TO_EMAIL || 'contact@valinztech.com';
         const fromEmail = process.env.CONTACT_FROM_EMAIL || 'onboarding@resend.dev';
+        const intentLabel = inquiryIntentLabel(intent);
+        const subject = `[${intentLabel}] ${oneLine(company, 80)} — ${oneLine(name, 80)}`;
 
         const text = [
             'New website inquiry',
             '',
+            `Request type: ${intentLabel}`,
             `Name: ${name}`,
             `Email: ${email}`,
-            `Company: ${company || 'N/A'}`,
+            `Company: ${company}`,
             `Phone: ${phone || 'N/A'}`,
             '',
             'Message:',
@@ -62,12 +81,13 @@ export async function POST(request: Request) {
 
         const html = `
             <h2>New website inquiry</h2>
-            <p><strong>Name:</strong> ${name}</p>
-            <p><strong>Email:</strong> ${email}</p>
-            <p><strong>Company:</strong> ${company || 'N/A'}</p>
-            <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+            <p><strong>Request type:</strong> ${escapeHtml(intentLabel)}</p>
+            <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+            <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+            <p><strong>Company:</strong> ${escapeHtml(company)}</p>
+            <p><strong>Phone:</strong> ${escapeHtml(phone || 'N/A')}</p>
             <p><strong>Message:</strong></p>
-            <p>${message.replace(/\n/g, '<br/>')}</p>
+            <p>${escapeHtml(message).replace(/\n/g, '<br/>')}</p>
         `;
 
         const resendResponse = await fetch('https://api.resend.com/emails', {
@@ -80,7 +100,7 @@ export async function POST(request: Request) {
                 from: fromEmail,
                 to: [toEmail],
                 reply_to: email,
-                subject: `Website Inquiry from ${name}`,
+                subject,
                 text,
                 html,
             }),

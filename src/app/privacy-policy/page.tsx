@@ -1,14 +1,12 @@
-import type { Metadata } from 'next';
 import LegalPageLayout from '@/components/legal/LegalPageLayout';
+import { pageMetadata } from '@/lib/pageMetadata';
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
     title: 'Privacy Policy',
     description:
         'Privacy Policy for ValinzTech covering information collection, use, disclosure, retention, and contact details.',
-    alternates: {
-        canonical: '/privacy-policy',
-    },
-};
+    path: '/privacy-policy',
+});
 
 const sections = [
     {

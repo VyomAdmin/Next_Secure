@@ -129,7 +129,7 @@ const CorePillars = () => {
 
                                 <div className="pt-10 mt-8 border-t border-white/5">
                                     <Link
-                                        href="/about-contact#contact-form"
+                                        href="/about-contact?intent=booking#contact-form"
                                         className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white hover:text-[#64ffda] transition-colors group/btn"
                                     >
                                         Consult on {pillar.title}

@@ -235,8 +235,20 @@ a:visited {
 }
 
 html {
-  /* This works perfectly on mobile Chrome and Safari */
-  scroll-padding-top: 80px;
+  scroll-padding-top: 5.5rem;
+  scroll-padding-bottom: 5.5rem;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-bottom: 0;
+  }
+}
+
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: calc(5.25rem + env(safe-area-inset-bottom));
+  }
 }
 
 /* Default Lucide icon color across the site */

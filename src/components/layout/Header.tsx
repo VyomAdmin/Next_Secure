@@ -1,17 +1,49 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import Button from '../ui/Button';
 import Logo from '../ui/Logo';
+import { contactHref } from '@/lib/inquiry';
 
 type NavItem = {
     name: string;
     href: string;
     dropdown?: Array<{ name: string; href: string }>;
 };
+
+const navigation: NavItem[] = [
+    { name: 'Home', href: '/' },
+    {
+        name: 'Services',
+        href: '/services',
+        dropdown: [
+            { name: 'All services', href: '/services' },
+            { name: 'DPDPA compliance', href: '/dpdpa-compliance' },
+            { name: 'AI infra & governance', href: '/ai-infra-governance' },
+        ],
+    },
+    { name: 'About', href: '/about-contact#about' },
+    { name: 'Contact', href: contactHref('lead') },
+];
+
+function isItemActive(item: NavItem, pathname: string) {
+    if (item.name === 'Contact' || item.name === 'About') {
+        return false;
+    }
+
+    if (item.href === '/') {
+        return pathname === '/';
+    }
+
+    if (pathname === item.href) {
+        return true;
+    }
+
+    return item.dropdown?.some((subItem) => subItem.href === pathname) ?? false;
+}
 
 const Header = () => {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -27,95 +59,116 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navigation: NavItem[] = [
-        { name: 'Home', href: '/' },
-        { name: 'Services', href: '/services' },
-        { name: 'DPDPA', href: '/dpdpa-compliance' },
-        { name: 'AI Infra & Gov', href: '/ai-infra-governance' },
-        { name: 'About Us', href: '/about-contact' },
-    ];
+    useEffect(() => {
+        document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMobileMenuOpen]);
+
+    const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
     return (
         <header
-            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#020617]/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'
-                }`}
+            className={`fixed z-50 w-full transition-all duration-300 ${
+                isScrolled || isMobileMenuOpen
+                    ? 'border-b border-white/5 bg-[#020617] py-3'
+                    : 'bg-transparent py-5'
+            }`}
         >
-            <div className="container mx-auto px-6 flex justify-between items-center">
-                <Link href="/" className="flex items-center">
-                    <Logo className="h-[42.24px] w-auto" variant="dark" />
+            <div className="container mx-auto flex items-center justify-between px-6">
+                <Link href="/" className="flex items-center" aria-label="ValinzTech home">
+                    <Logo className="h-10 w-auto" variant="dark" />
                 </Link>
 
-                {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-                    {navigation.map((item) => (
-                        <div
-                            key={item.name}
-                            className="relative group"
-                            onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
-                            onMouseLeave={() => setActiveDropdown(null)}
-                        >
-                            <Link
-                                href={item.href}
-                                className={`flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] transition-colors ${pathname === item.href ? 'text-white' : 'text-slate-400 hover:text-white'}`}
+                <nav className="hidden items-center gap-6 lg:flex xl:gap-8" aria-label="Primary">
+                    {navigation.map((item) => {
+                        const active = isItemActive(item, pathname);
+                        return (
+                            <div
+                                key={item.name}
+                                className="relative"
+                                onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
+                                onMouseLeave={() => setActiveDropdown(null)}
+                                onFocus={() => item.dropdown && setActiveDropdown(item.name)}
+                                onBlur={(event) => {
+                                    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                                        setActiveDropdown(null);
+                                    }
+                                }}
                             >
-                                {item.name}
-                            </Link>
+                                <Link
+                                    href={item.href}
+                                    className={`text-sm font-semibold tracking-wide transition-colors ${
+                                        active ? 'text-white' : 'text-slate-300 hover:text-white'
+                                    }`}
+                                    aria-current={active ? 'page' : undefined}
+                                >
+                                    {item.name}
+                                </Link>
 
-                            {item.dropdown && activeDropdown === item.name && (
-                                <div className="absolute top-full left-0 pt-6 animate-in fade-in slide-in-from-top-2 duration-200">
-                                    <div className="bg-[#0D1426] border border-white/5 rounded-2xl p-3 min-w-[220px] shadow-2xl">
-                                        {item.dropdown.map((subItem) => (
-                                            <Link
-                                                key={subItem.name}
-                                                href={subItem.href}
-                                                className="block px-5 py-3.5 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all"
-                                            >
-                                                {subItem.name}
-                                            </Link>
-                                        ))}
+                                {item.dropdown && activeDropdown === item.name && (
+                                    <div className="absolute left-0 top-full pt-4">
+                                        <div className="min-w-[240px] rounded-2xl border border-white/10 bg-[#0D1426] p-2 shadow-2xl">
+                                            {item.dropdown.map((subItem) => (
+                                                <Link
+                                                    key={subItem.name}
+                                                    href={subItem.href}
+                                                    className="block rounded-xl px-4 py-3 text-sm font-medium text-slate-300 hover:bg-white/5 hover:text-white"
+                                                >
+                                                    {subItem.name}
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                    <Button variant="primary"
-                        href="/about-contact#contact-form"
-                        className="ml-2 py-4 px-10 text-[14px] tracking-[0.1em] bg-[#0052CC] !text-white border-none hover:bg-[#64ffda] hover:!text-black rounded-full shadow-xl transition-all duration-200 ease-in-out whitespace-nowrap"
+                                )}
+                            </div>
+                        );
+                    })}
+                    <Button
+                        variant="primary"
+                        href={contactHref('booking')}
+                        className="ml-2 rounded-full bg-[#64ffda] px-6 py-3 text-sm font-semibold !text-black hover:bg-white"
                     >
-                        SCHEDULE FREE CONSULTATION
+                        Book a call
                     </Button>
                 </nav>
 
-                {/* Mobile Menu Button */}
                 <button
-                    className="lg:hidden text-white p-2"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    type="button"
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-white lg:hidden"
+                    aria-expanded={isMobileMenuOpen}
+                    aria-controls="mobile-navigation"
+                    aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+                    onClick={() => setIsMobileMenuOpen((open) => !open)}
                 >
                     {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                 </button>
             </div>
 
-            {/* Mobile Navigation */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden absolute top-full left-0 w-full bg-[#020617] border-b border-white/5 py-10 shadow-2xl animate-in fade-in slide-in-from-top-4">
-                    <nav className="flex flex-col px-6 gap-8">
+                <div
+                    id="mobile-navigation"
+                    className="fixed inset-x-0 bottom-0 top-16 z-[70] overflow-y-auto bg-[#020617] px-6 pb-10 pt-6 lg:hidden"
+                >
+                    <nav className="flex flex-col gap-2" aria-label="Mobile">
                         {navigation.map((item) => (
-                            <div key={item.name} className="space-y-6">
+                            <div key={item.name} className="border-b border-white/5 py-2">
                                 <Link
                                     href={item.href}
-                                    className="text-2xl font-black text-white tracking-tighter"
-                                    onClick={() => !item.dropdown && setIsMobileMenuOpen(false)}
+                                    className="flex min-h-12 items-center text-lg font-semibold text-white"
+                                    onClick={closeMobileMenu}
                                 >
                                     {item.name}
                                 </Link>
                                 {item.dropdown && (
-                                    <div className="pl-6 flex flex-col gap-6 border-l border-white/5">
-                                        {item.dropdown.map((subItem) => (
+                                    <div className="flex flex-col pb-2 pl-3">
+                                        {item.dropdown.filter((subItem) => subItem.href !== item.href).map((subItem) => (
                                             <Link
                                                 key={subItem.name}
                                                 href={subItem.href}
-                                                className="text-lg font-bold text-slate-400"
-                                                onClick={() => setIsMobileMenuOpen(false)}
+                                                className="flex min-h-11 items-center text-base text-slate-300"
+                                                onClick={closeMobileMenu}
                                             >
                                                 {subItem.name}
                                             </Link>
@@ -124,8 +177,13 @@ const Header = () => {
                                 )}
                             </div>
                         ))}
-                        <Button variant="primary" href="/about-contact#contact-form" className="mt-6 w-full justify-center py-5 font-bold bg-white text-black border-none" onClick={() => setIsMobileMenuOpen(false)}>
-                            SCHEDULE CONSULTATION
+                        <Button
+                            variant="primary"
+                            href={contactHref('booking')}
+                            className="mt-4 w-full justify-center rounded-xl bg-[#64ffda] py-4 font-semibold !text-black"
+                            onClick={closeMobileMenu}
+                        >
+                            Book a call
                         </Button>
                     </nav>
                 </div>

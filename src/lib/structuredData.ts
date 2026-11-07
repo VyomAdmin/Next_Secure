@@ -22,19 +22,81 @@ export const organizationSchema = {
     '@id': `${siteUrl}/#organization`,
     name: 'ValinzTech',
     url: siteUrl,
+    logo: `${siteUrl}/images/Valinz-Logo.png`,
+    image: `${siteUrl}/images/Valinz-Logo.png`,
     email: 'contact@valinztech.com',
     telephone: '+919953562762',
-    areaServed: 'IN',
-    description: 'Technology governance, DPDPA readiness, privacy governance, and compliance advisory services.',
+    areaServed: ['India', 'Worldwide'],
+    address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delhi',
+        addressCountry: 'IN'
+    },
+    description: 'ValinzTech provides consulting and services for companies across privacy, cybersecurity, AI governance, and compliance.',
     contactPoint: [
+        {
+            '@type': 'ContactPoint',
+            telephone: '+919953562762',
+            contactType: 'sales',
+            availableLanguage: ['English'],
+            email: 'contact@valinztech.com',
+            areaServed: 'Worldwide'
+        },
         {
             '@type': 'ContactPoint',
             telephone: '+919953562762',
             contactType: 'customer support',
             availableLanguage: ['English'],
-            email: 'contact@valinztech.com'
+            email: 'contact@valinztech.com',
+            areaServed: 'Worldwide'
         }
     ]
+};
+
+export const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteUrl}/#website`,
+    name: 'ValinzTech',
+    url: siteUrl,
+    description: 'Consulting and services for companies. Review the work, book a consultation, or request support.',
+    publisher: {
+        '@id': `${siteUrl}/#organization`
+    },
+    inLanguage: 'en'
+};
+
+export const professionalServiceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ProfessionalService',
+    '@id': `${siteUrl}/#professional-service`,
+    name: 'ValinzTech',
+    url: siteUrl,
+    image: `${siteUrl}/images/Valinz-Logo.png`,
+    description: 'Consulting and services for companies: privacy, cybersecurity, AI governance, and compliance.',
+    telephone: '+919953562762',
+    email: 'contact@valinztech.com',
+    address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Delhi',
+        addressCountry: 'IN'
+    },
+    areaServed: ['India', 'Worldwide'],
+    provider: {
+        '@id': `${siteUrl}/#organization`
+    }
+};
+
+export const contactPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    '@id': `${siteUrl}/about-contact#contact`,
+    url: `${siteUrl}/about-contact`,
+    name: 'Contact ValinzTech',
+    description: 'Contact form for companies to start an engagement, book a consultation, or request support.',
+    mainEntity: {
+        '@id': `${siteUrl}/#organization`
+    }
 };
 
 export const aboutFaqSchema = createFaqSchema('/about', generalFaqs);

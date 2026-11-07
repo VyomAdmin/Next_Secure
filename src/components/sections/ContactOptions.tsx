@@ -1,81 +1,90 @@
 import React from 'react';
-import { Calendar, Mail, MessageCircle, Phone } from 'lucide-react';
+import { Calendar, Headphones, Mail, MessagesSquare, Phone } from 'lucide-react';
 import Button from '../ui/Button';
+import { contactHref } from '@/lib/inquiry';
+
+const options = [
+    {
+        icon: MessagesSquare,
+        title: 'New engagement',
+        description: 'Tell us about a consulting or services need for your company.',
+        cta: 'Start a conversation',
+        href: contactHref('lead'),
+        primary: true,
+    },
+    {
+        icon: Calendar,
+        title: 'Book a consultation',
+        description: 'Request time with the team and share when your company can meet.',
+        cta: 'Request a time',
+        href: contactHref('booking'),
+        primary: false,
+    },
+    {
+        icon: Headphones,
+        title: 'Customer support',
+        description: 'Already working with us? Send the request through the same form.',
+        cta: 'Request support',
+        href: contactHref('support'),
+        primary: false,
+    },
+];
 
 const ContactOptions = () => {
-    const options = [
-        {
-            icon: Calendar,
-            title: "Schedule Consultation",
-            description: "Book a free 30-minute strategy session with our governance team.",
-            cta: "SCHEDULE FREE CONSULTATION",
-            href: "#contact-form",
-            primary: true
-        },
-        {
-            icon: Mail,
-            title: "Email Us",
-            description: "Send us your specific project details or governance inquiries.",
-            cta: "Email Us",
-            href: "mailto:contact@valinztech.com"
-        },
-        {
-            icon: MessageCircle,
-            title: "WhatsApp",
-            description: "Quick questions? Message our experts directly.",
-            cta: "WhatsApp Us",
-            href: "https://wa.me/919953562762"
-        },
-        {
-            icon: Phone,
-            title: "Call Us",
-            description: "Speak directly with our team for immediate assistance.",
-            cta: "Call Us",
-            href: "tel:+919953562762"
-        }
-    ];
-
     return (
-        <section className="py-24 bg-[#050A18]">
+        <section className="bg-[#050A18] py-16 md:py-24">
             <div className="container mx-auto px-6">
-                <div className="text-center mb-20">
-                    <h2 className="text-4xl md:text-6xl font-black text-white mb-6 tracking-tighter">
-                        Get in Touch
+                <div className="mb-10 text-center md:mb-14">
+                    <h2 className="mb-4 text-3xl font-bold text-white md:text-5xl">
+                        How should we help?
                     </h2>
-                    <p className="text-lg text-slate-400 max-w-2xl mx-auto font-medium">
-                        Choose your preferred way to connect with our governance experts.
+                    <p className="mx-auto max-w-2xl text-base font-medium text-slate-300 md:text-lg">
+                        Pick a path. Each one opens the contact form with the right request type already selected.
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-                    {options.map((option, index) => {
+                <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 md:grid-cols-3">
+                    {options.map((option) => {
                         const Icon = option.icon;
                         return (
                             <div
-                                key={index}
-                                className={`group bg-[#0D1426]/50 border ${option.primary ? 'border-[#64ffda]/30 shadow-[0_0_40px_rgba(100,255,218,0.05)]' : 'border-white/5'} rounded-[2rem] p-8 hover:border-blue-500/20 transition-all duration-500 flex flex-col h-full`}
+                                key={option.title}
+                                className={`flex h-full flex-col rounded-2xl border bg-[#0D1426]/50 p-6 ${
+                                    option.primary ? 'border-[#64ffda]/40' : 'border-white/10'
+                                }`}
                             >
-                                <div className={`w-11 h-11 rounded-xl flex items-center justify-center mb-6 transition-colors ${option.primary ? 'bg-[#64ffda]/10 group-hover:bg-[#64ffda]/20' : 'bg-blue-500/5 group-hover:bg-blue-500/10'}`}>
-                                    <Icon className={`w-6 h-6 ${option.primary ? 'text-[#64ffda]' : 'text-blue-400'}`} />
+                                <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl bg-white/5">
+                                    <Icon className="h-6 w-6" aria-hidden="true" />
                                 </div>
-
-                                <h3 className="text-xl font-bold text-white mb-3 tracking-tight">
-                                    {option.title}
-                                </h3>
-                                <p className="text-slate-400 text-sm font-medium leading-relaxed mb-8 flex-grow">
+                                <h3 className="mb-3 text-xl font-bold text-white">{option.title}</h3>
+                                <p className="mb-6 flex-grow text-sm leading-relaxed text-slate-300 md:text-base">
                                     {option.description}
                                 </p>
-
                                 <Button
                                     variant={option.primary ? 'primary' : 'secondary'}
                                     href={option.href}
-                                    className={`w-full py-3 text-xs uppercase tracking-widest rounded-full transition-all duration-200 ease-in-out ${option.primary ? 'bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda] hover:text-black' : 'backdrop-blur-sm bg-white/5 border-white/10 hover:bg-[#64ffda] hover:text-black hover:border-[#64ffda]'}`}
+                                    className="w-full rounded-xl py-3 text-sm font-semibold"
                                 >
                                     {option.cta}
                                 </Button>
                             </div>
                         );
                     })}
+                </div>
+
+                <div className="mx-auto mt-8 flex max-w-6xl flex-col gap-3 text-sm text-slate-300 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-6">
+                    <a href="mailto:contact@valinztech.com" className="inline-flex min-h-11 items-center gap-2 hover:text-white">
+                        <Mail size={16} aria-hidden="true" />
+                        contact@valinztech.com
+                    </a>
+                    <a href="tel:+919953562762" className="inline-flex min-h-11 items-center gap-2 hover:text-white">
+                        <Phone size={16} aria-hidden="true" />
+                        +91 9953562762
+                    </a>
+                    <a href="https://wa.me/919953562762" className="inline-flex min-h-11 items-center gap-2 hover:text-white">
+                        <MessagesSquare size={16} aria-hidden="true" />
+                        WhatsApp
+                    </a>
                 </div>
             </div>
         </section>

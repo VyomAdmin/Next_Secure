@@ -131,7 +131,7 @@ export const services: ServiceEntry[] = [
                 items: ["Dark web monitoring", "Industry-specific threat analysis", "Vulnerability intelligence feeds", "Geopolitical risk assessment"]
             }
         ],
-        cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact#contact-form" }
+        cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact?intent=booking#contact-form" }
     },
     {
         slug: "privacy-data-protection",
@@ -206,7 +206,7 @@ export const services: ServiceEntry[] = [
                 items: ["CERT-In incident reporting", "RBI data localization", "Sector-specific requirements", "Cross-border compliance"]
             }
         ],
-        cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact#contact-form" }
+        cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact?intent=booking#contact-form" }
     },
     {
         slug: "audits-assessments",
@@ -231,7 +231,7 @@ export const services: ServiceEntry[] = [
                 items: ["Vendor security posture evaluation", "SaaS application security review", "Supply chain security assessment", "Software Bill of Materials (SBOM)"]
             }
         ],
-        cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact#contact-form" }
+        cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact?intent=booking#contact-form" }
     },
     {
         slug: "training-enablement",
@@ -256,6 +256,6 @@ export const services: ServiceEntry[] = [
                 items: ["DPDPA implementation training", "ISO 27001 awareness", "SOC 2 trust criteria", "Industry-specific requirements"]
             }
         ],
-        cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact#contact-form" }
+        cta: { label: "SCHEDULE FREE CONSULTATION", href: "/about-contact?intent=booking#contact-form" }
     }
 ];

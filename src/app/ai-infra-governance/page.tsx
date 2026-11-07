@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/ai-infra-governance/Hero';
@@ -8,21 +7,20 @@ import WhyValinzTech from '@/components/sections/ai-infra-governance/WhyValinzTe
 import AIFAQ from '@/components/sections/ai-infra-governance/AIFAQ';
 import AIFinalCTA from '@/components/sections/ai-infra-governance/AIFinalCTA';
 import { aiInfraServiceSchema } from '@/lib/structuredData';
+import { pageMetadata } from '@/lib/pageMetadata';
 
-export const metadata: Metadata = {
-    title: 'AI Infra, Build & Governance Services | ValinzTech',
+export const metadata = pageMetadata({
+    title: 'AI Infra, Build and Governance',
     description:
-        'Enterprise AI compute sizing, high-throughput model pipeline engineering, and sovereign AI governance, safety guardrails, and compliance (EU AI Act, MeitY, NIST AI RMF).',
-    alternates: {
-        canonical: '/ai-infra-governance',
-    },
-};
+        'Consulting and services for companies building AI: compute, pipelines, safety guardrails, and governance aligned to the EU AI Act, MeitY, and NIST AI RMF.',
+    path: '/ai-infra-governance',
+});
 
 export default function AIInfraGovernancePage() {
     return (
         <div className="flex flex-col min-h-screen bg-[#050A18]">
             <Header />
-            <main className="flex-grow">
+            <main id="main-content" className="flex-grow">
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(aiInfraServiceSchema) }}

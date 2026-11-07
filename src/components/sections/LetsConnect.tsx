@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '../ui/Button';
+import { contactHref } from '@/lib/inquiry';
 
 const LetsConnect = () => {
     return (
@@ -18,12 +19,12 @@ const LetsConnect = () => {
                     </h2>
 
                     <p className="text-xl md:text-2xl text-slate-400 mb-14 max-w-2xl mx-auto leading-relaxed font-medium">
-                        Ready to build trust and compliance into your technology systems? Let&apos;s discuss how ValinzTech can help your organization.
+                        Tell us whether your company needs a new engagement, a booking, or support. The contact form is how we take that in.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
-                        <Button variant="secondary" href="/about-contact#contact-form" className="w-full sm:w-auto text-sm py-4 px-12 uppercase tracking-widest bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda] hover:text-black rounded-full shadow-2xl shadow-[#64ffda]/10 transition-all duration-200 ease-in-out">
-                            SCHEDULE FREE CONSULTATION
+                        <Button variant="secondary" href={contactHref('booking')} className="w-full sm:w-auto text-sm py-4 px-12 uppercase tracking-widest bg-[#64ffda]/10 border-[#64ffda]/30 text-[#64ffda] hover:bg-[#64ffda] hover:text-black rounded-full shadow-2xl shadow-[#64ffda]/10 transition-all duration-200 ease-in-out">
+                            Book a consultation
                         </Button>
                         <Button variant="secondary" href="mailto:contact@valinztech.com" className="w-full sm:w-auto text-sm py-4 px-12 uppercase tracking-widest backdrop-blur-sm bg-white/5 border-white/10 hover:bg-[#64ffda] hover:text-black rounded-full transition-all duration-200 ease-in-out">
                             Email Us
