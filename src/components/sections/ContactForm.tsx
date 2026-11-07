@@ -222,19 +222,33 @@ const ContactFormInner = () => {
                                             }`}
                                         >
                                             <div
-                                                className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 mt-0.5 ${
-                                                    isSelected ? 'bg-[#64ffda] text-black' : 'bg-white/5 text-slate-400'
+                                                className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-200 ${
+                                                    isSelected
+                                                        ? 'bg-[#64ffda]/15 border border-[#64ffda]/50 shadow-[0_0_15px_rgba(100,255,218,0.2)]'
+                                                        : 'bg-white/5 border border-white/10'
                                                 }`}
                                             >
-                                                <Icon size={18} />
+                                                <Icon
+                                                    size={20}
+                                                    style={{ color: isSelected ? '#64ffda' : '#94a3b8' }}
+                                                    className="transition-colors duration-200"
+                                                />
                                             </div>
                                             <div className="flex-grow">
                                                 <div className="flex items-center justify-between">
-                                                    <span className="text-sm font-bold text-white tracking-tight">
+                                                    <span
+                                                        className={`text-sm font-bold tracking-tight transition-colors ${
+                                                            isSelected ? 'text-[#64ffda]' : 'text-white'
+                                                        }`}
+                                                    >
                                                         {opt.label}
                                                     </span>
                                                     {isSelected && (
-                                                        <CheckCircle2 size={16} className="text-[#64ffda] shrink-0" />
+                                                        <CheckCircle2
+                                                            size={16}
+                                                            className="text-[#64ffda] shrink-0"
+                                                            style={{ color: '#64ffda' }}
+                                                        />
                                                     )}
                                                 </div>
                                                 <p className="text-xs font-medium text-slate-400 mt-0.5 leading-snug">
