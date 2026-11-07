@@ -28,7 +28,7 @@ const ServicesFinalCTA = () => {
 
                     <Button
                         variant="secondary"
-                        href="/about-contact#contact-form"
+                        href="/contact"
                         className="min-w-[280px] justify-center bg-blue-600 hover:bg-[#64ffda] hover:text-black text-white border-none py-5 px-12 rounded-full font-black tracking-wide shadow-[0_0_60px_rgba(59,130,246,0.25)] hover:shadow-[0_0_60px_rgba(100,255,218,0.25)] group transition-all duration-200 ease-in-out"
                     >
                         SCHEDULE FREE CONSULTATION

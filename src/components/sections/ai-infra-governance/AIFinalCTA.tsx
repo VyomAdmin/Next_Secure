@@ -40,7 +40,7 @@ const AIFinalCTA = () => {
                     <div className="flex flex-col items-center gap-10 mb-14">
                         <Button
                             variant="secondary"
-                            href="/about-contact#contact-form"
+                            href="/contact"
                             className="w-full sm:w-auto sm:min-w-[320px] justify-center text-xs sm:text-sm py-5 px-8 uppercase tracking-widest bg-white text-indigo-950 hover:bg-[#64ffda] hover:text-black border-none rounded-2xl shadow-[0_0_60px_rgba(255,255,255,0.2)] hover:shadow-[0_0_60px_rgba(100,255,218,0.25)] font-black group transition-all duration-200 ease-in-out"
                         >
                             BOOK ARCHITECTURE CONSULTATION

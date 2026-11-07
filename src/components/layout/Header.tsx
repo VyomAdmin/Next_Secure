@@ -34,16 +34,16 @@ const Header = () => {
             href: '/services',
             dropdown: [
                 { name: 'All Services Overview', href: '/services' },
-                { name: 'DPDPA Compliance Services', href: '/dpdpa-compliance' },
-                { name: 'AI Infra, Build & Governance', href: '/ai-infra-governance' },
                 { name: 'Cybersecurity Consulting', href: '/services#cybersecurity-consulting' },
                 { name: 'Privacy & Data Protection', href: '/services#privacy-data-protection' },
                 { name: 'Audits & Technical Assessments', href: '/services#audits-assessments' },
                 { name: 'Compliance & Risk Management', href: '/services#compliance-risk-management' },
             ],
         },
-        { name: 'About', href: '/about-contact#about' },
-        { name: 'Contact', href: '/about-contact#contact-form' },
+        { name: 'DPDPA', href: '/dpdpa-compliance' },
+        { name: 'AI Infra', href: '/ai-infra-governance' },
+        { name: 'About', href: '/about' },
+        { name: 'Contact', href: '/contact' },
     ];
 
     return (
@@ -60,7 +60,7 @@ const Header = () => {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center gap-10">
+                <nav className="hidden lg:flex items-center gap-7">
                     {navigation.map((item) => {
                         const isActive =
                             item.href === '/'
@@ -112,7 +112,7 @@ const Header = () => {
 
                     <Button
                         variant="primary"
-                        href="/about-contact#contact-form?intent=consultation"
+                        href="/contact?intent=consultation"
                         className="ml-2 py-3.5 px-8 text-xs tracking-[0.14em] font-black uppercase bg-[#0052CC] !text-white border-none hover:bg-[#64ffda] hover:!text-black rounded-full shadow-lg transition-all duration-200 ease-in-out whitespace-nowrap"
                     >
                         SCHEDULE CONSULTATION
@@ -131,7 +131,7 @@ const Header = () => {
 
             {/* Mobile Navigation Drawer */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden fixed inset-x-0 top-[74px] bottom-0 bg-[#020617]/98 backdrop-blur-2xl border-t border-white/10 overflow-y-auto px-6 py-8 flex flex-col justify-between animate-in fade-in slide-in-from-top-4 duration-300 z-50">
+                <div className="lg:hidden fixed inset-x-0 top-[74px] bottom-0 bg-[#020617]/98 backdrop-blur-2xl border-t border-white/10 overflow-y-auto px-6 py-8 flex flex-col animate-in fade-in slide-in-from-top-4 duration-300 z-50">
                     <nav className="flex flex-col gap-6">
                         {navigation.map((item) => (
                             <div key={item.name} className="space-y-3 pb-4 border-b border-white/5">
@@ -161,16 +161,6 @@ const Header = () => {
                         ))}
                     </nav>
 
-                    <div className="pt-8 pb-12">
-                        <Button
-                            variant="primary"
-                            href="/about-contact#contact-form?intent=consultation"
-                            className="w-full justify-center py-4 font-black uppercase tracking-wider text-xs bg-[#64ffda] text-black border-none rounded-2xl shadow-xl"
-                            onClick={() => setIsMobileMenuOpen(false)}
-                        >
-                            SCHEDULE FREE CONSULTATION
-                        </Button>
-                    </div>
                 </div>
             )}
         </header>

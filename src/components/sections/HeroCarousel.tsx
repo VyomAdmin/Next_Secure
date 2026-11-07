@@ -116,9 +116,8 @@ const HeroCarousel = () => {
                     </span>
                   </div>
 
-                  <h1 className="mx-auto mb-5 max-w-[20rem] text-3xl font-black uppercase leading-tight tracking-normal text-white sm:text-5xl md:mx-0 md:mb-6 md:max-w-3xl md:text-6xl lg:text-6xl">
-                    {slide.subtitle}
-                  </h1>
+                  {/* only the visible slide is the page h1 */}
+                  {React.createElement(index === currentSlide ? 'h1' : 'h2', { className: "mx-auto mb-5 max-w-[20rem] text-3xl font-black uppercase leading-tight tracking-normal text-white sm:text-5xl md:mx-0 md:mb-6 md:max-w-3xl md:text-6xl lg:text-6xl" }, slide.subtitle)}
 
                   <p className="mx-auto mb-8 max-w-[17rem] text-sm font-medium leading-relaxed text-indigo-100/90 sm:max-w-[20rem] sm:text-base md:mx-0 md:mb-10 md:max-w-2xl md:text-xl">
                     {slide.description}

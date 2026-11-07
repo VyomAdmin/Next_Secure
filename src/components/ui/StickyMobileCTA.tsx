@@ -40,7 +40,7 @@ const StickyMobileCTA = () => {
             }`}
         >
             <a
-                href="/about-contact#contact-form?intent=consultation"
+                href="/contact?intent=consultation"
                 className="flex items-center justify-center gap-2.5 w-full bg-[#64ffda] !text-black py-4 rounded-2xl font-black text-xs uppercase tracking-[0.14em] shadow-[0_0_30px_rgba(100,255,218,0.3)] transition-transform active:scale-[0.98]"
             >
                 <Calendar size={18} />

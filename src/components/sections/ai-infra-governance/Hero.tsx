@@ -64,7 +64,7 @@ const Hero = () => {
                     <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-16">
                         <Button
                             variant="primary"
-                            href="/about-contact#contact-form"
+                            href="/contact"
                             className="w-full sm:w-auto py-5 px-9 text-xs sm:text-sm tracking-[0.16em] uppercase font-black bg-[#0052CC] text-white hover:bg-[#64ffda] hover:!text-black rounded-full shadow-2xl transition-all duration-200 ease-in-out group"
                         >
                             SCHEDULE AI CONSULTATION

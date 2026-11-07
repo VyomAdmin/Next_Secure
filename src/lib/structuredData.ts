@@ -51,7 +51,7 @@ export const websiteSchema = {
 
 export const aboutFaqSchema = createFaqSchema('/about', generalFaqs);
 
-export const aboutContactFaqSchema = createFaqSchema('/about-contact', generalFaqs);
+export const aboutContactFaqSchema = createFaqSchema('/contact', generalFaqs);
 
 export const dpdpaFaqSchema = createFaqSchema('/dpdpa-compliance', dpdpaFaqs);
 

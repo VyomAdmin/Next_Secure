@@ -73,7 +73,7 @@ const AIFAQ = () => {
 
                     <div className="text-center">
                         <Link
-                            href="/about-contact#contact-form"
+                            href="/contact"
                             className="inline-flex items-center gap-3 text-base font-bold text-blue-400 hover:text-white transition-colors group"
                         >
                             <span>Have a specific architectural or compliance question? Speak with our engineers</span>

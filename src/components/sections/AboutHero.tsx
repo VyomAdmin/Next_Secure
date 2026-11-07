@@ -45,9 +45,7 @@ const AboutHero = () => {
                         <div className="grid grid-cols-1 items-center gap-7 md:grid-cols-[minmax(0,1fr)_260px] md:gap-16 lg:grid-cols-[max-content_220px] lg:justify-start lg:gap-8">
                             <div className="text-center md:text-left">
                                 <h1 className="mx-auto max-w-[8ch] text-3xl font-black leading-tight tracking-normal text-white sm:text-5xl md:mx-0 md:text-6xl lg:text-6xl">
-                                    We&apos;re
-                                    <br />
-                                    ValinzTech
+                                    We&apos;re <span className="block">ValinzTech</span>
                                 </h1>
                             </div>
 

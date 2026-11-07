@@ -1,17 +1,9 @@
 import React from 'react';
-import { Calendar, Mail, MessageCircle, Phone } from 'lucide-react';
+import { Mail, MessageCircle, Phone } from 'lucide-react';
 import Button from '../ui/Button';
 
 const ContactOptions = () => {
-    const options = [
-        {
-            icon: Calendar,
-            title: "Schedule Consultation",
-            description: "Book a free 30-minute strategy session with our governance team.",
-            cta: "SCHEDULE FREE CONSULTATION",
-            href: "#contact-form",
-            primary: true
-        },
+    const options: Array<{ icon: typeof Mail; title: string; description: string; cta: string; href: string; primary?: boolean }> = [
         {
             icon: Mail,
             title: "Email Us",
@@ -47,7 +39,7 @@ const ContactOptions = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                     {options.map((option, index) => {
                         const Icon = option.icon;
                         return (

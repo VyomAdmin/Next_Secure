@@ -11,7 +11,7 @@ import ServicesFinalCTA from '@/components/sections/services/ServicesFinalCTA';
 import { servicesSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
-    title: 'Technology Assurance & Consulting Services | ValinzTech',
+    title: 'Technology Assurance & Consulting Services',
     description:
         'Intelligence-driven consulting across cybersecurity, privacy, AI governance, and compliance. ValinzTech builds frameworks that bring order to complexity.',
     alternates: {

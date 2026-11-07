@@ -20,24 +20,52 @@ const REQUEST_OPTIONS = [
         label: 'Book a Consultation',
         hint: '30-min strategy & architecture review',
         icon: Calendar,
+        title: 'Book a Consultation',
+        intro: 'Reserve a 30-minute session with our senior advisors under mutual NDA.',
+        extraLabel: 'Preferred date & time (with timezone)',
+        extraPlaceholder: 'e.g. Tue 14 Nov, 3-4 pm IST',
+        messageLabel: 'What should the session cover?',
+        placeholder: 'Describe your DPDPA, governance, or AI infrastructure objective...',
+        submit: 'Request Consultation',
     },
     {
         id: 'conversation' as RequestType,
         label: 'Start a Conversation',
         hint: 'General advisory & partnerships',
         icon: MessageSquare,
+        title: 'Start a Conversation',
+        intro: 'A preliminary question or a partnership idea? Tell us briefly and we will reply.',
+        extraLabel: 'Topic',
+        extraPlaceholder: 'e.g. Partnership, general advisory',
+        messageLabel: 'Your question or idea',
+        placeholder: 'What would you like to discuss?',
+        submit: 'Send Message',
     },
     {
         id: 'work' as RequestType,
         label: 'See the Work',
         hint: 'Case studies & capabilities overview',
         icon: Briefcase,
+        title: 'See the Work',
+        intro: 'Request our capability deck, frameworks and case studies.',
+        extraLabel: 'Area of interest',
+        extraPlaceholder: 'e.g. DPDPA, AI governance, cybersecurity',
+        messageLabel: 'Anything specific you want to see?',
+        placeholder: 'Industry, regulations, or scale we should tailor the deck to...',
+        submit: 'Request Capability Deck',
     },
     {
         id: 'support' as RequestType,
         label: 'Request Support',
         hint: 'Active framework & operations help',
         icon: HelpCircle,
+        title: 'Request Support',
+        intro: 'For active governance programs, vendor assessments, or compliance updates.',
+        extraLabel: 'Program / engagement reference & urgency',
+        extraPlaceholder: 'e.g. DPDPA programme, high urgency',
+        messageLabel: 'Issue details',
+        placeholder: 'What is blocked, and what is the deadline?',
+        submit: 'Submit Support Request',
     },
 ];
 
@@ -51,6 +79,8 @@ const ContactFormInner = () => {
         phone: '',
         message: '',
     });
+    const [extra, setExtra] = useState('');
+    const cfg = REQUEST_OPTIONS.find((o) => o.id === requestType)!;
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitMessage, setSubmitMessage] = useState('');
     const [submitError, setSubmitError] = useState(false);
@@ -115,6 +145,11 @@ const ContactFormInner = () => {
                 },
                 body: JSON.stringify({
                     ...formData,
+                    message: extra.trim()
+                        ? `${cfg.extraLabel}: ${extra.trim()}
+
+${formData.message}`
+                        : formData.message,
                     requestType,
                 }),
             });
@@ -125,6 +160,7 @@ const ContactFormInner = () => {
             }
 
             setSubmitMessage('Inquiry received successfully. Our team will get back to you within 24 hours.');
+            setExtra('');
             setFormData({
                 name: '',
                 email: '',
@@ -190,10 +226,10 @@ const ContactFormInner = () => {
                             </span>
                         </div>
                         <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-white mb-6 tracking-tight uppercase">
-                            Connect With Our Team
+                            {cfg.title}
                         </h2>
                         <p className="text-base sm:text-lg text-slate-400 max-w-2xl mx-auto font-medium">
-                            Select your path below. Our senior consultants review every request and respond within 24 hours under mutual NDA.
+                            {cfg.intro} We respond within 24 hours.
                         </p>
                     </div>
 
@@ -203,9 +239,9 @@ const ContactFormInner = () => {
                     >
                         {/* Request Type Selector */}
                         <div className="mb-10">
-                            <label className="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 ml-1">
-                                What does your organization need? <span className="text-[#64ffda]">*</span>
-                            </label>
+                            <p className="block text-xs font-bold text-slate-400 uppercase tracking-widest mb-4 ml-1">
+                                Other ways to reach us
+                            </p>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                                 {REQUEST_OPTIONS.map((opt) => {
                                     const Icon = opt.icon;
@@ -214,7 +250,7 @@ const ContactFormInner = () => {
                                         <button
                                             key={opt.id}
                                             type="button"
-                                            onClick={() => setRequestType(opt.id)}
+                                            onClick={() => { setRequestType(opt.id); setExtra(''); setSubmitMessage(''); window.history.replaceState(null, '', `/contact?intent=${opt.id}`); }}
                                             className={`p-4 rounded-2xl border text-left flex items-start gap-3.5 transition-all duration-200 min-h-[64px] ${
                                                 isSelected
                                                     ? 'bg-[#64ffda]/10 border-[#64ffda]/50 shadow-[0_0_25px_rgba(100,255,218,0.15)] ring-1 ring-[#64ffda]/30'
@@ -361,13 +397,27 @@ const ContactFormInner = () => {
                             </div>
                         </div>
 
+                        <div className="mb-6 space-y-2">
+                            <label htmlFor="extra" className="block text-xs font-bold text-slate-400 uppercase tracking-widest ml-1">
+                                {cfg.extraLabel} <span className="text-slate-500">(Optional)</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="extra"
+                                value={extra}
+                                onChange={(e) => setExtra(e.target.value)}
+                                className="w-full min-h-[48px] px-5 py-3.5 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:border-[#64ffda]/60 transition-all font-medium text-[16px] md:text-sm"
+                                placeholder={cfg.extraPlaceholder}
+                            />
+                        </div>
+
                         {/* Message */}
                         <div className="mb-10 space-y-2">
                             <label
                                 htmlFor="message"
                                 className="block text-xs font-bold text-slate-400 uppercase tracking-widest ml-1"
                             >
-                                Project Details & Timeline <span className="text-[#64ffda]">*</span>
+                                {cfg.messageLabel} <span className="text-[#64ffda]">*</span>
                             </label>
                             <textarea
                                 id="message"
@@ -377,7 +427,7 @@ const ContactFormInner = () => {
                                 value={formData.message}
                                 onChange={handleChange}
                                 className="w-full px-5 py-4 bg-white/5 border border-white/10 rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:border-[#64ffda]/60 transition-all font-medium text-[16px] md:text-sm resize-none"
-                                placeholder="Describe your current governance, DPDPA compliance, or AI infrastructure challenge..."
+                                placeholder={cfg.placeholder}
                             />
                             {formErrors.message && (
                                 <p className="text-xs text-red-400 ml-1">{formErrors.message}</p>
@@ -391,7 +441,7 @@ const ContactFormInner = () => {
                             disabled={isSubmitting}
                             className="w-full min-h-[52px] text-xs py-4 uppercase tracking-[0.2em] font-black bg-[#64ffda] text-black hover:bg-white hover:text-black rounded-2xl transition-all duration-200 ease-in-out shadow-[0_0_30px_rgba(100,255,218,0.2)] disabled:opacity-60 disabled:cursor-not-allowed"
                         >
-                            {isSubmitting ? 'Transmitting Request...' : 'Submit Enterprise Inquiry'}
+                            {isSubmitting ? 'Sending...' : cfg.submit}
                         </Button>
 
                         {/* Submission Status Message */}

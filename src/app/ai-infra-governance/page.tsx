@@ -10,7 +10,7 @@ import AIFinalCTA from '@/components/sections/ai-infra-governance/AIFinalCTA';
 import { aiInfraServiceSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
-    title: 'AI Infra, Build & Governance Services | ValinzTech',
+    title: 'AI Infra, Build & Governance Services',
     description:
         'Enterprise AI compute sizing, high-throughput model pipeline engineering, and sovereign AI governance, safety guardrails, and compliance (EU AI Act, MeitY, NIST AI RMF).',
     alternates: {

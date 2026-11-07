@@ -47,8 +47,8 @@ const Footer = () => {
                         <h4 className="text-xs font-black uppercase tracking-[0.3em] text-white mb-10">Resources</h4>
                         <ul className="space-y-5">
                             {[
-                                { name: 'About Us', href: '/about-contact' },
-                                { name: 'Contact', href: '/about-contact#contact-form' },
+                                { name: 'About Us', href: '/about' },
+                                { name: 'Contact', href: '/contact' },
                             ].map((item) => (
                                 <li key={item.name}>
                                     <Link href={item.href} className="text-sm font-medium text-slate-500 hover:text-blue-400 transition-colors">

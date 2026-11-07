@@ -12,7 +12,7 @@ import EngagementModels from '@/components/sections/services/EngagementModels';
 import { organizationSchema, websiteSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
-  title: 'ValinzTech | Enterprise Technology, Cybersecurity & AI Governance',
+  title: { absolute: 'ValinzTech | Enterprise Technology, Cybersecurity & AI Governance' },
   description:
     'ValinzTech delivers intelligence-driven technology governance, sovereign AI infrastructure, DPDPA 2023 compliance execution, and cybersecurity risk advisory.',
   alternates: {
