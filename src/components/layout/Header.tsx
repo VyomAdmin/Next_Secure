@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import Button from '../ui/Button';
 import Logo from '../ui/Logo';
 
@@ -29,92 +29,127 @@ const Header = () => {
 
     const navigation: NavItem[] = [
         { name: 'Home', href: '/' },
-        { name: 'Services', href: '/services' },
-        { name: 'DPDPA', href: '/dpdpa-compliance' },
-        { name: 'AI Infra & Gov', href: '/ai-infra-governance' },
-        { name: 'About Us', href: '/about-contact' },
+        {
+            name: 'Services',
+            href: '/services',
+            dropdown: [
+                { name: 'All Services Overview', href: '/services' },
+                { name: 'DPDPA Compliance Services', href: '/dpdpa-compliance' },
+                { name: 'AI Infra, Build & Governance', href: '/ai-infra-governance' },
+                { name: 'Cybersecurity Consulting', href: '/services#cybersecurity-consulting' },
+                { name: 'Privacy & Data Protection', href: '/services#privacy-data-protection' },
+                { name: 'Audits & Technical Assessments', href: '/services#audits-assessments' },
+                { name: 'Compliance & Risk Management', href: '/services#compliance-risk-management' },
+            ],
+        },
+        { name: 'About', href: '/about-contact#about' },
+        { name: 'Contact', href: '/about-contact#contact-form' },
     ];
 
     return (
         <header
-            className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-[#020617]/90 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'
-                }`}
+            className={`fixed w-full z-50 transition-all duration-300 ${
+                isScrolled
+                    ? 'bg-[#020617]/95 backdrop-blur-md border-b border-white/5 py-4 shadow-xl'
+                    : 'bg-transparent py-6'
+            }`}
         >
             <div className="container mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="flex items-center">
-                    <Logo className="h-[42.24px] w-auto" variant="dark" />
+                    <Logo className="h-[42px] w-auto" variant="dark" />
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-                    {navigation.map((item) => (
-                        <div
-                            key={item.name}
-                            className="relative group"
-                            onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
-                            onMouseLeave={() => setActiveDropdown(null)}
-                        >
-                            <Link
-                                href={item.href}
-                                className={`flex items-center gap-2 text-sm font-black uppercase tracking-[0.16em] transition-colors ${pathname === item.href ? 'text-white' : 'text-slate-400 hover:text-white'}`}
-                            >
-                                {item.name}
-                            </Link>
+                <nav className="hidden lg:flex items-center gap-10">
+                    {navigation.map((item) => {
+                        const isActive =
+                            item.href === '/'
+                                ? pathname === '/'
+                                : pathname.startsWith(item.href.split('#')[0]);
 
-                            {item.dropdown && activeDropdown === item.name && (
-                                <div className="absolute top-full left-0 pt-6 animate-in fade-in slide-in-from-top-2 duration-200">
-                                    <div className="bg-[#0D1426] border border-white/5 rounded-2xl p-3 min-w-[220px] shadow-2xl">
-                                        {item.dropdown.map((subItem) => (
-                                            <Link
-                                                key={subItem.name}
-                                                href={subItem.href}
-                                                className="block px-5 py-3.5 text-xs font-bold text-slate-400 hover:text-white hover:bg-white/5 rounded-xl transition-all"
-                                            >
-                                                {subItem.name}
-                                            </Link>
-                                        ))}
+                        return (
+                            <div
+                                key={item.name}
+                                className="relative group py-2"
+                                onMouseEnter={() => item.dropdown && setActiveDropdown(item.name)}
+                                onMouseLeave={() => setActiveDropdown(null)}
+                            >
+                                <Link
+                                    href={item.href}
+                                    className={`flex items-center gap-1.5 text-xs font-black uppercase tracking-[0.2em] transition-colors ${
+                                        isActive ? 'text-white' : 'text-slate-400 hover:text-white'
+                                    }`}
+                                >
+                                    <span>{item.name}</span>
+                                    {item.dropdown && (
+                                        <ChevronDown
+                                            size={14}
+                                            className={`transition-transform duration-200 text-slate-500 group-hover:text-white ${
+                                                activeDropdown === item.name ? 'rotate-180' : ''
+                                            }`}
+                                        />
+                                    )}
+                                </Link>
+
+                                {item.dropdown && activeDropdown === item.name && (
+                                    <div className="absolute top-full left-0 pt-4 animate-in fade-in slide-in-from-top-2 duration-200 z-50">
+                                        <div className="bg-[#0D1426] border border-white/10 rounded-2xl p-3 min-w-[260px] shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl">
+                                            {item.dropdown.map((subItem) => (
+                                                <Link
+                                                    key={subItem.name}
+                                                    href={subItem.href}
+                                                    className="block px-4 py-3 text-xs font-bold text-slate-300 hover:text-[#64ffda] hover:bg-white/5 rounded-xl transition-all"
+                                                >
+                                                    {subItem.name}
+                                                </Link>
+                                            ))}
+                                        </div>
                                     </div>
-                                </div>
-                            )}
-                        </div>
-                    ))}
-                    <Button variant="primary"
-                        href="/about-contact#contact-form"
-                        className="ml-2 py-4 px-10 text-[14px] tracking-[0.1em] bg-[#0052CC] !text-white border-none hover:bg-[#64ffda] hover:!text-black rounded-full shadow-xl transition-all duration-200 ease-in-out whitespace-nowrap"
+                                )}
+                            </div>
+                        );
+                    })}
+
+                    <Button
+                        variant="primary"
+                        href="/about-contact#contact-form?intent=consultation"
+                        className="ml-2 py-3.5 px-8 text-xs tracking-[0.14em] font-black uppercase bg-[#0052CC] !text-white border-none hover:bg-[#64ffda] hover:!text-black rounded-full shadow-lg transition-all duration-200 ease-in-out whitespace-nowrap"
                     >
-                        SCHEDULE FREE CONSULTATION
+                        SCHEDULE CONSULTATION
                     </Button>
                 </nav>
 
                 {/* Mobile Menu Button */}
                 <button
-                    className="lg:hidden text-white p-2"
+                    className="lg:hidden text-white p-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl bg-white/5 border border-white/10"
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                    {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
                 </button>
             </div>
 
-            {/* Mobile Navigation */}
+            {/* Mobile Navigation Drawer */}
             {isMobileMenuOpen && (
-                <div className="lg:hidden absolute top-full left-0 w-full bg-[#020617] border-b border-white/5 py-10 shadow-2xl animate-in fade-in slide-in-from-top-4">
-                    <nav className="flex flex-col px-6 gap-8">
+                <div className="lg:hidden fixed inset-x-0 top-[74px] bottom-0 bg-[#020617]/98 backdrop-blur-2xl border-t border-white/10 overflow-y-auto px-6 py-8 flex flex-col justify-between animate-in fade-in slide-in-from-top-4 duration-300 z-50">
+                    <nav className="flex flex-col gap-6">
                         {navigation.map((item) => (
-                            <div key={item.name} className="space-y-6">
+                            <div key={item.name} className="space-y-3 pb-4 border-b border-white/5">
                                 <Link
                                     href={item.href}
-                                    className="text-2xl font-black text-white tracking-tighter"
+                                    className="text-2xl font-black text-white tracking-tight flex items-center justify-between"
                                     onClick={() => !item.dropdown && setIsMobileMenuOpen(false)}
                                 >
-                                    {item.name}
+                                    <span>{item.name}</span>
                                 </Link>
+
                                 {item.dropdown && (
-                                    <div className="pl-6 flex flex-col gap-6 border-l border-white/5">
+                                    <div className="pl-4 flex flex-col gap-3.5 border-l-2 border-white/10 mt-3 pt-2">
                                         {item.dropdown.map((subItem) => (
                                             <Link
                                                 key={subItem.name}
                                                 href={subItem.href}
-                                                className="text-lg font-bold text-slate-400"
+                                                className="text-sm font-semibold text-slate-400 hover:text-[#64ffda] py-1"
                                                 onClick={() => setIsMobileMenuOpen(false)}
                                             >
                                                 {subItem.name}
@@ -124,10 +159,18 @@ const Header = () => {
                                 )}
                             </div>
                         ))}
-                        <Button variant="primary" href="/about-contact#contact-form" className="mt-6 w-full justify-center py-5 font-bold bg-white text-black border-none" onClick={() => setIsMobileMenuOpen(false)}>
-                            SCHEDULE CONSULTATION
-                        </Button>
                     </nav>
+
+                    <div className="pt-8 pb-12">
+                        <Button
+                            variant="primary"
+                            href="/about-contact#contact-form?intent=consultation"
+                            className="w-full justify-center py-4 font-black uppercase tracking-wider text-xs bg-[#64ffda] text-black border-none rounded-2xl shadow-xl"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                            SCHEDULE FREE CONSULTATION
+                        </Button>
+                    </div>
                 </div>
             )}
         </header>

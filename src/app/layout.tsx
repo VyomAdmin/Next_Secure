@@ -1,29 +1,42 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://valinztech.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://valinztech.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "ValinzTech | Intelligence-Driven Technology Governance",
+    default: "ValinzTech | Enterprise Technology, Cybersecurity & AI Governance",
     template: "%s | ValinzTech",
   },
-  description: "We help organizations build intelligent, secure, compliant, and future-ready technology systems through systematic governance frameworks.",
+  description:
+    "We help organizations engineer sovereign AI infrastructure, achieve DPDPA 2023 compliance, and implement institutional cybersecurity governance.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     siteName: "ValinzTech",
-    title: "ValinzTech | Intelligence-Driven Technology Governance",
+    title: "ValinzTech | Enterprise Technology, Cybersecurity & AI Governance",
     description:
-      "Technology governance, DPDPA readiness, privacy, compliance, and risk advisory support.",
+      "Technology governance, sovereign AI infrastructure, DPDPA readiness, and risk advisory support.",
     url: "/",
+    images: [
+      {
+        url: "/crousel/IMG_home.PNG",
+        width: 1200,
+        height: 630,
+        alt: "ValinzTech Enterprise Technology & Governance",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ValinzTech | Intelligence-Driven Technology Governance",
+    title: "ValinzTech | Enterprise Technology, Cybersecurity & AI Governance",
     description:
-      "Technology governance, DPDPA readiness, privacy, compliance, and risk advisory support.",
+      "Technology governance, sovereign AI infrastructure, DPDPA readiness, and risk advisory support.",
+    images: ["/crousel/IMG_home.PNG"],
   },
   icons: {
     icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
@@ -32,8 +45,6 @@ export const metadata: Metadata = {
   },
 };
 
-import StickyMobileCTA from "@/components/ui/StickyMobileCTA";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,7 +52,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans">
+      <body className="font-sans pb-24 lg:pb-0">
         {children}
         <StickyMobileCTA />
       </body>

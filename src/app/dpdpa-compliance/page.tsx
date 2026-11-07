@@ -12,11 +12,22 @@ import DPDPAFinalCTA from '@/components/sections/dpdpa-compliance/DPDPAFinalCTA'
 import { dpdpaServiceSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
-  title: 'DPDPA Compliance Services | ValinzTech',
+  title: 'DPDPA 2023 Compliance & Readiness Advisory | ValinzTech',
   description:
     'Comprehensive DPDPA 2023 compliance services. We help organizations build sustainable privacy governance frameworks for India\'s data protection requirements.',
   alternates: {
     canonical: '/dpdpa-compliance',
+  },
+  openGraph: {
+    title: 'DPDPA 2023 Compliance & Readiness Advisory | ValinzTech',
+    description:
+      'Comprehensive DPDPA 2023 compliance services and privacy governance frameworks.',
+    url: '/dpdpa-compliance',
+  },
+  twitter: {
+    title: 'DPDPA 2023 Compliance & Readiness Advisory | ValinzTech',
+    description:
+      'Comprehensive DPDPA 2023 compliance services and privacy governance frameworks.',
   },
 };
 

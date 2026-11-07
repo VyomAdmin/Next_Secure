@@ -14,19 +14,19 @@ import AboutHero from '@/components/sections/AboutHero';
 import { aboutContactFaqSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
-    title: 'About & Contact',
-    description: 'ValinzTech company capabilities, operating model, and contact information for DPDPA and technology governance consulting.',
+    title: 'About Us & Consultation Intake | ValinzTech',
+    description: 'ValinzTech company capabilities, operating model, and direct intake for enterprise DPDPA, cybersecurity, and AI governance consulting.',
     alternates: {
         canonical: '/about-contact',
     },
     openGraph: {
-        title: 'About & Contact | ValinzTech',
-        description: 'Company capabilities, delivery model, and direct contact information for DPDPA and technology governance consulting.',
+        title: 'About Us & Consultation Intake | ValinzTech',
+        description: 'Company capabilities, delivery model, and direct intake for enterprise technology governance and compliance consulting.',
         url: '/about-contact',
     },
     twitter: {
-        title: 'About & Contact | ValinzTech',
-        description: 'Company capabilities, delivery model, and direct contact information for DPDPA and technology governance consulting.',
+        title: 'About Us & Consultation Intake | ValinzTech',
+        description: 'Company capabilities, delivery model, and direct intake for enterprise technology governance and compliance consulting.',
     },
 };
 

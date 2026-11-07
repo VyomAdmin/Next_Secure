@@ -11,11 +11,22 @@ import ServicesFinalCTA from '@/components/sections/services/ServicesFinalCTA';
 import { servicesSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
-    title: 'Comprehensive Services | ValinzTech',
+    title: 'Technology Assurance & Consulting Services | ValinzTech',
     description:
         'Intelligence-driven consulting across cybersecurity, privacy, AI governance, and compliance. ValinzTech builds frameworks that bring order to complexity.',
     alternates: {
         canonical: '/services',
+    },
+    openGraph: {
+        title: 'Technology Assurance & Consulting Services | ValinzTech',
+        description:
+            'Intelligence-driven consulting across cybersecurity, privacy, AI governance, and compliance.',
+        url: '/services',
+    },
+    twitter: {
+        title: 'Technology Assurance & Consulting Services | ValinzTech',
+        description:
+            'Intelligence-driven consulting across cybersecurity, privacy, AI governance, and compliance.',
     },
 };
 

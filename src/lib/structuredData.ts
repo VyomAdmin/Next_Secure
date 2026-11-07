@@ -37,6 +37,18 @@ export const organizationSchema = {
     ]
 };
 
+export const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteUrl}/#website`,
+    name: 'ValinzTech',
+    url: siteUrl,
+    description: 'Intelligence-driven technology governance, sovereign AI infrastructure, and DPDPA compliance advisory.',
+    publisher: {
+        '@id': `${siteUrl}/#organization`
+    }
+};
+
 export const aboutFaqSchema = createFaqSchema('/about', generalFaqs);
 
 export const aboutContactFaqSchema = createFaqSchema('/about-contact', generalFaqs);

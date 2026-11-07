@@ -62,3 +62,15 @@ export const validatePhoneNumber = (value: string): string | null => {
 
     return null;
 };
+
+export const validateCompanyName = (value: string): string | null => {
+    const company = value.trim();
+    if (!company) {
+        return 'Company name is required.';
+    }
+    if (company.length < 2) {
+        return 'Company name must be at least 2 characters.';
+    }
+    return null;
+};
+

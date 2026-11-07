@@ -3,30 +3,31 @@ import type { Metadata } from 'next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import HeroCarousel from '@/components/sections/HeroCarousel';
+import HomeFourPaths from '@/components/sections/HomeFourPaths';
 import CoreServices from '@/components/sections/CoreServices';
 import Differentiation from '@/components/sections/Differentiation';
 import Audience from '@/components/sections/Audience';
 import FinalCTA from '@/components/sections/FinalCTA';
 import EngagementModels from '@/components/sections/services/EngagementModels';
-import { organizationSchema } from '@/lib/structuredData';
+import { organizationSchema, websiteSchema } from '@/lib/structuredData';
 
 export const metadata: Metadata = {
-  title: 'DPDPA & Technology Governance Consulting',
+  title: 'ValinzTech | Enterprise Technology, Cybersecurity & AI Governance',
   description:
-    'ValinzTech helps organizations with DPDPA readiness, privacy governance, compliance execution, and technology risk operating models.',
+    'ValinzTech delivers intelligence-driven technology governance, sovereign AI infrastructure, DPDPA 2023 compliance execution, and cybersecurity risk advisory.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'ValinzTech | DPDPA & Technology Governance Consulting',
+    title: 'ValinzTech | Enterprise Technology, Cybersecurity & AI Governance',
     description:
-      'DPDPA readiness, privacy governance, compliance execution, and technology risk advisory support.',
+      'Intelligence-driven technology governance, sovereign AI infrastructure, DPDPA readiness, and risk advisory support.',
     url: '/',
   },
   twitter: {
-    title: 'ValinzTech | DPDPA & Technology Governance Consulting',
+    title: 'ValinzTech | Enterprise Technology, Cybersecurity & AI Governance',
     description:
-      'DPDPA readiness, privacy governance, compliance execution, and technology risk advisory support.',
+      'Intelligence-driven technology governance, sovereign AI infrastructure, DPDPA readiness, and risk advisory support.',
   },
 };
 
@@ -37,9 +38,12 @@ export default function Home() {
       <main className="flex-grow">
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([organizationSchema, websiteSchema]),
+          }}
         />
         <HeroCarousel />
+        <HomeFourPaths />
         <CoreServices />
         <EngagementModels />
         <Differentiation />
