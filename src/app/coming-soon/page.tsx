@@ -20,7 +20,7 @@ const ComingSoon = () => {
     return (
         <div className="flex flex-col min-h-screen bg-hero-gradient overflow-hidden">
             {/* Main Content */}
-            <main className="flex-grow flex flex-col items-center justify-center px-6 relative">
+            <main id="main-content" className="flex-grow flex flex-col items-center justify-center px-6 relative">
                 {/* Background Decor */}
                 <div className="absolute top-[20%] right-[10%] w-[50%] h-[50%] bg-blue-600/10 rounded-full blur-[120px] z-0"></div>
                 <div className="absolute bottom-[20%] left-[5%] w-[40%] h-[40%] bg-blue-900/20 rounded-full blur-[100px] z-0"></div>

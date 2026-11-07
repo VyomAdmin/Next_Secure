@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
+import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
@@ -9,30 +10,33 @@ const slides = [
     image: '/crousel/IMG_home.PNG',
     mobileImage: '/crousel/mobile_backbround.jpeg',
     imagePosition: 'center center',
-    title: 'Adding value & intelligence to technology',
-    subtitle: 'Privacy • Security • AI',
-    description: 'Simplify Compliance • Protect Data • Build Trust',
-    link: '#allservices',
+    title: 'For companies',
+    subtitle: 'Consulting and services',
+    description: 'Privacy, cybersecurity, and AI governance. Start with the work, a booking, or support.',
+    link: '/services',
+    cta: 'See the work',
   },
   {
     id: 'allservices',
     image: '/crousel/IMG_allservices.PNG',
     mobileImage: '/crousel/mobile_backbround.jpeg',
     imagePosition: '62% center',
-    title: 'Comprehensive Technology Assurance',
-    subtitle: 'Intelligence-driven consulting',
-    description: 'We provide expert guidance across every dimension of technology governance.',
-    link: '#allservices',
+    title: 'What we deliver',
+    subtitle: 'Technology governance',
+    description: 'Consulting across privacy, security, compliance, and AI for companies that need a clearer operating model.',
+    link: '/services',
+    cta: 'Explore services',
   },
   {
     id: 'dpdpa',
     image: '/crousel/IMG_DPDPA.PNG',
     mobileImage: '/crousel/mobile_backbround.jpeg',
     imagePosition: '64% center',
-    title: 'DPDPA Compliance Services',
-    subtitle: "India's Data Protection Act 2023",
-    description: "Systematic frameworks for India's modern data protection requirements.",
-    link: '#dpdpa',
+    title: 'DPDPA compliance',
+    subtitle: "India's data protection law",
+    description: 'A practical consulting path for companies preparing for the Digital Personal Data Protection Act.',
+    link: '/dpdpa-compliance',
+    cta: 'View DPDPA services',
   },
 ];
 
@@ -55,25 +59,11 @@ const HeroCarousel = () => {
   }, [isTransitioning]);
 
   useEffect(() => {
-    const timer = setInterval(nextSlide, 5000);
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (media.matches) return;
+    const timer = setInterval(nextSlide, 7000);
     return () => clearInterval(timer);
   }, [nextSlide]);
-
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault();
-    const targetId = href.replace('#', '');
-    const elem = document.getElementById(targetId);
-    if (elem) {
-      const headerOffset = 96;
-      const top = elem.getBoundingClientRect().top + window.scrollY - headerOffset;
-
-      window.history.pushState(null, '', href);
-      window.scrollTo({
-        top: Math.max(top, 0),
-        behavior: 'smooth',
-      });
-    }
-  };
 
   return (
     <section id="home" className="relative h-[88svh] w-full overflow-hidden bg-[#050A18] md:h-screen">
@@ -81,8 +71,10 @@ const HeroCarousel = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
+            aria-hidden={index !== currentSlide}
+            inert={index !== currentSlide}
             className={`absolute inset-0 h-full w-full transition-opacity duration-1000 ease-in-out ${
-              index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
+              index === currentSlide ? 'opacity-100 z-10' : 'pointer-events-none opacity-0 z-0'
             }`}
           >
             <div className="absolute inset-0 overflow-hidden bg-[#050A18]">
@@ -110,27 +102,32 @@ const HeroCarousel = () => {
                 <div className={`mx-auto max-w-3xl text-center transition-all duration-1000 delay-300 transform md:mx-0 md:text-left ${
                   index === currentSlide ? 'translate-x-0 opacity-100' : '-translate-x-12 opacity-0'
                 }`}>
-                  <div className="mb-5 inline-flex w-full max-w-[18rem] justify-center rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md md:mb-6 md:w-auto md:max-w-full md:px-5">
-                    <span className="block whitespace-normal text-center text-[9px] font-bold uppercase leading-snug tracking-[0.14em] text-white md:text-xs md:tracking-[0.3em]">
+                  <div className="mb-5 inline-flex justify-center rounded-full border border-white/20 bg-white/10 px-4 py-2 backdrop-blur-md md:mb-6 md:justify-start">
+                    <span className="text-center text-xs font-semibold uppercase tracking-[0.16em] text-white md:text-sm">
                       {slide.title}
                     </span>
                   </div>
 
-                  <h1 className="mx-auto mb-5 max-w-[20rem] text-3xl font-black uppercase leading-tight tracking-normal text-white sm:text-5xl md:mx-0 md:mb-6 md:max-w-3xl md:text-6xl lg:text-6xl">
-                    {slide.subtitle}
-                  </h1>
+                  {index === 0 ? (
+                    <h1 className="mx-auto mb-5 max-w-3xl text-4xl font-bold leading-tight text-white sm:text-5xl md:mx-0 md:mb-6 md:text-6xl">
+                      {slide.subtitle}
+                    </h1>
+                  ) : (
+                    <p className="mx-auto mb-5 max-w-3xl text-4xl font-bold leading-tight text-white sm:text-5xl md:mx-0 md:mb-6 md:text-6xl">
+                      {slide.subtitle}
+                    </p>
+                  )}
 
-                  <p className="mx-auto mb-8 max-w-[17rem] text-sm font-medium leading-relaxed text-indigo-100/90 sm:max-w-[20rem] sm:text-base md:mx-0 md:mb-10 md:max-w-2xl md:text-xl">
+                  <p className="mx-auto mb-8 max-w-xl text-base font-medium leading-relaxed text-slate-100 md:mx-0 md:mb-10 md:text-xl">
                     {slide.description}
                   </p>
 
-                  <a
+                  <Link
                     href={slide.link}
-                    onClick={(e) => handleLinkClick(e, slide.link)}
-                    className="inline-flex min-h-14 items-center justify-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-8 py-4 text-sm font-bold uppercase tracking-widest text-white backdrop-blur-md transition-all duration-300 hover:border-[#64ffda] hover:bg-[#64ffda] hover:text-black"
+                    className="inline-flex min-h-12 items-center justify-center rounded-xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur-md transition-colors hover:border-[#64ffda] hover:bg-[#64ffda] hover:text-black"
                   >
-                    Learn More
-                  </a>
+                    {slide.cta}
+                  </Link>
                 </div>
               </div>
             </div>
@@ -138,20 +135,27 @@ const HeroCarousel = () => {
         ))}
       </div>
 
-      <div className="absolute bottom-12 left-1/2 z-20 flex -translate-x-1/2 items-center gap-4 md:bottom-12">
-        {slides.map((_, index) => (
+      <div className="absolute bottom-24 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 md:bottom-12">
+        {slides.map((slide, index) => (
           <button
-            key={index}
+            key={slide.id}
+            type="button"
             onClick={() => setCurrentSlide(index)}
-            className={`h-1.5 rounded-full transition-all duration-300 ${
-              index === currentSlide ? 'w-8 bg-[#64ffda]' : 'w-2 bg-white/30 hover:bg-white/50'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
+            className="inline-flex h-11 w-11 items-center justify-center"
+            aria-label={`Go to slide ${index + 1}: ${slide.subtitle}`}
+            aria-current={index === currentSlide}
+          >
+            <span
+              className={`block h-1.5 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'w-8 bg-[#64ffda]' : 'w-2 bg-white/50'
+              }`}
+            />
+          </button>
         ))}
       </div>
 
       <button
+        type="button"
         onClick={prevSlide}
         className="absolute left-4 top-1/2 z-20 hidden -translate-y-1/2 p-2 text-white/50 transition-colors hover:text-white md:block"
         aria-label="Previous slide"
@@ -159,6 +163,7 @@ const HeroCarousel = () => {
         <ChevronLeft size={40} />
       </button>
       <button
+        type="button"
         onClick={nextSlide}
         className="absolute right-4 top-1/2 z-20 hidden -translate-y-1/2 p-2 text-white/50 transition-colors hover:text-white md:block"
         aria-label="Next slide"

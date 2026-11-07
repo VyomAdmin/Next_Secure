@@ -55,7 +55,7 @@ const DPDPAFAQ = () => {
 
                     <div className="text-center">
                         <Link
-                            href="/about-contact#contact-form"
+                            href="/about-contact?intent=booking#contact-form"
                             className="inline-flex items-center gap-3 text-lg font-bold text-indigo-400 hover:text-white transition-colors group"
                         >
                             Don&apos;t see your question? Schedule a consultation

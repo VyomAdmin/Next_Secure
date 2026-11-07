@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '../ui/Button';
 import { Mail, Phone, MessageCircle } from 'lucide-react';
+import { contactHref } from '@/lib/inquiry';
 
 const FinalCTA = () => {
     return (
@@ -15,8 +16,8 @@ const FinalCTA = () => {
                     </p>
 
                     <div className="flex flex-col items-center gap-12">
-                        <Button variant="secondary" href="/about-contact#contact-form" className="py-6 px-16 text-sm font-bold bg-white text-slate-900 border-none rounded-full shadow-2xl hover:bg-[#64ffda] hover:text-black transition-all duration-200 ease-in-out">
-                            SCHEDULE FREE CONSULTATION
+                        <Button variant="secondary" href={contactHref('booking')} className="py-6 px-16 text-sm font-bold bg-white text-slate-900 border-none rounded-full shadow-2xl hover:bg-[#64ffda] hover:text-black transition-all duration-200 ease-in-out">
+                            Book a consultation
                         </Button>
 
                         <div className="flex flex-wrap gap-x-8 gap-y-3 justify-center text-xs font-bold uppercase tracking-[0.18em] text-indigo-100/50 mb-16">

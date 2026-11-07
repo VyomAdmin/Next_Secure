@@ -1,14 +1,12 @@
-import type { Metadata } from 'next';
 import LegalPageLayout from '@/components/legal/LegalPageLayout';
+import { pageMetadata } from '@/lib/pageMetadata';
 
-export const metadata: Metadata = {
+export const metadata = pageMetadata({
     title: 'Terms of Service',
     description:
         'Terms of Service for ValinzTech covering acceptable use, intellectual property, disclaimers, and limitations of liability.',
-    alternates: {
-        canonical: '/terms-of-service',
-    },
-};
+    path: '/terms-of-service',
+});
 
 const sections = [
     {

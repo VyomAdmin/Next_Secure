@@ -79,9 +79,8 @@ const CoreServices = () => {
                     <h2 className="mb-8 text-4xl font-black tracking-tighter text-white md:text-6xl">
                         Comprehensive Technology Assurance
                     </h2>
-                    <p className="text-xl font-medium leading-relaxed text-slate-300">
-                        We provide intelligence-driven consulting across every
-                        dimension of technology governance.
+                    <p className="text-lg font-medium leading-relaxed text-slate-300 md:text-xl">
+                        Consulting and services for companies across privacy, cybersecurity, AI, and compliance.
                     </p>
                 </div>
 

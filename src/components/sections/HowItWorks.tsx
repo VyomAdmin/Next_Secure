@@ -5,7 +5,7 @@ const HowItWorks = () => {
         {
             icon: Calendar,
             title: "Schedule",
-            description: "Book a free 30-minute consultation at your convenience to start the conversation."
+            description: "Use the contact form to book time, start an engagement, or ask for support."
         },
         {
             icon: FileText,
@@ -27,7 +27,7 @@ const HowItWorks = () => {
                         How Consultations Work
                     </h2>
                     <p className="text-lg text-slate-400 max-w-2xl mx-auto font-medium">
-                        A simple, transparent 3-step process to begin your transformation.
+                        Companies start in the contact form. A consultation then follows three steps.
                     </p>
                 </div>
 

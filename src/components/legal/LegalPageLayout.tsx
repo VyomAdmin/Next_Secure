@@ -25,7 +25,7 @@ const LegalPageLayout = ({
     return (
         <div className="flex min-h-screen flex-col bg-[#050A18]">
             <Header />
-            <main className="flex-grow pt-32 pb-24">
+            <main id="main-content" className="flex-grow pt-32 pb-24">
                 <section className="border-b border-white/5 bg-[#020617]">
                     <div className="container mx-auto px-6 py-20">
                         <div className="mx-auto max-w-4xl">
